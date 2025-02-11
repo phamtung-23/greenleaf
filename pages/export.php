@@ -17,10 +17,10 @@ $email = $_SESSION['email'];
 $fullname = $_SESSION['full_name'];
 
 // Đọc danh sách nhà cung cấp từ suppliers.csv (bỏ dòng đầu tiên)
-$suppliers = getSuppliersList();
+$suppliers = readJsonFile(SUPPLIERS_JSON_LINK);
 
 // Đọc danh sách mặt hàng từ goods.csv (bỏ dòng đầu tiên)
-$goods = getGoodsList();
+$goods = readJsonFile(GOODS_JSON_LINK);
 
 ?>
 
@@ -72,6 +72,9 @@ $goods = getGoodsList();
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="management_goods.php">Hàng hóa</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="management_customer.php">Khách hàng</a>
+                        </li>
                     </ul>
                     <form action="../logout.php" class="d-flex" role="search">
                         <button class="btn btn-outline-danger" type="submit">Đăng xuất</button>
@@ -93,7 +96,7 @@ $goods = getGoodsList();
                                 <option selected disabled value="">Chọn nhà cung cấp</option>
                                 <?php
                                 foreach ($suppliers as $supplier) {
-                                    echo "<option value='{$supplier}'>{$supplier}</option>";
+                                    echo "<option value='{$supplier['nameNCC']}'>{$supplier['nameNCC']} ({$supplier['codeNCC']})</option>";
                                 }
                                 ?>
                             </select>
@@ -107,7 +110,7 @@ $goods = getGoodsList();
                                 <option selected disabled value="">Chọn mặt hàng</option>
                                 <?php
                                 foreach ($goods as $good) {
-                                    echo "<option value='{$good}'>{$good}</option>";
+                                    echo "<option value='{$good['codeGoods']} - {$good['nameGoods']}'>{$good['codeGoods']} - {$good['nameGoods']}</option>";
                                 }
                                 ?>
                             </select>
@@ -269,7 +272,7 @@ $goods = getGoodsList();
                 formSubmit.classList.add("was-validated");
             } else {
                 e.preventDefault();
-                
+
                 const supplier = $('#supplier').val();
                 const item = $('#item').val();
                 const weight = $('#weight').val();
@@ -311,7 +314,7 @@ $goods = getGoodsList();
 
                 // Gửi dữ liệu
                 $.ajax({
-                    url: 'save_inventory.php',
+                    url: 'backend/save_inventory.php',
                     type: 'POST',
                     data: importData,
                     contentType: false,
@@ -345,7 +348,7 @@ $goods = getGoodsList();
                         });
                     }
                 });
-                
+
             }
 
         });

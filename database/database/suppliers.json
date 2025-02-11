@@ -1,134 +1,662 @@
 [
-  {"codeNCC": "AN", "nameNCC": "ÂN - ỚT CHUÔNG"},
-  {"codeNCC": "ANH", "nameNCC": "ANH - HÀNH LÁ"},
-  {"codeNCC": "ATINH", "nameNCC": "ANH TÌNH- BÍ NỤ-TRỌC"},
-  {"codeNCC": "ATINH", "nameNCC": "ANH TÌNH- BÍ NỤ-TRỌC"},
-  {"codeNCC": "BBAO", "nameNCC": "BẢO - CÀ TÍM"},
-  {"codeNCC": "BBAO", "nameNCC": "BẢO - CÀ TÍM"},
-  {"codeNCC": "BCANG", "nameNCC": "BA CẢNG"},
-  {"codeNCC": "BHL", "nameNCC": "BẢO-BÍ HỒ LÔ"},
-  {"codeNCC": "BHL", "nameNCC": "BẢO-BÍ HỒ LÔ"},
-  {"codeNCC": "BEH", "nameNCC": "BÉ HAI - LƠ"},
-  {"codeNCC": "BEH", "nameNCC": "BÉ HAI - LƠ"},
-  {"codeNCC": "BXLM", "nameNCC": "ANH BÁU - XÀ LÁCH MỸ"},
-  {"codeNCC": "BINHCTH", "nameNCC": "BÌNH - CẢI THẢO"},
-  {"codeNCC": "CHITH", "nameNCC": "CHI - CẢI THẢO"},
-  {"codeNCC": "CHICR", "nameNCC": "CHI -  CÀ RỐT"},
-  {"codeNCC": "CNX", "nameNCC": "CAO NGUYÊN XANH-BEEF"},
-  {"codeNCC": "LIEU", "nameNCC": "CHỊ LIỄU-DƯA HẠ UYỂN"},
-  {"codeNCC": "COI", "nameNCC": "CÒI - CẢI THÌA"},
-  {"codeNCC": "CUONG", "nameNCC": "CƯỜNG - DƯA BABY"},
-  {"codeNCC": "CHO", "nameNCC": "CHỢ - MUA NGOÀI"},
-  {"codeNCC": "LOI", "nameNCC": "ANH LỢI- BÓ XÔI"},
-  {"codeNCC": "DAO", "nameNCC": "ĐẠO - ỚT PLM"},
-  {"codeNCC": "COLOI", "nameNCC": "CÔ LỢI- HÀNH TÂY"},
-  {"codeNCC": "DIEN", "nameNCC": "DIÊN - ỚT CHUÔNG"},
-  {"codeNCC": "DIEMCC", "nameNCC": "DIỄM - CÀ CHUA"},
-  {"codeNCC": "DIEMB", "nameNCC": "DIỄM - BẮP MỸ"},
-  {"codeNCC": "HA", "nameNCC": "HÀ - CỦ CẢI"},
-  {"codeNCC": "HAIDUNG", "nameNCC": "HAI DŨNG -CẢI THẢO"},
-  {"codeNCC": "HANG", "nameNCC": "HẰNG - SÚ TRẮNG"},
-  {"codeNCC": "HANH", "nameNCC": "HẠNH VÂN - HÀNH TÂY"},
-  {"codeNCC": "LAM", "nameNCC": "ANH LÂM- BÓ XÔI"},
-  {"codeNCC": "CHOA", "nameNCC": "CHỊ HOA - ỚT CHUÔNG"},
-  {"codeNCC": "HOAK", "nameNCC": "HOA -KHOAI LANG"},
-  {"codeNCC": "HOANGH", "nameNCC": "HOÀNG HẰNG- HÀNH TÂY"},
-  {"codeNCC": "HONGCR", "nameNCC": "HỒNG - CÀ RỐT"},
-  {"codeNCC": "HUAN", "nameNCC": "HUÂN - ỚT CAY"},
-  {"codeNCC": "HUELINH", "nameNCC": "HUÊ LINH - ỚT CHUÔNG"},
-  {"codeNCC": "HUNG", "nameNCC": "HÙNG - AGRO"},
-  {"codeNCC": "HUNGTL", "nameNCC": "HÙNG- THÌ LÀ"},
-  {"codeNCC": "HOANG", "nameNCC": "HOÀNG - CẦN TÂY"},
-  {"codeNCC": "HATHINH", "nameNCC": "HÀ -VỰA RAU THƠM"},
-  {"codeNCC": "NGAN", "nameNCC": "CHỊ NGÂN- LÔ LÔ TÍM"},
-  {"codeNCC": "KHANHR", "nameNCC": "KHÁNH - RỐT"},
-  {"codeNCC": "KHANHLAN", "nameNCC": "KHÁNH LAN- CẢI THẢO"},
-  {"codeNCC": "KIMNGAN", "nameNCC": "KIM NGÂN- HÀNH LÁ"},
-  {"codeNCC": "HOANGH", "nameNCC": "HOÀNG- CẦN TÂY KADO"},
-  {"codeNCC": "LANNGHIEM", "nameNCC": "LAN NGHIÊM - KHOAI LANG"},
-  {"codeNCC": "LOAN", "nameNCC": "CHỊ LOAN - SÚ TIM"},
-  {"codeNCC": "LUA", "nameNCC": "LỤA- ĐỌT SU"},
-  {"codeNCC": "LUABM", "nameNCC": "LƯU - BẮP MỸ"},
-  {"codeNCC": "MAI", "nameNCC": "MAI- KHOAI MẬT"},
-  {"codeNCC": "MANH", "nameNCC": "MẠNH- ỚT CHUÔNG"},
-  {"codeNCC": "NA", "nameNCC": "NA - QUẾ TÂY"},
-  {"codeNCC": "NAM", "nameNCC": "NAM - CẢI THẢO"},
-  {"codeNCC": "NGHI", "nameNCC": "NGHỊ - SÚ TIM"},
-  {"codeNCC": "NGHIEP", "nameNCC": "NGHIỆP- CHERY"},
-  {"codeNCC": "NGOCANH", "nameNCC": "NGỌC ANH- DƯA BABY"},
-  {"codeNCC": "NGO", "nameNCC": "NGỌ - CẢI THẢO"},
-  {"codeNCC": "NGOCD", "nameNCC": "NGỌC - DỀN"},
-  {"codeNCC": "NGUYEN", "nameNCC": "CHỊ NGUYÊN - SÚ TIM"},
-  {"codeNCC": "NHATQ", "nameNCC": "NHẬT QUYÊN - XOÀI"},
-  {"codeNCC": "PHUONGCD", "nameNCC": "PHƯỢNG - CHANH DÂY"},
-  {"codeNCC": "PHUONGCT", "nameNCC": "PHƯƠNG - CẦN TÂY"},
-  {"codeNCC": "THUANLUU", "nameNCC": "THUẬN LƯU - SÚ TIM"},
-  {"codeNCC": "THUY", "nameNCC": "THÙY - SÚ TIM"},
-  {"codeNCC": "TIENOC", "nameNCC": "TIẾN - ỚT CHUÔNG"},
-  {"codeNCC": "TKY", "nameNCC": "ANH TIẾN- BẮP MỸ"},
-  {"codeNCC": "THUYO", "nameNCC": "THỦY - ỚT BABY"},
-  {"codeNCC": "TIENP", "nameNCC": "TIẾN PHÁT - THẢO"},
-  {"codeNCC": "TOAN", "nameNCC": "TOÀN - RAU THƠM"},
-  {"codeNCC": "TRUNG", "nameNCC": "TRUNG - BÍ NON"},
-  {"codeNCC": "VUONG", "nameNCC": "VƯƠNG - CÀ BI"},
-  {"codeNCC": "VUONG", "nameNCC": "VƯƠNG - CÀ BI"},
-  {"codeNCC": "DHONG", "nameNCC": "DIÊN HỒNG- CÀ RỐT"},
-  {"codeNCC": "HCHAU", "nameNCC": "HẢI CHÂU-RỐT BABY"},
-  {"codeNCC": "HIEN", "nameNCC": "CHỊ HIỀN - KHOAI LANG NHẬT"},
-  {"codeNCC": "HOA", "nameNCC": "CHỊ HOA - KHOAI LANG NHẬT"},
-  {"codeNCC": "MANH", "nameNCC": "VIỄN MẠNH- ỚT CHUÔNG"},
-  {"codeNCC": "MINH", "nameNCC": "MINH - ĐỌT SU"},
-  {"codeNCC": "MUI", "nameNCC": "CHỊ MÙI - CÀ RỐT"},
-  {"codeNCC": "NGA", "nameNCC": "NGA-CÀ BEEF-DƯA BABY"},
-  {"codeNCC": "PHUONG", "nameNCC": "PHƯƠNG -THÌA-CẢI"},
-  {"codeNCC": "TIEN", "nameNCC": "DIỆP TIÊN - ĐẬU LEO-DƯA LEO"},
-  {"codeNCC": "CTUAN", "nameNCC": "CHÚ TUẤN- SU HÀO"},
-  {"codeNCC": "TUYEN", "nameNCC": "TUYÊN- MĂNG TÂY -NINH THUẬN"},
-  {"codeNCC": "TUOI", "nameNCC": "CHỊ TƯƠI- CÀ BEEF"},
-  {"codeNCC": "THAI", "nameNCC": "ANH THÁI- XÀ LÁCH"},
-  {"codeNCC": "THIET", "nameNCC": "CHỊ THIẾT - RAU CỦ DL"},
-  {"codeNCC": "CTHU", "nameNCC": "CHỊ THU -BẮP NỮ HOÀNG"},
-  {"codeNCC": "CTHUAN", "nameNCC": "CÔ THUẦN- CỦ CẢI TRẮNG"},
-  {"codeNCC": "THUYTRAN", "nameNCC": "CHỊ THỦY - LƠ BABY"},
-  {"codeNCC": "VMINH", "nameNCC": "VĨNH PHƯƠNG - PHƯỜNG 8"},
-  {"codeNCC": "VLAN", "nameNCC": "CHỊ KIM LOAN- ỚT SỪNG"},
-  {"codeNCC": "TUANDL", "nameNCC": "TUÂN ĐL"},
-  {"codeNCC": "XIXIN", "nameNCC": "XI XIN - ĐƠN LẺ"},
-  {"codeNCC": "HVAN", "nameNCC": "HỒNG VÂN - LƠ BABY"},
-  {"codeNCC": "HOPELAND", "nameNCC": "HOPELAND- DƯA NHẬT"},
-  {"codeNCC": "QTRANG", "nameNCC": "QUYỀN TRANG - KHOAI"},
-  {"codeNCC": "GIACY", "nameNCC": "GIÁC Ý-CÀ BEEF"},
-  {"codeNCC": "KIMHOA", "nameNCC": "KIM HOA - CÀ BEEF"},
-  {"codeNCC": "THUYCCD", "nameNCC": "THỦY - CỦ CẢI ĐỎ"},
-  {"codeNCC": "TYLE", "nameNCC": "TÝ LỆ  - KHOAI LANG"},
-  {"codeNCC": "HANHTAN", "nameNCC": "HẠNH TÂN - SÚ TRẮNG"},
-  {"codeNCC": "CUBI", "nameNCC": "CU BI - ĐẬU BẮP"},
-  {"codeNCC": "CHANGLE", "nameNCC": "CHỊ HẰNG - HÀNG LẺ"},
-  {"codeNCC": "HAN", "nameNCC": "BEEF GIA HÂN"},
-  {"codeNCC": "HUNGLV", "nameNCC": "HÙNG - THỦY CANH"},
-  {"codeNCC": "BAOBI", "nameNCC": "BẢO BÍ ĐỎ"},
-  {"codeNCC": "CLIEN", "nameNCC": "CÔ LIÊN - ỚT XIÊM"},
-  {"codeNCC": "HUONG", "nameNCC": "HƯƠNG - LƠ XANH"},
-  {"codeNCC": "TNGUYEN", "nameNCC": "TƯỜNG NGUYÊN - LÁ É"},
-  {"codeNCC": "HNGOC", "nameNCC": "HỒNG NGỌC - QUẾ TÂY"},
-  {"codeNCC": "CHIR", "nameNCC": "CHI - CÀ RỐT"},
-  {"codeNCC": "BPDL", "nameNCC": "BÍCH PHƯƠNG- ĐÀ LẠT"},
-  {"codeNCC": "MTU", "nameNCC": "MÌNH TÚ - KHOAI TÂY"},
-  {"codeNCC": "LAICD", "nameNCC": "LÀI - CHANH DÂY"},
-  {"codeNCC": "CYEN", "nameNCC": "CHỊ YẾN - KHOAI LANG"},
-  {"codeNCC": "QKHANH", "nameNCC": "KHANH - CẢI THẢO"},
-  {"codeNCC": "KTAN", "nameNCC": "KIM TÂN"},
-  {"codeNCC": "MI", "nameNCC": "MI - PARO"},
-  {"codeNCC": "CTHANH", "nameNCC": "THANH ỚT CAY"},
-  {"codeNCC": "MDUNG", "nameNCC": "MỸ DUNG - CHANH DÂY"},
-  {"codeNCC": "MDUYEN", "nameNCC": "DUYÊN - HỒNG GIÒN"},
-  {"codeNCC": "LCAU", "nameNCC": "LIÊN CẨU - THẢO TQ"},
-  {"codeNCC": "THAO", "nameNCC": "THẠO  - CẢI THẢO"},
-  {"codeNCC": "NAMCR", "nameNCC": "NAM - CORON"},
-  {"codeNCC": "BAODL", "nameNCC": "BẢO - CẦN TÂY DL"},
-  {"codeNCC": "THAOBN", "nameNCC": "THẢO - BÍ NỤ"},
-  {"codeNCC": "NGUYENH", "nameNCC": "NGUYÊN - HỒNG GIÒN"},
-  {"codeNCC": "HUANDL", "nameNCC": "HUÂN ĐÀ LẠT"},
-  {"codeNCC": "CUONGCD", "nameNCC": "CƯỜNG - CHANH DÂY"},
-  {"codeNCC": "TDOAN", "nameNCC": "THUẬN ĐOÀN - CÀ RỐT"}
+    {
+        "id": "ncc_67a8b2dfdc1af",
+        "codeNCC": "AN",
+        "nameNCC": "ÂN - ỚT CHUÔNG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1b2",
+        "codeNCC": "ANH",
+        "nameNCC": "ANH - HÀNH LÁ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1b3",
+        "codeNCC": "ATINH",
+        "nameNCC": "ANH TÌNH- BÍ NỤ-TRỌC"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1b4",
+        "codeNCC": "ATINH",
+        "nameNCC": "ANH TÌNH- BÍ NỤ-TRỌC"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1b5",
+        "codeNCC": "BBAO",
+        "nameNCC": "BẢO - CÀ TÍM"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1b6",
+        "codeNCC": "BBAO",
+        "nameNCC": "BẢO - CÀ TÍM"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1b7",
+        "codeNCC": "BCANG",
+        "nameNCC": "BA CẢNG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1b8",
+        "codeNCC": "BHL",
+        "nameNCC": "BẢO-BÍ HỒ LÔ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1b9",
+        "codeNCC": "BHL",
+        "nameNCC": "BẢO-BÍ HỒ LÔ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1ba",
+        "codeNCC": "BEH",
+        "nameNCC": "BÉ HAI - LƠ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1bb",
+        "codeNCC": "BEH",
+        "nameNCC": "BÉ HAI - LƠ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1bc",
+        "codeNCC": "BXLM",
+        "nameNCC": "ANH BÁU - XÀ LÁCH MỸ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1bd",
+        "codeNCC": "BINHCTH",
+        "nameNCC": "BÌNH - CẢI THẢO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1be",
+        "codeNCC": "CHITH",
+        "nameNCC": "CHI - CẢI THẢO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1bf",
+        "codeNCC": "CHICR",
+        "nameNCC": "CHI -  CÀ RỐT"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1c0",
+        "codeNCC": "CNX",
+        "nameNCC": "CAO NGUYÊN XANH-BEEF"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1c1",
+        "codeNCC": "LIEU",
+        "nameNCC": "CHỊ LIỄU-DƯA HẠ UYỂN"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1c2",
+        "codeNCC": "COI",
+        "nameNCC": "CÒI - CẢI THÌA"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1c3",
+        "codeNCC": "CUONG",
+        "nameNCC": "CƯỜNG - DƯA BABY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1c4",
+        "codeNCC": "CHO",
+        "nameNCC": "CHỢ - MUA NGOÀI"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1c5",
+        "codeNCC": "LOI",
+        "nameNCC": "ANH LỢI- BÓ XÔI"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1c6",
+        "codeNCC": "DAO",
+        "nameNCC": "ĐẠO - ỚT PLM"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1c7",
+        "codeNCC": "COLOI",
+        "nameNCC": "CÔ LỢI- HÀNH TÂY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1c8",
+        "codeNCC": "DIEN",
+        "nameNCC": "DIÊN - ỚT CHUÔNG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1d9",
+        "codeNCC": "DIEMCC",
+        "nameNCC": "DIỄM - CÀ CHUA"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1da",
+        "codeNCC": "DIEMB",
+        "nameNCC": "DIỄM - BẮP MỸ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1db",
+        "codeNCC": "HA",
+        "nameNCC": "HÀ - CỦ CẢI"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1dc",
+        "codeNCC": "HAIDUNG",
+        "nameNCC": "HAI DŨNG -CẢI THẢO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1dd",
+        "codeNCC": "HANG",
+        "nameNCC": "HẰNG - SÚ TRẮNG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1de",
+        "codeNCC": "HANH",
+        "nameNCC": "HẠNH VÂN - HÀNH TÂY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1df",
+        "codeNCC": "LAM",
+        "nameNCC": "ANH LÂM- BÓ XÔI"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1e0",
+        "codeNCC": "CHOA",
+        "nameNCC": "CHỊ HOA - ỚT CHUÔNG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1e1",
+        "codeNCC": "HOAK",
+        "nameNCC": "HOA -KHOAI LANG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1e2",
+        "codeNCC": "HOANGH",
+        "nameNCC": "HOÀNG HẰNG- HÀNH TÂY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1e3",
+        "codeNCC": "HONGCR",
+        "nameNCC": "HỒNG - CÀ RỐT"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1e4",
+        "codeNCC": "HUAN",
+        "nameNCC": "HUÂN - ỚT CAY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1e5",
+        "codeNCC": "HUELINH",
+        "nameNCC": "HUÊ LINH - ỚT CHUÔNG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1e6",
+        "codeNCC": "HUNG",
+        "nameNCC": "HÙNG - AGRO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1e7",
+        "codeNCC": "HUNGTL",
+        "nameNCC": "HÙNG- THÌ LÀ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1e8",
+        "codeNCC": "HOANG",
+        "nameNCC": "HOÀNG - CẦN TÂY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1e9",
+        "codeNCC": "HATHINH",
+        "nameNCC": "HÀ -VỰA RAU THƠM"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1ea",
+        "codeNCC": "NGAN",
+        "nameNCC": "CHỊ NGÂN- LÔ LÔ TÍM"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1eb",
+        "codeNCC": "KHANHR",
+        "nameNCC": "KHÁNH - RỐT"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1ec",
+        "codeNCC": "KHANHLAN",
+        "nameNCC": "KHÁNH LAN- CẢI THẢO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1ed",
+        "codeNCC": "KIMNGAN",
+        "nameNCC": "KIM NGÂN- HÀNH LÁ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1ee",
+        "codeNCC": "HOANGH",
+        "nameNCC": "HOÀNG- CẦN TÂY KADO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1ef",
+        "codeNCC": "LANNGHIEM",
+        "nameNCC": "LAN NGHIÊM - KHOAI LANG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1f0",
+        "codeNCC": "LOAN",
+        "nameNCC": "CHỊ LOAN - SÚ TIM"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1f1",
+        "codeNCC": "LUA",
+        "nameNCC": "LỤA- ĐỌT SU"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1f3",
+        "codeNCC": "LUABM",
+        "nameNCC": "LƯU - BẮP MỸ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1f4",
+        "codeNCC": "MAI",
+        "nameNCC": "MAI- KHOAI MẬT"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1f5",
+        "codeNCC": "MANH",
+        "nameNCC": "MẠNH- ỚT CHUÔNG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1f6",
+        "codeNCC": "NA",
+        "nameNCC": "NA - QUẾ TÂY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1f7",
+        "codeNCC": "NAM",
+        "nameNCC": "NAM - CẢI THẢO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1f8",
+        "codeNCC": "NGHI",
+        "nameNCC": "NGHỊ - SÚ TIM"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1f9",
+        "codeNCC": "NGHIEP",
+        "nameNCC": "NGHIỆP- CHERY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1fa",
+        "codeNCC": "NGOCANH",
+        "nameNCC": "NGỌC ANH- DƯA BABY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1fb",
+        "codeNCC": "NGO",
+        "nameNCC": "NGỌ - CẢI THẢO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1fc",
+        "codeNCC": "NGOCD",
+        "nameNCC": "NGỌC - DỀN"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1fd",
+        "codeNCC": "NGUYEN",
+        "nameNCC": "CHỊ NGUYÊN - SÚ TIM"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1fe",
+        "codeNCC": "NHATQ",
+        "nameNCC": "NHẬT QUYÊN - XOÀI"
+    },
+    {
+        "id": "ncc_67a8b2dfdc1ff",
+        "codeNCC": "PHUONGCD",
+        "nameNCC": "PHƯỢNG - CHANH DÂY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc200",
+        "codeNCC": "PHUONGCT",
+        "nameNCC": "PHƯƠNG - CẦN TÂY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc201",
+        "codeNCC": "THUANLUU",
+        "nameNCC": "THUẬN LƯU - SÚ TIM"
+    },
+    {
+        "id": "ncc_67a8b2dfdc202",
+        "codeNCC": "THUY",
+        "nameNCC": "THÙY - SÚ TIM"
+    },
+    {
+        "id": "ncc_67a8b2dfdc203",
+        "codeNCC": "TIENOC",
+        "nameNCC": "TIẾN - ỚT CHUÔNG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc204",
+        "codeNCC": "TKY",
+        "nameNCC": "ANH TIẾN- BẮP MỸ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc205",
+        "codeNCC": "THUYO",
+        "nameNCC": "THỦY - ỚT BABY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc206",
+        "codeNCC": "TIENP",
+        "nameNCC": "TIẾN PHÁT - THẢO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc207",
+        "codeNCC": "TOAN",
+        "nameNCC": "TOÀN - RAU THƠM"
+    },
+    {
+        "id": "ncc_67a8b2dfdc208",
+        "codeNCC": "TRUNG",
+        "nameNCC": "TRUNG - BÍ NON"
+    },
+    {
+        "id": "ncc_67a8b2dfdc209",
+        "codeNCC": "VUONG",
+        "nameNCC": "VƯƠNG - CÀ BI"
+    },
+    {
+        "id": "ncc_67a8b2dfdc20a",
+        "codeNCC": "VUONG",
+        "nameNCC": "VƯƠNG - CÀ BI"
+    },
+    {
+        "id": "ncc_67a8b2dfdc20b",
+        "codeNCC": "DHONG",
+        "nameNCC": "DIÊN HỒNG- CÀ RỐT"
+    },
+    {
+        "id": "ncc_67a8b2dfdc20c",
+        "codeNCC": "HCHAU",
+        "nameNCC": "HẢI CHÂU-RỐT BABY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc20d",
+        "codeNCC": "HIEN",
+        "nameNCC": "CHỊ HIỀN - KHOAI LANG NHẬT"
+    },
+    {
+        "id": "ncc_67a8b2dfdc20e",
+        "codeNCC": "HOA",
+        "nameNCC": "CHỊ HOA - KHOAI LANG NHẬT"
+    },
+    {
+        "id": "ncc_67a8b2dfdc20f",
+        "codeNCC": "MANH",
+        "nameNCC": "VIỄN MẠNH- ỚT CHUÔNG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc210",
+        "codeNCC": "MINH",
+        "nameNCC": "MINH - ĐỌT SU"
+    },
+    {
+        "id": "ncc_67a8b2dfdc211",
+        "codeNCC": "MUI",
+        "nameNCC": "CHỊ MÙI - CÀ RỐT"
+    },
+    {
+        "id": "ncc_67a8b2dfdc212",
+        "codeNCC": "NGA",
+        "nameNCC": "NGA-CÀ BEEF-DƯA BABY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc213",
+        "codeNCC": "PHUONG",
+        "nameNCC": "PHƯƠNG -THÌA-CẢI"
+    },
+    {
+        "id": "ncc_67a8b2dfdc214",
+        "codeNCC": "TIEN",
+        "nameNCC": "DIỆP TIÊN - ĐẬU LEO-DƯA LEO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc215",
+        "codeNCC": "CTUAN",
+        "nameNCC": "CHÚ TUẤN- SU HÀO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc216",
+        "codeNCC": "TUYEN",
+        "nameNCC": "TUYÊN- MĂNG TÂY -NINH THUẬN"
+    },
+    {
+        "id": "ncc_67a8b2dfdc217",
+        "codeNCC": "TUOI",
+        "nameNCC": "CHỊ TƯƠI- CÀ BEEF"
+    },
+    {
+        "id": "ncc_67a8b2dfdc218",
+        "codeNCC": "THAI",
+        "nameNCC": "ANH THÁI- XÀ LÁCH"
+    },
+    {
+        "id": "ncc_67a8b2dfdc219",
+        "codeNCC": "THIET",
+        "nameNCC": "CHỊ THIẾT - RAU CỦ DL"
+    },
+    {
+        "id": "ncc_67a8b2dfdc21a",
+        "codeNCC": "CTHU",
+        "nameNCC": "CHỊ THU -BẮP NỮ HOÀNG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc21b",
+        "codeNCC": "CTHUAN",
+        "nameNCC": "CÔ THUẦN- CỦ CẢI TRẮNG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc21c",
+        "codeNCC": "THUYTRAN",
+        "nameNCC": "CHỊ THỦY - LƠ BABY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc21d",
+        "codeNCC": "VMINH",
+        "nameNCC": "VĨNH PHƯƠNG - PHƯỜNG 8"
+    },
+    {
+        "id": "ncc_67a8b2dfdc21e",
+        "codeNCC": "VLAN",
+        "nameNCC": "CHỊ KIM LOAN- ỚT SỪNG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc21f",
+        "codeNCC": "TUANDL",
+        "nameNCC": "TUÂN ĐL"
+    },
+    {
+        "id": "ncc_67a8b2dfdc220",
+        "codeNCC": "XIXIN",
+        "nameNCC": "XI XIN - ĐƠN LẺ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc221",
+        "codeNCC": "HVAN",
+        "nameNCC": "HỒNG VÂN - LƠ BABY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc222",
+        "codeNCC": "HOPELAND",
+        "nameNCC": "HOPELAND- DƯA NHẬT"
+    },
+    {
+        "id": "ncc_67a8b2dfdc223",
+        "codeNCC": "QTRANG",
+        "nameNCC": "QUYỀN TRANG - KHOAI"
+    },
+    {
+        "id": "ncc_67a8b2dfdc224",
+        "codeNCC": "GIACY",
+        "nameNCC": "GIÁC Ý-CÀ BEEF"
+    },
+    {
+        "id": "ncc_67a8b2dfdc225",
+        "codeNCC": "KIMHOA",
+        "nameNCC": "KIM HOA - CÀ BEEF"
+    },
+    {
+        "id": "ncc_67a8b2dfdc226",
+        "codeNCC": "THUYCCD",
+        "nameNCC": "THỦY - CỦ CẢI ĐỎ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc227",
+        "codeNCC": "TYLE",
+        "nameNCC": "TÝ LỆ  - KHOAI LANG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc228",
+        "codeNCC": "HANHTAN",
+        "nameNCC": "HẠNH TÂN - SÚ TRẮNG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc229",
+        "codeNCC": "CUBI",
+        "nameNCC": "CU BI - ĐẬU BẮP"
+    },
+    {
+        "id": "ncc_67a8b2dfdc22a",
+        "codeNCC": "CHANGLE",
+        "nameNCC": "CHỊ HẰNG - HÀNG LẺ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc22b",
+        "codeNCC": "HAN",
+        "nameNCC": "BEEF GIA HÂN"
+    },
+    {
+        "id": "ncc_67a8b2dfdc22c",
+        "codeNCC": "HUNGLV",
+        "nameNCC": "HÙNG - THỦY CANH"
+    },
+    {
+        "id": "ncc_67a8b2dfdc22d",
+        "codeNCC": "BAOBI",
+        "nameNCC": "BẢO BÍ ĐỎ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc22e",
+        "codeNCC": "CLIEN",
+        "nameNCC": "CÔ LIÊN - ỚT XIÊM"
+    },
+    {
+        "id": "ncc_67a8b2dfdc22f",
+        "codeNCC": "HUONG",
+        "nameNCC": "HƯƠNG - LƠ XANH"
+    },
+    {
+        "id": "ncc_67a8b2dfdc230",
+        "codeNCC": "TNGUYEN",
+        "nameNCC": "TƯỜNG NGUYÊN - LÁ É"
+    },
+    {
+        "id": "ncc_67a8b2dfdc231",
+        "codeNCC": "HNGOC",
+        "nameNCC": "HỒNG NGỌC - QUẾ TÂY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc232",
+        "codeNCC": "CHIR",
+        "nameNCC": "CHI - CÀ RỐT"
+    },
+    {
+        "id": "ncc_67a8b2dfdc233",
+        "codeNCC": "BPDL",
+        "nameNCC": "BÍCH PHƯƠNG- ĐÀ LẠT"
+    },
+    {
+        "id": "ncc_67a8b2dfdc234",
+        "codeNCC": "MTU",
+        "nameNCC": "MÌNH TÚ - KHOAI TÂY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc235",
+        "codeNCC": "LAICD",
+        "nameNCC": "LÀI - CHANH DÂY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc236",
+        "codeNCC": "CYEN",
+        "nameNCC": "CHỊ YẾN - KHOAI LANG"
+    },
+    {
+        "id": "ncc_67a8b2dfdc237",
+        "codeNCC": "QKHANH",
+        "nameNCC": "KHANH - CẢI THẢO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc238",
+        "codeNCC": "KTAN",
+        "nameNCC": "KIM TÂN"
+    },
+    {
+        "id": "ncc_67a8b2dfdc239",
+        "codeNCC": "MI",
+        "nameNCC": "MI - PARO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc23a",
+        "codeNCC": "CTHANH",
+        "nameNCC": "THANH ỚT CAY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc23b",
+        "codeNCC": "MDUNG",
+        "nameNCC": "MỸ DUNG - CHANH DÂY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc23c",
+        "codeNCC": "MDUYEN",
+        "nameNCC": "DUYÊN - HỒNG GIÒN"
+    },
+    {
+        "id": "ncc_67a8b2dfdc23d",
+        "codeNCC": "LCAU",
+        "nameNCC": "LIÊN CẨU - THẢO TQ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc23e",
+        "codeNCC": "THAO",
+        "nameNCC": "THẠO  - CẢI THẢO"
+    },
+    {
+        "id": "ncc_67a8b2dfdc23f",
+        "codeNCC": "NAMCR",
+        "nameNCC": "NAM - CORON"
+    },
+    {
+        "id": "ncc_67a8b2dfdc240",
+        "codeNCC": "BAODL",
+        "nameNCC": "BẢO - CẦN TÂY DL"
+    },
+    {
+        "id": "ncc_67a8b2dfdc241",
+        "codeNCC": "THAOBN",
+        "nameNCC": "THẢO - BÍ NỤ"
+    },
+    {
+        "id": "ncc_67a8b2dfdc242",
+        "codeNCC": "NGUYENH",
+        "nameNCC": "NGUYÊN - HỒNG GIÒN"
+    },
+    {
+        "id": "ncc_67a8b2dfdc243",
+        "codeNCC": "HUANDL",
+        "nameNCC": "HUÂN ĐÀ LẠT"
+    },
+    {
+        "id": "ncc_67a8b2dfdc244",
+        "codeNCC": "CUONGCD",
+        "nameNCC": "CƯỜNG - CHANH DÂY"
+    },
+    {
+        "id": "ncc_67a8b2dfdc245",
+        "codeNCC": "TDOAN",
+        "nameNCC": "THUẬN ĐOÀN - CÀ RỐT"
+    }
 ]

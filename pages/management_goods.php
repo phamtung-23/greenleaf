@@ -16,7 +16,7 @@ include('../helper/general.php');
 $email = $_SESSION['email'];
 $fullname = $_SESSION['full_name'];
 
-// Đọc danh sách nhà cung cấp từ suppliers.csv (bỏ dòng đầu tiên)
+// Đọc danh sách nhà cung cấp từ goodss.csv (bỏ dòng đầu tiên)
 $goodsList = readJsonFile('../database/database/goods.json');
 
 ?>
@@ -67,6 +67,9 @@ $goodsList = readJsonFile('../database/database/goods.json');
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="management_goods.php">Hàng hóa</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="management_customer.php">Khách hàng</a>
+            </li>
           </ul>
           <form action="../logout.php" class="d-flex" role="search">
             <button class="btn btn-outline-danger" type="submit">Đăng xuất</button>
@@ -81,9 +84,7 @@ $goodsList = readJsonFile('../database/database/goods.json');
     <div class="container">
       <div class="row">
         <div class="col-12 d-flex justify-content-end gap-2">
-          <a href="import.php">
-            <button class="btn btn-success mt-2 mb-2"><i class="fa-solid fa-plus"></i> Thêm nhà hàng hóa</button>
-          </a>
+          <button class="btn btn-success mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#addGoodsModal" data-bs-whatever="@mdo"><i class="fa-solid fa-plus"></i> Thêm nhà hàng hóa</button>
         </div>
       </div>
     </div>
@@ -106,14 +107,101 @@ $goodsList = readJsonFile('../database/database/goods.json');
               echo "<td>" . $goods['codeGoods'] . "</td>";
               echo "<td>" . $goods['nameGoods'] . "</td>";
               echo "<td class='align-middle h-100 d-flex gap-1 justify-content-center align-items-center'>
-                                <button id='btn-detail' onclick='openDetail(\"" . $goods['codeGoods'] . "\")' type='button' class='btn btn-secondary'><i class='fa-solid fa-pen-to-square'></i></button>
-                                <button id='btn-detail' onclick='openDetail(\"" . $goods['codeGoods'] . "\")' type='button' class='btn btn-danger'><i class='fa-solid fa-trash'></i></button>
+                      <button type='button' class='btn btn-secondary btn-edit-goods' 
+                      data-bs-id='{$goods['id']}' 
+                      data-bs-name='{$goods['nameGoods']}' 
+                      data-bs-code='{$goods['codeGoods']}' 
+                      
+                      data-bs-toggle='modal' 
+                      data-bs-target='#editGoodsModal'>
+                        <i class='fa-solid fa-pen-to-square'></i>
+                      </button>
+                      <button type='button' class='btn btn-danger btn-delete-NCC' data-bs-toggle='modal' data-bs-target='#deleteGoodsModal' 
+                      data-goods-id='{$goods['id']}'
+                      data-goods-code='{$goods['codeGoods']}' data-goods-name='{$goods['nameGoods']}'>
+                        <i class='fa-solid fa-trash'></i>
+                      </button>
                             </td>";
               echo "</tr>";
             }
             ?>
           </tbody>
         </table>
+      </div>
+    </div>
+
+    <!-- Modal Add -->
+    <div class="modal fade" id="addGoodsModal" tabindex="-1" aria-labelledby="addGoodsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="addGoodsModalLabel">Thêm loại hàng hóa</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="codeGoods" class="col-form-label">Mã hàng hóa:</label>
+                <input type="text" class="form-control" id="codeGoods" name="codeGoods">
+              </div>
+              <div class="mb-3">
+                <label for="nameGoods" class="col-form-label">Tên hàng hóa:</label>
+                <input type="text" class="form-control" id="nameGoods" name="nameGoods">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+            <button type="button" class="btn btn-success" id="btn-add-goods">Thêm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Edit -->
+    <div class="modal fade" id="editGoodsModal" tabindex="-1" aria-labelledby="editGoodsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editGoodsModalLabel">Chỉnh sửa hàng hóa</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <input type="hidden" id="editIdGoods"> <!-- Hidden field to store the goods's ID -->
+              <div class="mb-3">
+                <label for="editCodeGoods" class="col-form-label">Mã hàng hóa:</label>
+                <input type="text" class="form-control" id="editCodeGoods" name="editCodeGoods">
+              </div>
+              <div class="mb-3">
+                <label for="editNameGoods" class="col-form-label">Tên hàng hóa:</label>
+                <input type="text" class="form-control" id="editNameGoods" name="editNameGoods">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+            <button type="button" class="btn btn-primary" id="btn-update-goods">Cập nhật</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Delete goods -->
+    <div class="modal fade" id="deleteGoodsModal" tabindex="-1" aria-labelledby="deleteGoodsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h1 class="modal-title fs-5" id="deleteGoodsModalLabel">Xóa hàng hóa</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Bạn có chắc chắn muốn xóa hàng hóa <strong id="deleteGoodsName"></strong>?</p>
+            <input type="hidden" id="deleteGoodsId">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+            <button type="button" class="btn btn-danger" id="confirmDeleteGoods">Xóa</button>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -165,7 +253,165 @@ $goodsList = readJsonFile('../database/database/goods.json');
         $('#adminTable').DataTable().columns(6).search(selectedStatus).draw();
       });
 
+      // Open Edit Modal with existing goods data
+      const exampleModal = document.getElementById('editGoodsModal')
+      if (exampleModal) {
+        exampleModal.addEventListener('show.bs.modal', event => {
+          // Button that triggered the modal
+          const button = event.relatedTarget
+          // Extract info from data-bs-* attributes
+          const id = button.getAttribute('data-bs-id')
+          const name = button.getAttribute('data-bs-name')
+          const code = button.getAttribute('data-bs-code')
+          // If necessary, you could initiate an Ajax request here
+          // and then do the updating in a callback.
 
+          // Update the modal's content.
+          const editIdGoods = exampleModal.querySelector('#editIdGoods')
+          const editCodeGoods = exampleModal.querySelector('#editCodeGoods')
+          const editNameGoods = exampleModal.querySelector('#editNameGoods')
+
+          editIdGoods.value = id
+          editCodeGoods.value = code
+          editNameGoods.value = name
+        })
+      }
+
+      // Open Delete Modal with existing goods data
+      const deleteModal = document.getElementById('deleteGoodsModal')
+      if (deleteModal) {
+        deleteModal.addEventListener('show.bs.modal', event => {
+          // Button that triggered the modal
+          const button = event.relatedTarget
+          // Extract info from data-bs-* attributes
+          const id = button.getAttribute('data-goods-id')
+          const name = button.getAttribute('data-goods-name')
+
+          // Update the modal's content.
+          const deleteGoodsName = deleteModal.querySelector('#deleteGoodsName')
+          const deleteGoodsId = deleteModal.querySelector('#deleteGoodsId')
+
+          deleteGoodsName.textContent = name
+          deleteGoodsId.value = id
+        })
+      }
+
+      // Handle add goods
+      $('#btn-add-goods').on('click', function() {
+        let codeGoods = $('#codeGoods').val();
+        let nameGoods = $('#nameGoods').val();
+
+        if (codeGoods == '' || nameGoods == '') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Lỗi',
+            text: 'Vui lòng nhập đầy đủ thông tin!'
+          });
+        } else {
+          $.ajax({
+            url: 'backend/addGoods.php',
+            type: 'POST',
+            data: {
+              codeGoods: codeGoods,
+              nameGoods: nameGoods
+            },
+            success: function(response) {
+              if (response.success) {
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Thành công',
+                  text: response.message
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    location.reload();
+                  }
+                });
+              } else {
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Lỗi',
+                  text: response.message
+                });
+              }
+            }
+          });
+        }
+      });
+
+      // Handle Update goods
+      $('#btn-update-goods').on('click', function() {
+        let id = $('#editIdGoods').val();
+        let updatedCodeGoods = $('#editCodeGoods').val();
+        let updatedNameGoods = $('#editNameGoods').val();
+
+        if (updatedCodeGoods === '' || updatedNameGoods === '') {
+          Swal.fire({
+            icon: 'error',
+            title: 'Lỗi',
+            text: 'Vui lòng nhập đầy đủ thông tin!'
+          });
+        } else {
+          $.ajax({
+            url: 'backend/editGoods.php',
+            type: 'POST',
+            data: {
+              id: id,
+              updatedCodeGoods: updatedCodeGoods,
+              updatedNameGoods: updatedNameGoods
+            },
+            success: function(response) {
+              if (response.success) {
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Thành công',
+                  text: response.message
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    location.reload();
+                  }
+                });
+              } else {
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Lỗi',
+                  text: response.message
+                });
+              }
+            }
+          });
+        }
+      });
+      // Handle Delete goods
+      $('#confirmDeleteGoods').on('click', function() {
+        let id = $('#deleteGoodsId').val();
+
+        $.ajax({
+          url: 'backend/deleteGoods.php',
+          type: 'POST',
+          data: {
+            id: id
+          },
+          success: function(response) {
+            if (response.success) {
+              Swal.fire({
+                icon: 'success',
+                title: 'Thành công',
+                text: response.message
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  location.reload();
+                }
+              });
+            } else {
+              Swal.fire({
+                icon: 'error',
+                title: 'Lỗi',
+                text: response.message
+              });
+            }
+          }
+        });
+      });
 
     });
   </script>

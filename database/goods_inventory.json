@@ -134,5 +134,35 @@
         "images": [
             "database\/image_import\/image_67a4d963cfd15_2025_02_06.jpg"
         ]
+    },
+    {
+        "id": "good_67a8c61a1e5f4",
+        "index": 10,
+        "createdAt": "2025-02-09 16:13:30",
+        "supplier": "HÙNG- THÌ LÀ",
+        "item": "BTROC - BÍ TRỌC",
+        "weight": 12,
+        "disposed_weight": 1,
+        "remaining_weight": 11,
+        "unit_price": 1000000,
+        "total_price": 11000000,
+        "images": [
+            "database\/image_import\/image_67a8c61a1dcfe_2025_02_09.png"
+        ]
+    },
+    {
+        "id": "good_67a8c7dc15713",
+        "index": 11,
+        "createdAt": "2025-02-09 16:21:00",
+        "supplier": "ncc_67a8b2dfdc1b2",
+        "item": "goods_67a8b3ad649e3",
+        "weight": 12,
+        "disposed_weight": 2,
+        "remaining_weight": 10,
+        "unit_price": 1111111,
+        "total_price": 11111110,
+        "images": [
+            "database\/image_import\/image_67a8c7dc1253c_2025_02_09.jpg"
+        ]
     }
 ]

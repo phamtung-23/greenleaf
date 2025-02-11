@@ -62,6 +62,9 @@ $fullname = $_SESSION['full_name'];
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="management_goods.php">Hàng hóa</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="management_customer.php">Khách hàng</a>
+                        </li>
                     </ul>
                     <form action="../logout.php" class="d-flex" role="search">
                         <button class="btn btn-outline-danger" type="submit">Đăng xuất</button>

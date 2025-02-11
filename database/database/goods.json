@@ -1,166 +1,822 @@
 [
-  { "codeGoods": "OCXL", "nameGoods": "ỚT CHUÔNG XANH LỚN" },
-  { "codeGoods": "OCXT", "nameGoods": "ỚT CHUÔNG XANH TRUNG" },
-  { "codeGoods": "HLA", "nameGoods": "HÀNH LÁ" },
-  { "codeGoods": "BNU", "nameGoods": "BÍ NỤ" },
-  { "codeGoods": "BTROC", "nameGoods": "BÍ TRỌC" },
-  { "codeGoods": "CTIM", "nameGoods": "CÀ TÍM" },
-  { "codeGoods": "SSU", "nameGoods": "SU SU" },
-  { "codeGoods": "DSU", "nameGoods": "ĐỌT SU" },
-  { "codeGoods": "BHL", "nameGoods": "BÍ HỒ LÔ" },
-  { "codeGoods": "BDT", "nameGoods": "BÍ ĐỎ TRÒN" },
-  { "codeGoods": "LOX", "nameGoods": "BÔNG LƠ XANH" },
-  { "codeGoods": "LOT", "nameGoods": "BÔNG LƠ TRẮNG" },
-  { "codeGoods": "XLM", "nameGoods": "XÀ LÁCH MỸ" },
-  { "codeGoods": "BCTR", "nameGoods": "BẮP CẢI TRĂNG" },
-  { "codeGoods": "CAITHAO", "nameGoods": "CẢI THẢO" },
-  { "codeGoods": "CROTL", "nameGoods": "CÀ RỐT LỚN" },
-  { "codeGoods": "CROTN", "nameGoods": "CÀ RỐT NHỎ" },
-  { "codeGoods": "BEL", "nameGoods": "CÀ CHUA BEEF LỚN" },
-  { "codeGoods": "BETR", "nameGoods": "CÀ CHUA BEEF TRUNG" },
-  { "codeGoods": "CACHUAL", "nameGoods": "CÀ CHUA LỚN" },
-  { "codeGoods": "CACHUAT", "nameGoods": "CÀ CHUA TRUNG" },
-  { "codeGoods": "OCDL", "nameGoods": "ỚT CHUÔNG ĐỎ LỚN" },
-  { "codeGoods": "OCDT", "nameGoods": "ỚT CHUÔNG ĐỎ TRUNG" },
-  { "codeGoods": "OCVL", "nameGoods": "ỚT CHUÔNG VÀNG LỚN" },
-  { "codeGoods": "OCVT", "nameGoods": "ỚT CHUÔNG VÀNG TRUNG" },
-  { "codeGoods": "KLN", "nameGoods": "KHOAI LANG NHẬT" },
-  { "codeGoods": "LKM", "nameGoods": "KHOAI LANG MẬT" },
-  { "codeGoods": "LBB", "nameGoods": "BÔNG CẢI XANH BABY" },
-  { "codeGoods": "LLX", "nameGoods": "LÔ LÔ XANH" },
-  { "codeGoods": "XLMO", "nameGoods": "XÀ LÁCH MỠ" },
-  { "codeGoods": "OCBB", "nameGoods": "ỚT CHUÔNG BABY" },
-  { "codeGoods": "OCTH", "nameGoods": "ỚT CHỈ THIÊN" },
-  { "codeGoods": "TANO", "nameGoods": "TẦN Ô - CẢI CÚC" },
-  { "codeGoods": "KLN", "nameGoods": "KHOAI LANG NHẬT" },
-  { "codeGoods": "CTAYT", "nameGoods": "CẦN TÂY TRUNG" },
-  { "codeGoods": "CSA", "nameGoods": "CÂY SẢ" },
-  { "codeGoods": "HTAYL", "nameGoods": "HÀNH TÂY LỚN" },
-  { "codeGoods": "HTAYT", "nameGoods": "HÀNH TÂY TRUNG" },
-  { "codeGoods": "HTAYC", "nameGoods": "HÀNH TÂY CỒ" },
-  { "codeGoods": "HTAYB", "nameGoods": "HÀNH TÂY BI" },
-  { "codeGoods": "CGUNG", "nameGoods": "CỦ GỪNG" },
-  { "codeGoods": "BCTIM", "nameGoods": "BẮP CẢI TÍM" },
-  { "codeGoods": "BCTT", "nameGoods": "BẮP CẢI TRÁI TIM" },
-  { "codeGoods": "CKH", "nameGoods": "CHANH KHÔNG HẠT" },
-  { "codeGoods": "CCH", "nameGoods": "CHANH CÓ HẠT" },
-  { "codeGoods": "KTV", "nameGoods": "KHOAI TÂY VÀNG" },
-  { "codeGoods": "KTH", "nameGoods": "KHOAI TÂY HỒNG" },
-  { "codeGoods": "CDAY", "nameGoods": "CHANH DÂY" },
-  { "codeGoods": "KSO", "nameGoods": "KHOAI SỌ" },
-  { "codeGoods": "NGR", "nameGoods": "NGÒ RÍ" },
-  { "codeGoods": "QTAY", "nameGoods": "QUẾ TÂY" },
-  { "codeGoods": "TIATO", "nameGoods": "TÍA TÔ" },
-  { "codeGoods": "LAE", "nameGoods": "LÁ É" },
-  { "codeGoods": "LLTIM", "nameGoods": "LÔ LÔ TÍM" },
-  { "codeGoods": "RDCO", "nameGoods": "RADICHIO" },
-  { "codeGoods": "CCD", "nameGoods": "CỦ CẢI ĐỎ" },
-  { "codeGoods": "HUNGQ", "nameGoods": "HÚNG QUẾ" },
-  { "codeGoods": "NGOG", "nameGoods": "NGÒ GAI" },
-  { "codeGoods": "LHE", "nameGoods": "HẸ LÁ" },
-  { "codeGoods": "KLE", "nameGoods": "CẢI KALE" },
-  { "codeGoods": "DLN", "nameGoods": "DƯA LEO NHẬT" },
-  { "codeGoods": "DBB", "nameGoods": "DƯA LEO BABY" },
-  { "codeGoods": "DCVT", "nameGoods": "ĐẬU COVE TRẮNG" },
-  { "codeGoods": "DCVN", "nameGoods": "ĐẬU COVE NHẬT" },
-  { "codeGoods": "PARO", "nameGoods": "HÀNH PARO" },
-  { "codeGoods": "CCCR", "nameGoods": "CÀ CHUA CHERY" },
-  { "codeGoods": "BNV", "nameGoods": "BÍ NGÒI VÀNG" },
-  { "codeGoods": "RRUNG", "nameGoods": "RAU RỪNG" },
-  { "codeGoods": "BMY", "nameGoods": "BẮP MỸ" },
-  { "codeGoods": "DLEO", "nameGoods": "DƯA LEO THƯỜNG" },
-  { "codeGoods": "CCAI", "nameGoods": "CỦ CẢI TRẮNG" },
-  { "codeGoods": "MT1", "nameGoods": "MĂNG TÂY LOẠI 1" },
-  { "codeGoods": "MT2", "nameGoods": "MĂNG TÂY LOẠI 2" },
-  { "codeGoods": "MT3", "nameGoods": "MĂNG TÂY LOẠI 3" },
-  { "codeGoods": "BNX", "nameGoods": "BÍ NGÒI XANH" },
-  { "codeGoods": "DRONG", "nameGoods": "ĐẬU RỒNG" },
-  { "codeGoods": "DBAP", "nameGoods": "ĐẬU BẮP" },
-  { "codeGoods": "DHU", "nameGoods": "DƯA HẠ UYỂN" },
-  { "codeGoods": "KMON", "nameGoods": "KHOAI MÔN" },
-  { "codeGoods": "DPHONG", "nameGoods": "ĐẬU PHỘNG" },
-  { "codeGoods": "PLM", "nameGoods": "ỚT PALEMO" },
-  { "codeGoods": "SD", "nameGoods": "ỚT SỪNG ĐỎ" },
-  { "codeGoods": "SX", "nameGoods": "ỚT SỪNG XANH" },
-  { "codeGoods": "DHL", "nameGoods": "ĐẬU HÀ LAN" },
-  { "codeGoods": "CTHIA", "nameGoods": "CẢI THÌA" },
-  { "codeGoods": "BXOI", "nameGoods": "CẢI BÓ XÔI" },
-  { "codeGoods": "SUHAO", "nameGoods": "CỦ SU HÀO" },
-  { "codeGoods": "RBB", "nameGoods": "RỐT BABY" },
-  { "codeGoods": "BCTR", "nameGoods": "BẮP CẢI TRẮNG" },
-  { "codeGoods": "XXANH", "nameGoods": "ỚT XIÊM XANH" },
-  { "codeGoods": "BNON", "nameGoods": "BÍ NGÔ NON" },
-  { "codeGoods": "LME", "nameGoods": "LÁ MÈ" },
-  { "codeGoods": "DX", "nameGoods": "CỦ DỀN XÔ" },
-  { "codeGoods": "DST", "nameGoods": "CỦ DỀN SIÊU THỊ" },
-  { "codeGoods": "BXOI", "nameGoods": "CẢI BÓ XÔI" },
-  { "codeGoods": "BTIM", "nameGoods": "BẮP NỮ HOÀNG" },
-  { "codeGoods": "RMAIN", "nameGoods": "ROMAIN" },
-  { "codeGoods": "CVANG", "nameGoods": "CÀ CHERY VÀNG" },
-  { "codeGoods": "HCN", "nameGoods": "HỒNG CHÍN NÊN" },
-  { "codeGoods": "TDUA", "nameGoods": "TRÁI DỪA" },
-  { "codeGoods": "BS", "nameGoods": "BƠ SÁP" },
-  { "codeGoods": "THOM", "nameGoods": "THƠM MẬT" },
-  { "codeGoods": "CAM", "nameGoods": "CAM SÀNH" },
-  { "codeGoods": "XLCR", "nameGoods": "XÀ LÁCH CORON" },
-  { "codeGoods": "GIA", "nameGoods": "GIÁ" },
-  { "codeGoods": "CTOI", "nameGoods": "TỎI" },
-  { "codeGoods": "BUN", "nameGoods": "BÚN" },
-  { "codeGoods": "NROM", "nameGoods": "NẤM RƠM" },
-  { "codeGoods": "PAROD", "nameGoods": "HÀNH PARO ĐẤT" },
-  { "codeGoods": "SCL", "nameGoods": "CÀ SOCOLA" },
-  { "codeGoods": "BCT", "nameGoods": "BẮP CẢI TÍM" },
-  { "codeGoods": "TBOP", "nameGoods": "TẦM BÓP" },
-  { "codeGoods": "OCTHL", "nameGoods": "ỚT CHỈ THIÊN LẶT" },
-  { "codeGoods": "CROTC", "nameGoods": "CÀ RỐT CỒ" },
-  { "codeGoods": "KLT", "nameGoods": "KHOAI LANG TÍM" },
-  { "codeGoods": "CDEN", "nameGoods": "CỦ DỀN" },
-  { "codeGoods": "HDUNG", "nameGoods": "HÚNG ĐỨNG" },
-  { "codeGoods": "HLUI", "nameGoods": "HÚNG LỦI" },
-  { "codeGoods": "RMUONG", "nameGoods": "RAU MUỐNG" },
-  { "codeGoods": "BAPN", "nameGoods": "BẮP NON" },
-  { "codeGoods": "DCA", "nameGoods": "DIẾP CÁ" },
-  { "codeGoods": "CNGOT", "nameGoods": "CẢI NGỌT" },
-  { "codeGoods": "KQUA", "nameGoods": "KHỔ QUA" },
-  { "codeGoods": "DLT", "nameGoods": "DƯA LEO THƯỜNG" },
-  { "codeGoods": "ROCKET", "nameGoods": "ROCKET" },
-  { "codeGoods": "XLFS", "nameGoods": "XÀ LÁCH FRISE" },
-  { "codeGoods": "KLM", "nameGoods": "KHOAI LANG MẬT" },
-  { "codeGoods": "SHAO", "nameGoods": "SU HÀO" },
-  { "codeGoods": "NGG", "nameGoods": "NGÒ GAI" },
-  { "codeGoods": "NGO", "nameGoods": "NGÒ OM" },
-  { "codeGoods": "RRAM", "nameGoods": "RAU RĂM" },
-  { "codeGoods": "LXANH", "nameGoods": "LƠ XANH" },
-  { "codeGoods": "LTRANG", "nameGoods": "LƠ TRẮNG" },
-  { "codeGoods": "CXANH", "nameGoods": "CẢI XANH" },
-  { "codeGoods": "MUOP", "nameGoods": "MƯỚP" },
-  { "codeGoods": "BAU", "nameGoods": "BẦU" },
-  { "codeGoods": "BDX", "nameGoods": "BÍ ĐAO XANH" },
-  { "codeGoods": "KGIOI", "nameGoods": "KINH GIỚI" },
-  { "codeGoods": "TLA", "nameGoods": "THÌ LÀ" },
-  { "codeGoods": "CTAU", "nameGoods": "CẦN TÀU" },
-  { "codeGoods": "CDAU", "nameGoods": "CỦ ĐẬU" },
-  { "codeGoods": "RNGOT", "nameGoods": "RAU NGÓT" },
-  { "codeGoods": "MTOI", "nameGoods": "MỒNG TƠI" },
-  { "codeGoods": "GSONG", "nameGoods": "GIÁ SỐNG" },
-  { "codeGoods": "RLANG", "nameGoods": "RAU LANG" },
-  { "codeGoods": "DNAO", "nameGoods": "DỪA NẠO" },
-  { "codeGoods": "HTIM", "nameGoods": "HÀNH TÍM" },
-  { "codeGoods": "DTAY", "nameGoods": "DÂU TÂY" },
-  { "codeGoods": "NTAY", "nameGoods": "NGÒ TÂY" },
-  { "codeGoods": "CCHQ", "nameGoods": "CỦ CẢI HQ" },
-  { "codeGoods": "NAMKC", "nameGoods": "NẤM KIM CHÂM" },
-  { "codeGoods": "NAMBN", "nameGoods": "NẤM BÀO NGƯ" },
-  { "codeGoods": "BN", "nameGoods": "BÍ NHẬT" },
-  { "codeGoods": "CVL1", "nameGoods": "CHANH VÀNG L1" },
-  { "codeGoods": "CVL2", "nameGoods": "CHANH VÀNG L2" },
-  { "codeGoods": "CVL3", "nameGoods": "CHANH VÀNG L3" },
-  { "codeGoods": "MT4", "nameGoods": "MĂNG TÂY L4" },
-  { "codeGoods": "HTRUNG", "nameGoods": "HỒNG TRỨNG" },
-  { "codeGoods": "BHA", "nameGoods": "BẠC HÀ" },
-  { "codeGoods": "TX", "nameGoods": "TRÀ XANH" },
-  { "codeGoods": "CTAYL", "nameGoods": "CẦN TÂY LỚN" },
-  { "codeGoods": "HCD", "nameGoods": "HỒNG CHÉN ĐÁ" },
-  { "codeGoods": "KTU", "nameGoods": "KHOAI TỪ" },
-  { "codeGoods": "BTH", "nameGoods": "BẮP TÁCH HẠT" }
+    {
+        "id": "goods_67a8b3ad649dd",
+        "codeGoods": "OCXL",
+        "nameGoods": "ỚT CHUÔNG XANH LỚN"
+    },
+    {
+        "id": "goods_67a8b3ad649e2",
+        "codeGoods": "OCXT",
+        "nameGoods": "ỚT CHUÔNG XANH TRUNG"
+    },
+    {
+        "id": "goods_67a8b3ad649e3",
+        "codeGoods": "HLA",
+        "nameGoods": "HÀNH LÁ"
+    },
+    {
+        "id": "goods_67a8b3ad649e4",
+        "codeGoods": "BNU",
+        "nameGoods": "BÍ NỤ"
+    },
+    {
+        "id": "goods_67a8b3ad649e5",
+        "codeGoods": "BTROC",
+        "nameGoods": "BÍ TRỌC"
+    },
+    {
+        "id": "goods_67a8b3ad649e6",
+        "codeGoods": "CTIM",
+        "nameGoods": "CÀ TÍM"
+    },
+    {
+        "id": "goods_67a8b3ad649e7",
+        "codeGoods": "SSU",
+        "nameGoods": "SU SU"
+    },
+    {
+        "id": "goods_67a8b3ad649e8",
+        "codeGoods": "DSU",
+        "nameGoods": "ĐỌT SU"
+    },
+    {
+        "id": "goods_67a8b3ad649e9",
+        "codeGoods": "BHL",
+        "nameGoods": "BÍ HỒ LÔ"
+    },
+    {
+        "id": "goods_67a8b3ad649ea",
+        "codeGoods": "BDT",
+        "nameGoods": "BÍ ĐỎ TRÒN"
+    },
+    {
+        "id": "goods_67a8b3ad649eb",
+        "codeGoods": "LOX",
+        "nameGoods": "BÔNG LƠ XANH"
+    },
+    {
+        "id": "goods_67a8b3ad649ec",
+        "codeGoods": "LOT",
+        "nameGoods": "BÔNG LƠ TRẮNG"
+    },
+    {
+        "id": "goods_67a8b3ad649ed",
+        "codeGoods": "XLM",
+        "nameGoods": "XÀ LÁCH MỸ"
+    },
+    {
+        "id": "goods_67a8b3ad649ee",
+        "codeGoods": "BCTR",
+        "nameGoods": "BẮP CẢI TRĂNG"
+    },
+    {
+        "id": "goods_67a8b3ad649ef",
+        "codeGoods": "CAITHAO",
+        "nameGoods": "CẢI THẢO"
+    },
+    {
+        "id": "goods_67a8b3ad649f0",
+        "codeGoods": "CROTL",
+        "nameGoods": "CÀ RỐT LỚN"
+    },
+    {
+        "id": "goods_67a8b3ad649f1",
+        "codeGoods": "CROTN",
+        "nameGoods": "CÀ RỐT NHỎ"
+    },
+    {
+        "id": "goods_67a8b3ad649f2",
+        "codeGoods": "BEL",
+        "nameGoods": "CÀ CHUA BEEF LỚN"
+    },
+    {
+        "id": "goods_67a8b3ad649f3",
+        "codeGoods": "BETR",
+        "nameGoods": "CÀ CHUA BEEF TRUNG"
+    },
+    {
+        "id": "goods_67a8b3ad649f4",
+        "codeGoods": "CACHUAL",
+        "nameGoods": "CÀ CHUA LỚN"
+    },
+    {
+        "id": "goods_67a8b3ad649f5",
+        "codeGoods": "CACHUAT",
+        "nameGoods": "CÀ CHUA TRUNG"
+    },
+    {
+        "id": "goods_67a8b3ad649f6",
+        "codeGoods": "OCDL",
+        "nameGoods": "ỚT CHUÔNG ĐỎ LỚN"
+    },
+    {
+        "id": "goods_67a8b3ad649f7",
+        "codeGoods": "OCDT",
+        "nameGoods": "ỚT CHUÔNG ĐỎ TRUNG"
+    },
+    {
+        "id": "goods_67a8b3ad649f8",
+        "codeGoods": "OCVL",
+        "nameGoods": "ỚT CHUÔNG VÀNG LỚN"
+    },
+    {
+        "id": "goods_67a8b3ad649f9",
+        "codeGoods": "OCVT",
+        "nameGoods": "ỚT CHUÔNG VÀNG TRUNG"
+    },
+    {
+        "id": "goods_67a8b3ad649fa",
+        "codeGoods": "KLN",
+        "nameGoods": "KHOAI LANG NHẬT"
+    },
+    {
+        "id": "goods_67a8b3ad649fb",
+        "codeGoods": "LKM",
+        "nameGoods": "KHOAI LANG MẬT"
+    },
+    {
+        "id": "goods_67a8b3ad649fc",
+        "codeGoods": "LBB",
+        "nameGoods": "BÔNG CẢI XANH BABY"
+    },
+    {
+        "id": "goods_67a8b3ad649fd",
+        "codeGoods": "LLX",
+        "nameGoods": "LÔ LÔ XANH"
+    },
+    {
+        "id": "goods_67a8b3ad649fe",
+        "codeGoods": "XLMO",
+        "nameGoods": "XÀ LÁCH MỠ"
+    },
+    {
+        "id": "goods_67a8b3ad649ff",
+        "codeGoods": "OCBB",
+        "nameGoods": "ỚT CHUÔNG BABY"
+    },
+    {
+        "id": "goods_67a8b3ad64a00",
+        "codeGoods": "OCTH",
+        "nameGoods": "ỚT CHỈ THIÊN"
+    },
+    {
+        "id": "goods_67a8b3ad64a01",
+        "codeGoods": "TANO",
+        "nameGoods": "TẦN Ô - CẢI CÚC"
+    },
+    {
+        "id": "goods_67a8b3ad64a02",
+        "codeGoods": "KLN",
+        "nameGoods": "KHOAI LANG NHẬT"
+    },
+    {
+        "id": "goods_67a8b3ad64a03",
+        "codeGoods": "CTAYT",
+        "nameGoods": "CẦN TÂY TRUNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a04",
+        "codeGoods": "CSA",
+        "nameGoods": "CÂY SẢ"
+    },
+    {
+        "id": "goods_67a8b3ad64a05",
+        "codeGoods": "HTAYL",
+        "nameGoods": "HÀNH TÂY LỚN"
+    },
+    {
+        "id": "goods_67a8b3ad64a06",
+        "codeGoods": "HTAYT",
+        "nameGoods": "HÀNH TÂY TRUNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a07",
+        "codeGoods": "HTAYC",
+        "nameGoods": "HÀNH TÂY CỒ"
+    },
+    {
+        "id": "goods_67a8b3ad64a08",
+        "codeGoods": "HTAYB",
+        "nameGoods": "HÀNH TÂY BI"
+    },
+    {
+        "id": "goods_67a8b3ad64a09",
+        "codeGoods": "CGUNG",
+        "nameGoods": "CỦ GỪNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a0a",
+        "codeGoods": "BCTIM",
+        "nameGoods": "BẮP CẢI TÍM"
+    },
+    {
+        "id": "goods_67a8b3ad64a0b",
+        "codeGoods": "BCTT",
+        "nameGoods": "BẮP CẢI TRÁI TIM"
+    },
+    {
+        "id": "goods_67a8b3ad64a0c",
+        "codeGoods": "CKH",
+        "nameGoods": "CHANH KHÔNG HẠT"
+    },
+    {
+        "id": "goods_67a8b3ad64a0d",
+        "codeGoods": "CCH",
+        "nameGoods": "CHANH CÓ HẠT"
+    },
+    {
+        "id": "goods_67a8b3ad64a0e",
+        "codeGoods": "KTV",
+        "nameGoods": "KHOAI TÂY VÀNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a0f",
+        "codeGoods": "KTH",
+        "nameGoods": "KHOAI TÂY HỒNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a10",
+        "codeGoods": "CDAY",
+        "nameGoods": "CHANH DÂY"
+    },
+    {
+        "id": "goods_67a8b3ad64a11",
+        "codeGoods": "KSO",
+        "nameGoods": "KHOAI SỌ"
+    },
+    {
+        "id": "goods_67a8b3ad64a12",
+        "codeGoods": "NGR",
+        "nameGoods": "NGÒ RÍ"
+    },
+    {
+        "id": "goods_67a8b3ad64a13",
+        "codeGoods": "QTAY",
+        "nameGoods": "QUẾ TÂY"
+    },
+    {
+        "id": "goods_67a8b3ad64a14",
+        "codeGoods": "TIATO",
+        "nameGoods": "TÍA TÔ"
+    },
+    {
+        "id": "goods_67a8b3ad64a15",
+        "codeGoods": "LAE",
+        "nameGoods": "LÁ É"
+    },
+    {
+        "id": "goods_67a8b3ad64a16",
+        "codeGoods": "LLTIM",
+        "nameGoods": "LÔ LÔ TÍM"
+    },
+    {
+        "id": "goods_67a8b3ad64a18",
+        "codeGoods": "RDCO",
+        "nameGoods": "RADICHIO"
+    },
+    {
+        "id": "goods_67a8b3ad64a19",
+        "codeGoods": "CCD",
+        "nameGoods": "CỦ CẢI ĐỎ"
+    },
+    {
+        "id": "goods_67a8b3ad64a1a",
+        "codeGoods": "HUNGQ",
+        "nameGoods": "HÚNG QUẾ"
+    },
+    {
+        "id": "goods_67a8b3ad64a1b",
+        "codeGoods": "NGOG",
+        "nameGoods": "NGÒ GAI"
+    },
+    {
+        "id": "goods_67a8b3ad64a1c",
+        "codeGoods": "LHE",
+        "nameGoods": "HẸ LÁ"
+    },
+    {
+        "id": "goods_67a8b3ad64a1d",
+        "codeGoods": "KLE",
+        "nameGoods": "CẢI KALE"
+    },
+    {
+        "id": "goods_67a8b3ad64a1e",
+        "codeGoods": "DLN",
+        "nameGoods": "DƯA LEO NHẬT"
+    },
+    {
+        "id": "goods_67a8b3ad64a1f",
+        "codeGoods": "DBB",
+        "nameGoods": "DƯA LEO BABY"
+    },
+    {
+        "id": "goods_67a8b3ad64a20",
+        "codeGoods": "DCVT",
+        "nameGoods": "ĐẬU COVE TRẮNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a21",
+        "codeGoods": "DCVN",
+        "nameGoods": "ĐẬU COVE NHẬT"
+    },
+    {
+        "id": "goods_67a8b3ad64a22",
+        "codeGoods": "PARO",
+        "nameGoods": "HÀNH PARO"
+    },
+    {
+        "id": "goods_67a8b3ad64a23",
+        "codeGoods": "CCCR",
+        "nameGoods": "CÀ CHUA CHERY"
+    },
+    {
+        "id": "goods_67a8b3ad64a24",
+        "codeGoods": "BNV",
+        "nameGoods": "BÍ NGÒI VÀNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a25",
+        "codeGoods": "RRUNG",
+        "nameGoods": "RAU RỪNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a26",
+        "codeGoods": "BMY",
+        "nameGoods": "BẮP MỸ"
+    },
+    {
+        "id": "goods_67a8b3ad64a27",
+        "codeGoods": "DLEO",
+        "nameGoods": "DƯA LEO THƯỜNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a28",
+        "codeGoods": "CCAI",
+        "nameGoods": "CỦ CẢI TRẮNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a29",
+        "codeGoods": "MT1",
+        "nameGoods": "MĂNG TÂY LOẠI 1"
+    },
+    {
+        "id": "goods_67a8b3ad64a2a",
+        "codeGoods": "MT2",
+        "nameGoods": "MĂNG TÂY LOẠI 2"
+    },
+    {
+        "id": "goods_67a8b3ad64a2b",
+        "codeGoods": "MT3",
+        "nameGoods": "MĂNG TÂY LOẠI 3"
+    },
+    {
+        "id": "goods_67a8b3ad64a2c",
+        "codeGoods": "BNX",
+        "nameGoods": "BÍ NGÒI XANH"
+    },
+    {
+        "id": "goods_67a8b3ad64a2d",
+        "codeGoods": "DRONG",
+        "nameGoods": "ĐẬU RỒNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a2e",
+        "codeGoods": "DBAP",
+        "nameGoods": "ĐẬU BẮP"
+    },
+    {
+        "id": "goods_67a8b3ad64a2f",
+        "codeGoods": "DHU",
+        "nameGoods": "DƯA HẠ UYỂN"
+    },
+    {
+        "id": "goods_67a8b3ad64a30",
+        "codeGoods": "KMON",
+        "nameGoods": "KHOAI MÔN"
+    },
+    {
+        "id": "goods_67a8b3ad64a31",
+        "codeGoods": "DPHONG",
+        "nameGoods": "ĐẬU PHỘNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a32",
+        "codeGoods": "PLM",
+        "nameGoods": "ỚT PALEMO"
+    },
+    {
+        "id": "goods_67a8b3ad64a33",
+        "codeGoods": "SD",
+        "nameGoods": "ỚT SỪNG ĐỎ"
+    },
+    {
+        "id": "goods_67a8b3ad64a34",
+        "codeGoods": "SX",
+        "nameGoods": "ỚT SỪNG XANH"
+    },
+    {
+        "id": "goods_67a8b3ad64a35",
+        "codeGoods": "DHL",
+        "nameGoods": "ĐẬU HÀ LAN"
+    },
+    {
+        "id": "goods_67a8b3ad64a36",
+        "codeGoods": "CTHIA",
+        "nameGoods": "CẢI THÌA"
+    },
+    {
+        "id": "goods_67a8b3ad64a37",
+        "codeGoods": "BXOI",
+        "nameGoods": "CẢI BÓ XÔI"
+    },
+    {
+        "id": "goods_67a8b3ad64a38",
+        "codeGoods": "SUHAO",
+        "nameGoods": "CỦ SU HÀO"
+    },
+    {
+        "id": "goods_67a8b3ad64a39",
+        "codeGoods": "RBB",
+        "nameGoods": "RỐT BABY"
+    },
+    {
+        "id": "goods_67a8b3ad64a3a",
+        "codeGoods": "BCTR",
+        "nameGoods": "BẮP CẢI TRẮNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a3b",
+        "codeGoods": "XXANH",
+        "nameGoods": "ỚT XIÊM XANH"
+    },
+    {
+        "id": "goods_67a8b3ad64a3c",
+        "codeGoods": "BNON",
+        "nameGoods": "BÍ NGÔ NON"
+    },
+    {
+        "id": "goods_67a8b3ad64a3d",
+        "codeGoods": "LME",
+        "nameGoods": "LÁ MÈ"
+    },
+    {
+        "id": "goods_67a8b3ad64a3e",
+        "codeGoods": "DX",
+        "nameGoods": "CỦ DỀN XÔ"
+    },
+    {
+        "id": "goods_67a8b3ad64a3f",
+        "codeGoods": "DST",
+        "nameGoods": "CỦ DỀN SIÊU THỊ"
+    },
+    {
+        "id": "goods_67a8b3ad64a40",
+        "codeGoods": "BXOI",
+        "nameGoods": "CẢI BÓ XÔI"
+    },
+    {
+        "id": "goods_67a8b3ad64a41",
+        "codeGoods": "BTIM",
+        "nameGoods": "BẮP NỮ HOÀNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a42",
+        "codeGoods": "RMAIN",
+        "nameGoods": "ROMAIN"
+    },
+    {
+        "id": "goods_67a8b3ad64a43",
+        "codeGoods": "CVANG",
+        "nameGoods": "CÀ CHERY VÀNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a44",
+        "codeGoods": "HCN",
+        "nameGoods": "HỒNG CHÍN NÊN"
+    },
+    {
+        "id": "goods_67a8b3ad64a45",
+        "codeGoods": "TDUA",
+        "nameGoods": "TRÁI DỪA"
+    },
+    {
+        "id": "goods_67a8b3ad64a46",
+        "codeGoods": "BS",
+        "nameGoods": "BƠ SÁP"
+    },
+    {
+        "id": "goods_67a8b3ad64a47",
+        "codeGoods": "THOM",
+        "nameGoods": "THƠM MẬT"
+    },
+    {
+        "id": "goods_67a8b3ad64a48",
+        "codeGoods": "CAM",
+        "nameGoods": "CAM SÀNH"
+    },
+    {
+        "id": "goods_67a8b3ad64a49",
+        "codeGoods": "XLCR",
+        "nameGoods": "XÀ LÁCH CORON"
+    },
+    {
+        "id": "goods_67a8b3ad64a4a",
+        "codeGoods": "GIA",
+        "nameGoods": "GIÁ"
+    },
+    {
+        "id": "goods_67a8b3ad64a4b",
+        "codeGoods": "CTOI",
+        "nameGoods": "TỎI"
+    },
+    {
+        "id": "goods_67a8b3ad64a4c",
+        "codeGoods": "BUN",
+        "nameGoods": "BÚN"
+    },
+    {
+        "id": "goods_67a8b3ad64a4d",
+        "codeGoods": "NROM",
+        "nameGoods": "NẤM RƠM"
+    },
+    {
+        "id": "goods_67a8b3ad64a4f",
+        "codeGoods": "PAROD",
+        "nameGoods": "HÀNH PARO ĐẤT"
+    },
+    {
+        "id": "goods_67a8b3ad64a50",
+        "codeGoods": "SCL",
+        "nameGoods": "CÀ SOCOLA"
+    },
+    {
+        "id": "goods_67a8b3ad64a51",
+        "codeGoods": "BCT",
+        "nameGoods": "BẮP CẢI TÍM"
+    },
+    {
+        "id": "goods_67a8b3ad64a52",
+        "codeGoods": "TBOP",
+        "nameGoods": "TẦM BÓP"
+    },
+    {
+        "id": "goods_67a8b3ad64a53",
+        "codeGoods": "OCTHL",
+        "nameGoods": "ỚT CHỈ THIÊN LẶT"
+    },
+    {
+        "id": "goods_67a8b3ad64a54",
+        "codeGoods": "CROTC",
+        "nameGoods": "CÀ RỐT CỒ"
+    },
+    {
+        "id": "goods_67a8b3ad64a55",
+        "codeGoods": "KLT",
+        "nameGoods": "KHOAI LANG TÍM"
+    },
+    {
+        "id": "goods_67a8b3ad64a56",
+        "codeGoods": "CDEN",
+        "nameGoods": "CỦ DỀN"
+    },
+    {
+        "id": "goods_67a8b3ad64a57",
+        "codeGoods": "HDUNG",
+        "nameGoods": "HÚNG ĐỨNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a58",
+        "codeGoods": "HLUI",
+        "nameGoods": "HÚNG LỦI"
+    },
+    {
+        "id": "goods_67a8b3ad64a59",
+        "codeGoods": "RMUONG",
+        "nameGoods": "RAU MUỐNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a5a",
+        "codeGoods": "BAPN",
+        "nameGoods": "BẮP NON"
+    },
+    {
+        "id": "goods_67a8b3ad64a5b",
+        "codeGoods": "DCA",
+        "nameGoods": "DIẾP CÁ"
+    },
+    {
+        "id": "goods_67a8b3ad64a5c",
+        "codeGoods": "CNGOT",
+        "nameGoods": "CẢI NGỌT"
+    },
+    {
+        "id": "goods_67a8b3ad64a5d",
+        "codeGoods": "KQUA",
+        "nameGoods": "KHỔ QUA"
+    },
+    {
+        "id": "goods_67a8b3ad64a5e",
+        "codeGoods": "DLT",
+        "nameGoods": "DƯA LEO THƯỜNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a5f",
+        "codeGoods": "ROCKET",
+        "nameGoods": "ROCKET"
+    },
+    {
+        "id": "goods_67a8b3ad64a60",
+        "codeGoods": "XLFS",
+        "nameGoods": "XÀ LÁCH FRISE"
+    },
+    {
+        "id": "goods_67a8b3ad64a61",
+        "codeGoods": "KLM",
+        "nameGoods": "KHOAI LANG MẬT"
+    },
+    {
+        "id": "goods_67a8b3ad64a62",
+        "codeGoods": "SHAO",
+        "nameGoods": "SU HÀO"
+    },
+    {
+        "id": "goods_67a8b3ad64a63",
+        "codeGoods": "NGG",
+        "nameGoods": "NGÒ GAI"
+    },
+    {
+        "id": "goods_67a8b3ad64a64",
+        "codeGoods": "NGO",
+        "nameGoods": "NGÒ OM"
+    },
+    {
+        "id": "goods_67a8b3ad64a65",
+        "codeGoods": "RRAM",
+        "nameGoods": "RAU RĂM"
+    },
+    {
+        "id": "goods_67a8b3ad64a66",
+        "codeGoods": "LXANH",
+        "nameGoods": "LƠ XANH"
+    },
+    {
+        "id": "goods_67a8b3ad64a67",
+        "codeGoods": "LTRANG",
+        "nameGoods": "LƠ TRẮNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a68",
+        "codeGoods": "CXANH",
+        "nameGoods": "CẢI XANH"
+    },
+    {
+        "id": "goods_67a8b3ad64a69",
+        "codeGoods": "MUOP",
+        "nameGoods": "MƯỚP"
+    },
+    {
+        "id": "goods_67a8b3ad64a6a",
+        "codeGoods": "BAU",
+        "nameGoods": "BẦU"
+    },
+    {
+        "id": "goods_67a8b3ad64a6b",
+        "codeGoods": "BDX",
+        "nameGoods": "BÍ ĐAO XANH"
+    },
+    {
+        "id": "goods_67a8b3ad64a6c",
+        "codeGoods": "KGIOI",
+        "nameGoods": "KINH GIỚI"
+    },
+    {
+        "id": "goods_67a8b3ad64a6d",
+        "codeGoods": "TLA",
+        "nameGoods": "THÌ LÀ"
+    },
+    {
+        "id": "goods_67a8b3ad64a6e",
+        "codeGoods": "CTAU",
+        "nameGoods": "CẦN TÀU"
+    },
+    {
+        "id": "goods_67a8b3ad64a6f",
+        "codeGoods": "CDAU",
+        "nameGoods": "CỦ ĐẬU"
+    },
+    {
+        "id": "goods_67a8b3ad64a70",
+        "codeGoods": "RNGOT",
+        "nameGoods": "RAU NGÓT"
+    },
+    {
+        "id": "goods_67a8b3ad64a71",
+        "codeGoods": "MTOI",
+        "nameGoods": "MỒNG TƠI"
+    },
+    {
+        "id": "goods_67a8b3ad64a72",
+        "codeGoods": "GSONG",
+        "nameGoods": "GIÁ SỐNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a73",
+        "codeGoods": "RLANG",
+        "nameGoods": "RAU LANG"
+    },
+    {
+        "id": "goods_67a8b3ad64a74",
+        "codeGoods": "DNAO",
+        "nameGoods": "DỪA NẠO"
+    },
+    {
+        "id": "goods_67a8b3ad64a75",
+        "codeGoods": "HTIM",
+        "nameGoods": "HÀNH TÍM"
+    },
+    {
+        "id": "goods_67a8b3ad64a76",
+        "codeGoods": "DTAY",
+        "nameGoods": "DÂU TÂY"
+    },
+    {
+        "id": "goods_67a8b3ad64a77",
+        "codeGoods": "NTAY",
+        "nameGoods": "NGÒ TÂY"
+    },
+    {
+        "id": "goods_67a8b3ad64a78",
+        "codeGoods": "CCHQ",
+        "nameGoods": "CỦ CẢI HQ"
+    },
+    {
+        "id": "goods_67a8b3ad64a79",
+        "codeGoods": "NAMKC",
+        "nameGoods": "NẤM KIM CHÂM"
+    },
+    {
+        "id": "goods_67a8b3ad64a7a",
+        "codeGoods": "NAMBN",
+        "nameGoods": "NẤM BÀO NGƯ"
+    },
+    {
+        "id": "goods_67a8b3ad64a7b",
+        "codeGoods": "BN",
+        "nameGoods": "BÍ NHẬT"
+    },
+    {
+        "id": "goods_67a8b3ad64a7c",
+        "codeGoods": "CVL1",
+        "nameGoods": "CHANH VÀNG L1"
+    },
+    {
+        "id": "goods_67a8b3ad64a7d",
+        "codeGoods": "CVL2",
+        "nameGoods": "CHANH VÀNG L2"
+    },
+    {
+        "id": "goods_67a8b3ad64a7e",
+        "codeGoods": "CVL3",
+        "nameGoods": "CHANH VÀNG L3"
+    },
+    {
+        "id": "goods_67a8b3ad64a7f",
+        "codeGoods": "MT4",
+        "nameGoods": "MĂNG TÂY L4"
+    },
+    {
+        "id": "goods_67a8b3ad64a80",
+        "codeGoods": "HTRUNG",
+        "nameGoods": "HỒNG TRỨNG"
+    },
+    {
+        "id": "goods_67a8b3ad64a81",
+        "codeGoods": "BHA",
+        "nameGoods": "BẠC HÀ"
+    },
+    {
+        "id": "goods_67a8b3ad64a82",
+        "codeGoods": "TX",
+        "nameGoods": "TRÀ XANH"
+    },
+    {
+        "id": "goods_67a8b3ad64a83",
+        "codeGoods": "CTAYL",
+        "nameGoods": "CẦN TÂY LỚN"
+    },
+    {
+        "id": "goods_67a8b3ad64a84",
+        "codeGoods": "HCD",
+        "nameGoods": "HỒNG CHÉN ĐÁ"
+    },
+    {
+        "id": "goods_67a8b3ad64a85",
+        "codeGoods": "KTU",
+        "nameGoods": "KHOAI TỪ"
+    },
+    {
+        "id": "goods_67a8b3ad64a86",
+        "codeGoods": "BTH",
+        "nameGoods": "BẮP TÁCH HẠT"
+    }
 ]

@@ -16,8 +16,8 @@ include('../helper/general.php');
 $email = $_SESSION['email'];
 $fullname = $_SESSION['full_name'];
 
-// Đọc danh sách nhà cung cấp từ suppliers.csv (bỏ dòng đầu tiên)
-$suppliers = readJsonFile('../database/database/suppliers.json');
+// Đọc danh sách nhà cung cấp từ goodss.csv (bỏ dòng đầu tiên)
+$customerList = readJsonFile('../database/database/customers.json');
 
 ?>
 
@@ -62,13 +62,13 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
               <a class="nav-link" aria-current="page" href="export.php">Xuất hàng</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="management_ncc.php">Nhà cung cấp</a>
+              <a class="nav-link " aria-current="page" href="management_ncc.php">Nhà cung cấp</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="management_goods.php">Hàng hóa</a>
+              <a class="nav-link " aria-current="page" href="management_goods.php">Hàng hóa</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="management_customer.php">Khách hàng</a>
+              <a class="nav-link active" aria-current="page" href="management_customer.php">Khách hàng</a>
             </li>
           </ul>
           <form action="../logout.php" class="d-flex" role="search">
@@ -78,13 +78,13 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
       </div>
     </nav>
     <div class="container pt-3">
-      <h2>Quản lý nhà cung cấp</h2>
+      <h2>Quản lý khách hàng</h2>
       <p>Welcome, <?php echo $fullname; ?>!</p>
     </div>
     <div class="container">
       <div class="row">
         <div class="col-12 d-flex justify-content-end gap-2">
-          <button class="btn btn-success mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#addNCCModal" data-bs-whatever="@mdo"><i class="fa-solid fa-plus"></i> Thêm nhà cung cấp</button>
+          <button class="btn btn-success mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#addCustomerModal" data-bs-whatever="@mdo"><i class="fa-solid fa-plus"></i> Thêm khách hàng</button>
         </div>
       </div>
     </div>
@@ -94,34 +94,31 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
           <thead class="table-light">
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Mã nhà cung cấp</th>
-              <th scope="col">Tên nhà cung cấp</th>
+              <th scope="col">Tên khách hàng</th>
               <th scope="col">Thao tác</th>
             </tr>
           </thead>
           <tbody>
             <?php
-            foreach ($suppliers as $index => $supplier) {
+            foreach ($customerList as $index => $customer) {
               echo "<tr>";
               echo "<th scope='row'>" . ($index + 1) . "</th>";
-              echo "<td>" . $supplier['codeNCC'] . "</td>";
-              echo "<td>" . $supplier['nameNCC'] . "</td>";
+              echo "<td>" . $customer['nameCustomer'] . "</td>";
               echo "<td class='align-middle h-100 d-flex gap-1 justify-content-center align-items-center'>
-                        <button type='button' class='btn btn-secondary btn-edit-NCC' 
-                          data-bs-id='{$supplier['id']}' 
-                          data-bs-name='{$supplier['nameNCC']}' 
-                          data-bs-code='{$supplier['codeNCC']}' 
-                          
-                          data-bs-toggle='modal' 
-                          data-bs-target='#editNCCModal'>
-                          <i class='fa-solid fa-pen-to-square'></i>
-                        </button>
-                        <button type='button' class='btn btn-danger btn-delete-NCC' data-bs-toggle='modal' data-bs-target='#deleteNCCModal' 
-                        data-supplier-id='{$supplier['id']}'
-                        data-supplier-code='{$supplier['codeNCC']}' data-supplier-name='{$supplier['nameNCC']}'>
-                          <i class='fa-solid fa-trash'></i>
-                        </button>
-                    </td>";
+                      <button type='button' class='btn btn-secondary btn-edit-goods' 
+                      data-bs-id='{$customer['id']}' 
+                      data-bs-name='{$customer['nameCustomer']}' 
+                      
+                      data-bs-toggle='modal' 
+                      data-bs-target='#editCustomerModal'>
+                        <i class='fa-solid fa-pen-to-square'></i>
+                      </button>
+                      <button type='button' class='btn btn-danger btn-delete-NCC' data-bs-toggle='modal' data-bs-target='#deleteCustomerModal' 
+                      data-goods-id='{$customer['id']}'
+                      data-goods-name='{$customer['nameCustomer']}'>
+                        <i class='fa-solid fa-trash'></i>
+                      </button>
+                            </td>";
               echo "</tr>";
             }
             ?>
@@ -131,81 +128,71 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
     </div>
 
     <!-- Modal Add -->
-    <div class="modal fade" id="addNCCModal" tabindex="-1" aria-labelledby="addNCCModalLabel" aria-hidden="true">
+    <div class="modal fade" id="addCustomerModal" tabindex="-1" aria-labelledby="addCustomerModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="addNCCModalLabel">Thêm nhà cung cấp</h1>
+            <h1 class="modal-title fs-5" id="addCustomerModalLabel">Thêm khách hàng</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form>
               <div class="mb-3">
-                <label for="codeNCC" class="col-form-label">Mã NCC:</label>
-                <input type="text" class="form-control" id="codeNCC" name="codeNCC">
-              </div>
-              <div class="mb-3">
-                <label for="nameNCC" class="col-form-label">Tên NCC:</label>
-                <input type="text" class="form-control" id="nameNCC" name="nameNCC">
+                <label for="nameCustomer" class="col-form-label">Tên khách hàng:</label>
+                <input type="text" class="form-control" id="nameCustomer" name="nameCustomer">
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-            <button type="button" class="btn btn-success" id="btn-add-NCC">Thêm</button>
+            <button type="button" class="btn btn-success" id="btn-add-customer">Thêm</button>
           </div>
         </div>
       </div>
     </div>
     <!-- Modal Edit -->
-    <div class="modal fade" id="editNCCModal" tabindex="-1" aria-labelledby="editNCCModalLabel" aria-hidden="true">
+    <div class="modal fade" id="editCustomerModal" tabindex="-1" aria-labelledby="editCustomerModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="editNCCModalLabel">Chỉnh sửa nhà cung cấp</h1>
+            <h1 class="modal-title fs-5" id="editCustomerModalLabel">Chỉnh sửa khách hàng</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form>
-              <input type="hidden" id="editIdNCC"> <!-- Hidden field to store the supplier's ID -->
+              <input type="hidden" id="editIdCustomer"> <!-- Hidden field to store the goods's ID -->
               <div class="mb-3">
-                <label for="editCodeNCC" class="col-form-label">Mã NCC:</label>
-                <input type="text" class="form-control" id="editCodeNCC" name="editCodeNCC">
-              </div>
-              <div class="mb-3">
-                <label for="editNameNCC" class="col-form-label">Tên NCC:</label>
-                <input type="text" class="form-control" id="editNameNCC" name="editNameNCC">
+                <label for="editNameCustomer" class="col-form-label">Tên khách hàng:</label>
+                <input type="text" class="form-control" id="editNameCustomer" name="editNameCustomer">
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-            <button type="button" class="btn btn-primary" id="btn-update-NCC">Cập nhật</button>
+            <button type="button" class="btn btn-primary" id="btn-update-customer">Cập nhật</button>
           </div>
         </div>
       </div>
     </div>
-    <!-- Modal Delete Supplier -->
-    <div class="modal fade" id="deleteNCCModal" tabindex="-1" aria-labelledby="deleteNCCModalLabel" aria-hidden="true">
+    <!-- Modal Delete goods -->
+    <div class="modal fade" id="deleteCustomerModal" tabindex="-1" aria-labelledby="deleteCustomerModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header bg-danger text-white">
-            <h1 class="modal-title fs-5" id="deleteNCCModalLabel">Xóa nhà cung cấp</h1>
+            <h1 class="modal-title fs-5" id="deleteCustomerModalLabel">Xóa khách hàng</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>Bạn có chắc chắn muốn xóa nhà cung cấp <strong id="deleteSupplierName"></strong>?</p>
-            <input type="hidden" id="deleteSupplierId">
+            <p>Bạn có chắc chắn muốn xóa khách hàng <strong id="deleteCustomerName"></strong>?</p>
+            <input type="hidden" id="deleteCustomerId">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-            <button type="button" class="btn btn-danger" id="confirmDeleteNCC">Xóa</button>
+            <button type="button" class="btn btn-danger" id="confirmDeleteCustomer">Xóa</button>
           </div>
         </div>
       </div>
     </div>
-
-
   </main>
 
   <footer id="sticky-footer" class="flex-shrink-0 py-2 bg-dark text-white-50">
@@ -255,8 +242,8 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
         $('#adminTable').DataTable().columns(6).search(selectedStatus).draw();
       });
 
-      // Open Edit Modal with existing supplier data
-      const exampleModal = document.getElementById('editNCCModal')
+      // Open Edit Modal with existing goods data
+      const exampleModal = document.getElementById('editCustomerModal')
       if (exampleModal) {
         exampleModal.addEventListener('show.bs.modal', event => {
           // Button that triggered the modal
@@ -264,47 +251,42 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
           // Extract info from data-bs-* attributes
           const id = button.getAttribute('data-bs-id')
           const name = button.getAttribute('data-bs-name')
-          const code = button.getAttribute('data-bs-code')
           // If necessary, you could initiate an Ajax request here
           // and then do the updating in a callback.
 
           // Update the modal's content.
-          const editIdNCC = exampleModal.querySelector('#editIdNCC')
-          const editCodeNCC = exampleModal.querySelector('#editCodeNCC')
-          const editNameNCC = exampleModal.querySelector('#editNameNCC')
+          const editIdCustomer = exampleModal.querySelector('#editIdCustomer')
+          const editNameCustomer = exampleModal.querySelector('#editNameCustomer')
 
-          editIdNCC.value = id
-          editCodeNCC.value = code
-          editNameNCC.value = name
+          editIdCustomer.value = id
+          editNameCustomer.value = name
         })
       }
 
-      // Open Delete Modal with existing supplier data
-      const deleteModal = document.getElementById('deleteNCCModal')
+      // Open Delete Modal with existing goods data
+      const deleteModal = document.getElementById('deleteCustomerModal')
       if (deleteModal) {
         deleteModal.addEventListener('show.bs.modal', event => {
           // Button that triggered the modal
           const button = event.relatedTarget
           // Extract info from data-bs-* attributes
-          const id = button.getAttribute('data-supplier-id')
-          const name = button.getAttribute('data-supplier-name')
+          const id = button.getAttribute('data-goods-id')
+          const name = button.getAttribute('data-goods-name')
 
           // Update the modal's content.
-          const deleteSupplierName = deleteModal.querySelector('#deleteSupplierName')
-          const deleteSupplierId = deleteModal.querySelector('#deleteSupplierId')
+          const deleteCustomerName = deleteModal.querySelector('#deleteCustomerName')
+          const deleteCustomerId = deleteModal.querySelector('#deleteCustomerId')
 
-          deleteSupplierName.textContent = name
-          deleteSupplierId.value = id
+          deleteCustomerName.textContent = name
+          deleteCustomerId.value = id
         })
       }
 
+      // Handle add goods
+      $('#btn-add-customer').on('click', function() {
+        let nameCustomer = $('#nameCustomer').val();
 
-      // Handle add NCC
-      $('#btn-add-NCC').on('click', function() {
-        let codeNCC = $('#codeNCC').val();
-        let nameNCC = $('#nameNCC').val();
-
-        if (codeNCC == '' || nameNCC == '') {
+        if (nameCustomer == '') {
           Swal.fire({
             icon: 'error',
             title: 'Lỗi',
@@ -312,11 +294,10 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
           });
         } else {
           $.ajax({
-            url: 'backend/addNCC.php',
+            url: 'backend/addCustomer.php',
             type: 'POST',
             data: {
-              codeNCC: codeNCC,
-              nameNCC: nameNCC
+              nameCustomer: nameCustomer
             },
             success: function(response) {
               if (response.success) {
@@ -341,13 +322,12 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
         }
       });
 
-      // Handle Update Supplier
-      $('#btn-update-NCC').on('click', function() {
-        let id = $('#editIdNCC').val();
-        let updatedCodeNCC = $('#editCodeNCC').val();
-        let updatedNameNCC = $('#editNameNCC').val();
+      // Handle Update goods
+      $('#btn-update-customer').on('click', function() {
+        let id = $('#editIdCustomer').val();
+        let updatedNameCustomer = $('#editNameCustomer').val();
 
-        if (updatedCodeNCC === '' || updatedNameNCC === '') {
+        if (updatedNameCustomer === '') {
           Swal.fire({
             icon: 'error',
             title: 'Lỗi',
@@ -355,12 +335,11 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
           });
         } else {
           $.ajax({
-            url: 'backend/editNCC.php',
+            url: 'backend/editCustomer.php',
             type: 'POST',
             data: {
               id: id,
-              updatedCodeNCC: updatedCodeNCC,
-              updatedNameNCC: updatedNameNCC
+              updatedNameCustomer: updatedNameCustomer
             },
             success: function(response) {
               if (response.success) {
@@ -384,13 +363,12 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
           });
         }
       });
-
-      // Handle Delete Supplier
-      $('#confirmDeleteNCC').on('click', function() {
-        let id = $('#deleteSupplierId').val();
+      // Handle Delete goods
+      $('#confirmDeleteCustomer').on('click', function() {
+        let id = $('#deleteCustomerId').val();
 
         $.ajax({
-          url: 'backend/deleteNCC.php',
+          url: 'backend/deleteCustomer.php',
           type: 'POST',
           data: {
             id: id
@@ -416,6 +394,7 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
           }
         });
       });
+
     });
   </script>
 

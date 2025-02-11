@@ -6,6 +6,10 @@ define('IMAGE_DIR', '../database/image_import');
 define('GOODS_CSV_PATH', '../database/database/goods.csv');
 define('SUPPLIERS_CSV_PATH', '../database/database/suppliers.csv');
 define('IMAGE_DIR_LINK', 'database/image_import');
+define('SUPPLIERS_JSON_LINK', '../database/database/suppliers.json');
+define('GOODS_JSON_LINK', '../database/database/goods.json');
+define('CUSTOMER_JSON_LINK', '../database/database/customers.json');
+
 
 
 function getSuppliersList($filePath = SUPPLIERS_CSV_PATH)
@@ -93,4 +97,34 @@ function readJsonFile($filePath)
 function writeJsonFile($filePath, $data)
 {
     file_put_contents($filePath, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+}
+
+// cập nhật dữ liệu vào file json theo id
+function updateJsonFileById($filePath, $id, $newData)
+{
+    $data = readJsonFile($filePath);
+
+    foreach ($data as $key => $item) {
+        if ($item['id'] === $id) {
+            $data[$key] = array_merge($item, $newData);
+            break;
+        }
+    }
+
+    writeJsonFile($filePath, $data);
+}
+
+// Xóa dữ liệu trong file json theo id
+function deleteJsonFileById($filePath, $id)
+{
+    $data = readJsonFile($filePath);
+
+    foreach ($data as $key => $item) {
+        if ($item['id'] === $id) {
+            unset($data[$key]);
+            break;
+        }
+    }
+
+    writeJsonFile($filePath, $data);
 }
