@@ -22,6 +22,8 @@ $suppliers = readJsonFile(SUPPLIERS_JSON_LINK);
 // Đọc danh sách mặt hàng từ goods.csv (bỏ dòng đầu tiên)
 $goods = readJsonFile(GOODS_JSON_LINK);
 
+$customerList = readJsonFile(CUSTOMER_JSON_LINK);
+
 ?>
 
 <!doctype html>
@@ -90,13 +92,16 @@ $goods = readJsonFile(GOODS_JSON_LINK);
             <div class="row">
                 <div class="col-12 d-flex justify-content-start gap-2">
                     <form id="formSubmit" class="row g-3 needs-validation" novalidate>
+                        <!-- <div class="w-100 rounded border p-2 text-bg-secondary" role="alert">
+                            Vui lòng nhập đúng nhà cung cấp và mặt hàng để xem thông tin trong kho!
+                        </div> -->
                         <div class="col-md-6">
                             <label for="supplier" class="form-label">Nhà cung cấp:</label>
-                            <select class="form-select" id="supplier" name="supplier" required>
+                            <select class="form-select" id="supplier" name="supplier" required onchange="getGoodsBySupplier(this.value)">
                                 <option selected disabled value="">Chọn nhà cung cấp</option>
                                 <?php
                                 foreach ($suppliers as $supplier) {
-                                    echo "<option value='{$supplier['nameNCC']}'>{$supplier['nameNCC']} ({$supplier['codeNCC']})</option>";
+                                    echo "<option value='{$supplier['id']}'>{$supplier['nameNCC']} ({$supplier['codeNCC']})</option>";
                                 }
                                 ?>
                             </select>
@@ -106,46 +111,11 @@ $goods = readJsonFile(GOODS_JSON_LINK);
                         </div>
                         <div class="col-md-6">
                             <label for="item" class="form-label">Mặt hàng:</label>
-                            <select class="form-select" id="item" name="item" required>
+                            <select class="form-select" id="item" name="item" required disabled onchange="getWeightPriceByItem(this.value)">
                                 <option selected disabled value="">Chọn mặt hàng</option>
-                                <?php
-                                foreach ($goods as $good) {
-                                    echo "<option value='{$good['codeGoods']} - {$good['nameGoods']}'>{$good['codeGoods']} - {$good['nameGoods']}</option>";
-                                }
-                                ?>
                             </select>
                             <div class="invalid-feedback">
                                 Vui lòng chọn mặt hàng.
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="weight" class="form-label">Khối lượng (kg):</label>
-                            <div class="input-group has-validation">
-                                <span class="input-group-text" id="inputGroupPrepend">kg</span>
-                                <input type="number" class="form-control" id="weight" name="weight" step="0.01" placeholder="Nhập khối lượng" aria-describedby="inputGroupPrepend" required>
-                                <div class="invalid-feedback">
-                                    Vui lòng nhập khối lượng.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="disposed_weight" class="form-label">Xả (kg):</label>
-                            <div class="input-group has-validation">
-                                <span class="input-group-text" id="inputGroupPrepend">kg</span>
-                                <input type="number" class="form-control" id="disposed_weight" name="disposed_weight" step="0.01" placeholder="Nhập khối lượng đã xả" aria-describedby="inputGroupPrepend" required>
-                                <div class="invalid-feedback">
-                                    Vui lòng nhập khối lượng xả.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="remaining_weight" class="form-label">Khối lượng còn lại (kg):</label>
-                            <div class="input-group has-validation">
-                                <span class="input-group-text" id="inputGroupPrepend">kg</span>
-                                <input type="number" class="form-control" id="remaining_weight" name="remaining_weight" step="0.01" placeholder="Khối lượng còn lại" aria-describedby="inputGroupPrepend" required>
-                                <div class="invalid-feedback">
-                                    Vui lòng nhập khối lượng còn lại.
-                                </div>
                             </div>
                         </div>
 
@@ -153,20 +123,55 @@ $goods = readJsonFile(GOODS_JSON_LINK);
                             <label for="unit_price" class="form-label">Đơn giá (VNĐ):</label>
                             <div class="input-group has-validation">
                                 <span class="input-group-text" id="inputGroupPrepend">VNĐ</span>
-                                <input type="text" class="form-control" id="unit_price" name="unit_price" placeholder="Nhập đơn giá" aria-describedby="inputGroupPrepend" required>
+                                <select class="form-select" id="unit_price" name="unit_price" required disabled onchange="getWeight(this.value)">
+                                    <option selected disabled value="">Chọn đơn giá</option>
+                                </select>
                                 <div class="invalid-feedback">
                                     Vui lòng nhập đơn giá.
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-md-6">
-                            <label for="total_price" class="form-label">Thành tiền (VNĐ):</label>
+                            <label for="remaining_weight" class="form-label">Khối lượng trong kho (kg):</label>
                             <div class="input-group has-validation">
-                                <span class="input-group-text" id="inputGroupPrepend">VNĐ</span>
-                                <input type="text" class="form-control" id="total_price" name="total_price" placeholder="Thành tiền" aria-describedby="inputGroupPrepend" required>
+                                <span class="input-group-text" id="inputGroupPrepend">kg</span>
+                                <input type="number" class="form-control" id="remaining_weight" name="remaining_weight" step="0.01" placeholder="Khối lượng trong kho" aria-describedby="inputGroupPrepend" required disabled>
                                 <div class="invalid-feedback">
-                                    Vui lòng nhập thành tiền.
+                                    Vui lòng nhập khối lượng trong kho.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="customer" class="form-label">Khách hàng:</label>
+                            <select class="form-select" id="customer" name="customer" required>
+                                <option selected disabled value="">Chọn khách hàng</option>
+                                <?php
+                                foreach ($customerList as $customer) {
+                                    echo "<option value='{$customer['id']}'>{$customer['nameCustomer']}</option>";
+                                }
+                                ?>
+                            </select>
+                            <div class="invalid-feedback">
+                                Vui lòng chọn khách hàng.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="export_weight" class="form-label">khối lượng xuất (kg):</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">kg</span>
+                                <input type="number" class="form-control" id="export_weight" name="export_weight" step="0.01" placeholder="Nhập khối lượng xuất" aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Vui lòng nhập khối lượng xuất.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lost_weight" class="form-label">Hao hụt (kg):</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">kg</span>
+                                <input type="number" class="form-control" id="lost_weight" name="lost_weight" step="0.01" placeholder="Nhập khối lượng hao hụt" aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Vui lòng nhập khối lượng hao hụt.
                                 </div>
                             </div>
                         </div>
@@ -181,7 +186,7 @@ $goods = readJsonFile(GOODS_JSON_LINK);
                     </form>
                 </div>
                 <div class="col-12 d-flex justify-content-end mt-3">
-                    <button class="btn btn-primary btn-create-order" type="submit">Nhập</button>
+                    <button class="btn btn-primary btn-create-order" type="submit">Xuất</button>
                 </div>
             </div>
         </div>
@@ -261,6 +266,12 @@ $goods = readJsonFile(GOODS_JSON_LINK);
                 allowClear: true,
                 width: '100%'
             });
+
+            $('#customer').select2({
+                placeholder: "Chọn khách hàng",
+                allowClear: true,
+                width: '100%'
+            });
         });
 
         // Create order
@@ -275,22 +286,21 @@ $goods = readJsonFile(GOODS_JSON_LINK);
 
                 const supplier = $('#supplier').val();
                 const item = $('#item').val();
-                const weight = $('#weight').val();
-                const disposedWeight = $('#disposed_weight').val();
-                const remainingWeight = $('#remaining_weight').val();
-                const unitPrice = $('#unit_price').val().replace(/\./g, ''); // Bỏ dấu chấm
-                const totalPrice = $('#total_price').val().replace(/\./g, ''); // Bỏ dấu chấm
+                const unit_price = $('#unit_price').val();
+                const customer = $('#customer').val();
+                const weight = $('#export_weight').val();
+                const disposedWeight = $('#lost_weight').val();
                 const images = $('#images')[0].files;
 
                 // Tạo FormData
                 const importData = new FormData();
                 importData.append('supplier', supplier);
                 importData.append('item', item);
-                importData.append('weight', weight);
-                importData.append('disposed_weight', disposedWeight);
-                importData.append('remaining_weight', remainingWeight);
-                importData.append('unit_price', unitPrice);
-                importData.append('total_price', totalPrice);
+                importData.append('unit_price', unit_price);
+                importData.append('customer', customer);
+                importData.append('export_weight', weight);
+                importData.append('lost_weight', disposedWeight);
+
                 for (let i = 0; i < images.length; i++) {
                     importData.append('images[]', images[i]);
                 }
@@ -314,7 +324,7 @@ $goods = readJsonFile(GOODS_JSON_LINK);
 
                 // Gửi dữ liệu
                 $.ajax({
-                    url: 'backend/save_inventory.php',
+                    url: 'backend/export_goods.php',
                     type: 'POST',
                     data: importData,
                     contentType: false,
@@ -328,7 +338,7 @@ $goods = readJsonFile(GOODS_JSON_LINK);
                                 text: response.message,
                             }).then((result) => {
                                 if (result.isConfirmed) {
-                                    window.location.href = 'import.php';
+                                    window.location.href = 'export.php';
                                 }
                             });
                         } else {
@@ -352,6 +362,140 @@ $goods = readJsonFile(GOODS_JSON_LINK);
             }
 
         });
+
+        const supplierSelect = document.getElementById('supplier');
+        const itemSelect = document.getElementById('item');
+        const unitPriceInput = document.getElementById('unit_price');
+        const remainingWeightInput = document.getElementById('remaining_weight');
+
+        // Lấy thông tin mặt hàng theo nhà cung cấp
+        function getGoodsBySupplier(supplierId) {
+
+            // Nếu chưa chọn nhà cung cấp thì disable mặt hàng
+            if (!supplierId) {
+                itemSelect.disabled = true;
+                itemSelect.innerHTML = '<option selected disabled value="">Chọn mặt hàng</option>';
+                unitPriceInput.disabled = true;
+                unitPriceInput.innerHTML = '<option selected disabled value="">Chọn đơn giá</option>';
+                remainingWeightInput.value = '';
+                remainingWeightInput.disabled = true;
+                return;
+            }
+
+            // Fetch dữ liệu mặt hàng theo nhà cung cấp
+            $.ajax({
+                url: 'backend/get_goods_by_supplier.php',
+                type: 'POST',
+                data: {
+                    supplierId: supplierId
+                },
+                success: function(response) {
+                    if (response.success) {
+                        // Hiển thị danh sách mặt hàng
+                        if (response.data.length === 0) {
+                            Swal.fire({
+                                icon: 'warning',
+                                title: 'Không có mặt hàng',
+                                text: 'Nhà cung cấp này không có mặt hàng nào trong kho!',
+                            })
+                            itemSelect.disabled = true;
+                            itemSelect.innerHTML = '<option selected disabled value="">Chọn mặt hàng</option>';
+                            unitPriceInput.disabled = true;
+                            unitPriceInput.innerHTML = '<option selected disabled value="">Chọn đơn giá</option>';
+                            remainingWeightInput.value = '';
+                            remainingWeightInput.disabled = true;
+                        } else {
+                            itemSelect.innerHTML = '<option selected disabled value="">Chọn mặt hàng</option>';
+                            const listGoodsInfo = [];
+                            response.data.forEach(item => {
+                                // kiểm tra goodsInfo có trong listGoodsInfo chưa
+                                if (!listGoodsInfo.includes(item.goodsInfo.id)) {
+                                    listGoodsInfo.push(item.goodsInfo.id);
+                                    itemSelect.innerHTML += `<option value="${item.goodsInfo.id}">${item.goodsInfo.codeGoods} - ${item.goodsInfo.nameGoods}</option>`;
+                                }
+                            });
+
+                            // Enable mặt hàng
+                            itemSelect.disabled = false;
+                        }
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Lỗi',
+                            text: response.message,
+                        });
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Lỗi',
+                        text: 'Đã có lỗi xảy ra. Vui lòng thử lại sau!',
+                    });
+                }
+            });
+        }
+
+        let weightPriceData = [];
+        // Lấy thông tin khối lượng và đơn giá theo mặt hàng và nhà cung cấp
+        function getWeightPriceByItem(itemId) {
+            const supplierId = $('#supplier').val();
+
+            // Nếu chưa chọn mặt hàng thì disable khối lượng và đơn giá
+            if (!itemId) {
+                unitPriceInput.value = '';
+                unitPriceInput.disabled = true;
+                return;
+            }
+
+            // Fetch dữ liệu khối lượng và đơn giá theo mặt hàng
+            $.ajax({
+                url: 'backend/get_weight_price_by_item.php',
+                type: 'POST',
+                data: {
+                    supplierId: supplierId,
+                    itemId: itemId
+                },
+                success: function(response) {
+                    if (response.success) {
+                        weightPriceData = response.data;
+                        // Hiển thị thông tin đơn giá
+                        unitPriceInput.innerHTML = '<option selected disabled value="">Chọn đơn giá</option>';
+                        response.data.forEach(item => {
+                            unitPriceInput.innerHTML += `<option value="${item.unit_price}">${formatCurrency(item.unit_price)} VND</option>`;
+                        });
+
+                        unitPriceInput.disabled = false;
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Lỗi',
+                            text: response.message,
+                        });
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Lỗi',
+                        text: 'Đã có lỗi xảy ra. Vui lòng thử lại sau!',
+                    });
+                }
+            });
+        }
+
+        // Lấy thông tin khối lượng theo đơn giá
+        function getWeight(price) {
+            const unitPrice = parseFloat(price.replace(/\./g, '')) || 0; // Bỏ dấu chấm trước khi parse
+
+            // Tìm khối lượng còn lại theo đơn giá
+            const weight = weightPriceData.find(item => item.unit_price === unitPrice).weight;
+
+            // Hiển thị khối lượng còn lại
+            remainingWeightInput.value = weight.toFixed(2);
+        }
     </script>
 
 </body>

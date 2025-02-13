@@ -1,0 +1,47 @@
+[
+    {
+        "id": "good_67ac4328eaf96",
+        "index": 1,
+        "createdAt": "2025-02-12 07:43:52",
+        "supplier": "ncc_67a8b2dfdc1af",
+        "item": "goods_67a8b3ad649dd",
+        "weight": 12,
+        "disposed_weight": 2,
+        "remaining_weight": 10,
+        "unit_price": 1000,
+        "total_price": 10000,
+        "images": [
+            "database\/image_import\/image_67ac4328eaab9_2025_02_12.png"
+        ]
+    },
+    {
+        "id": "good_67ac434587235",
+        "index": 2,
+        "createdAt": "2025-02-12 07:44:21",
+        "supplier": "ncc_67a8b2dfdc1af",
+        "item": "goods_67a8b3ad649dd",
+        "weight": 15,
+        "disposed_weight": 0,
+        "remaining_weight": 15,
+        "unit_price": 1000,
+        "total_price": 15000,
+        "images": [
+            "database\/image_import\/image_67ac434586b7d_2025_02_12.png"
+        ]
+    },
+    {
+        "id": "good_67ac436209c5c",
+        "index": 3,
+        "createdAt": "2025-02-12 07:44:50",
+        "supplier": "ncc_67a8b2dfdc1af",
+        "item": "goods_67a8b3ad649dd",
+        "weight": 18,
+        "disposed_weight": 2,
+        "remaining_weight": 16,
+        "unit_price": 2000,
+        "total_price": 32000,
+        "images": [
+            "database\/image_import\/image_67ac43620992a_2025_02_12.jpg"
+        ]
+    }
+]

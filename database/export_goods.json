@@ -1,0 +1,16 @@
+[
+    {
+        "id": "export_67ac45e0b7f07",
+        "index": 1,
+        "createdAt": "2025-02-12 07:55:28",
+        "supplier": "ncc_67a8b2dfdc1af",
+        "unit_price": 1000,
+        "item": "goods_67a8b3ad649dd",
+        "customer": "customer_67a8cdd59f226",
+        "export_weight": 23,
+        "lost_weight": 0,
+        "images": [
+            "database\/image_import\/image_67ac45e0b7c11_2025_02_12.png"
+        ]
+    }
+]

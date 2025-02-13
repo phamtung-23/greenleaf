@@ -16,9 +16,9 @@ header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Đường dẫn file JSON
-    $filePath = '../'.GOODS_JSON_PATH;
+    $filePath = '../' . GOODS_JSON_PATH;
     // Đường dẫn thư mục lưu hình ảnh
-    $imageDir = '../'.IMAGE_DIR;
+    $imageDir = '../' . IMAGE_DIR;
 
     // Tạo thư mục nếu chưa tồn tại
     if (!is_dir($imageDir)) {
@@ -36,10 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $time = date('Y-m-d H:i:s'); // Lấy thời gian hiện tại
 
     // Xử lý upload hình ảnh
-    $imageLinks = uploadImages($_FILES, '../'.IMAGE_DIR);
+    $imageLinks = uploadImages($_FILES, '../' . IMAGE_DIR);
 
     // Đọc dữ liệu hiện có
-    $data = readJsonFile('../'.GOODS_JSON_PATH);
+    $data = readJsonFile('../' . GOODS_JSON_PATH);
 
     // Lấy ID cuối cùng và tăng thêm 1
     $lastId = end($data)['index'] ?? 0;
@@ -62,7 +62,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data[] = $newData;
 
     // Ghi dữ liệu vào file JSON
-    writeJsonFile('../'.GOODS_JSON_PATH, $data);
+    writeJsonFile('../' . GOODS_JSON_PATH, $data);
+
+    // lấy số lượng hàng hóa hiện có
+    $remaining_weight_in_inventory = getWeightByItemSupplierPrice($item, $supplier, (int)$unit_price, '../'.INVENTORY_JSON_PATH);
+
+    // ======= Cập nhật số lượng hàng hóa trong kho
+    $inventoryData = readJsonFile('../' . INVENTORY_JSON_PATH);
+    if (checkGoodsExist($item, $supplier, (int)$unit_price, $inventoryData)) {
+        $inventoryData = updateInventory($item, $supplier, (float)$remaining_weight, (int)$unit_price, $inventoryData, 'import');
+    } else {
+        $inventoryData = addInventory($item, $supplier, (float)$remaining_weight, (int)$unit_price, $inventoryData);
+    }
+    writeJsonFile('../' . INVENTORY_JSON_PATH, $inventoryData);
+
+    // ======= Lưu thông tin nhập hàng vào import_export_inventory.json
+    $current_date = date('d-m-Y');
+    saveImportExportGoodsInInventory($supplier, $item, (float)$remaining_weight_in_inventory, (int)$unit_price, $current_date, $newData, '../' . IMPORT_EXPORT_INVENTORY_JSON_PATH, 'import');
+
 
     echo json_encode(['success' => true, 'message' => 'Đã nhập hàng thành công!']);
 } else {

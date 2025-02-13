@@ -1,7 +1,7 @@
 <?php
 
 // Định nghĩa đường dẫn file và thư mục
-define('GOODS_JSON_PATH', '../database/goods_inventory.json');
+define('GOODS_JSON_PATH', '../database/import_goods.json');
 define('IMAGE_DIR', '../database/image_import');
 define('GOODS_CSV_PATH', '../database/database/goods.csv');
 define('SUPPLIERS_CSV_PATH', '../database/database/suppliers.csv');
@@ -9,40 +9,56 @@ define('IMAGE_DIR_LINK', 'database/image_import');
 define('SUPPLIERS_JSON_LINK', '../database/database/suppliers.json');
 define('GOODS_JSON_LINK', '../database/database/goods.json');
 define('CUSTOMER_JSON_LINK', '../database/database/customers.json');
+define('EXPORT_GOODS_JSON_PATH', '../database/export_goods.json');
+define('IMAGE_EXPORT_DIR', '../database/image_export');
+define('INVENTORY_JSON_PATH', '../database/inventory.json');
+define('IMPORT_EXPORT_INVENTORY_JSON_PATH', '../database/import_export_inventory.json');
 
 
+
+// Hàm ghi log
+function logEntry($message)
+{
+    $logFile = '../../logs/debug_log.txt';
+    $timestamp = date("Y-m-d H:i:s");
+    // get full path
+    $filePath = $_SERVER['PHP_SELF'];
+    $logMessage = "[$timestamp] $filePath: $message\n";
+    file_put_contents($logFile, $logMessage, FILE_APPEND);
+}
 
 function getSuppliersList($filePath = SUPPLIERS_CSV_PATH)
 {
-  $suppliers = [];
-  if (($handle = fopen($filePath, "r")) !== false) {
-    $isFirstRow = true;
-    while (($row = fgetcsv($handle)) !== false) {
-      if ($isFirstRow) {
-        $isFirstRow = false;
-        continue;
-      }
-      $suppliers[] = $row[1]; // Cột thứ 2
+    $suppliers = [];
+    if (($handle = fopen($filePath, "r")) !== false) {
+        $isFirstRow = true;
+        while (($row = fgetcsv($handle)) !== false) {
+            if ($isFirstRow) {
+                $isFirstRow = false;
+                continue;
+            }
+            $suppliers[] = $row[1]; // Cột thứ 2
+        }
+        fclose($handle);
     }
-    fclose($handle);
-  }
-  return $suppliers;
+    return $suppliers;
 }
 
-function getGoodsList($filePath = GOODS_CSV_PATH) {
-  $goods = [];
-  if (($handle = fopen($filePath, "r")) !== false) {
-      $isFirstRow = true;
-      while (($row = fgetcsv($handle)) !== false) {
-          if ($isFirstRow) {
-              $isFirstRow = false;
-              continue;
-          }
-          $goods[] = $row[1] . " - " . $row[2]; // Kết hợp cột thứ 2 và cột thứ 3
-      }
-      fclose($handle);
-  }
-  return $goods;
+function getGoodsList($filePath = GOODS_CSV_PATH)
+{
+    $goods = [];
+    if (($handle = fopen($filePath, "r")) !== false) {
+        $isFirstRow = true;
+        while (($row = fgetcsv($handle)) !== false) {
+            if ($isFirstRow) {
+                $isFirstRow = false;
+                continue;
+            }
+            $goods[] = $row[1] . " - " . $row[2]; // Kết hợp cột thứ 2 và cột thứ 3
+        }
+        fclose($handle);
+    }
+    return $goods;
 }
 
 // Tạo thư mục nếu chưa tồn tại
@@ -68,7 +84,7 @@ function uploadImages($files, $imageDir)
         foreach ($files['images']['name'] as $key => $imageName) {
             $tmpName = $files['images']['tmp_name'][$key];
             $imageExt = pathinfo($imageName, PATHINFO_EXTENSION);
-            $uniqueName = uniqid('image_'). '_' . $formatDate . '.' . $imageExt;
+            $uniqueName = uniqid('image_') . '_' . $formatDate . '.' . $imageExt;
             $targetPath = $imageDir . '/' . $uniqueName;
 
             if (move_uploaded_file($tmpName, $targetPath)) {
@@ -127,4 +143,157 @@ function deleteJsonFileById($filePath, $id)
     }
 
     writeJsonFile($filePath, $data);
+}
+
+// kiểm tra hàng hóa có tồn tại trong kho không
+function checkGoodsExist($goods, $supplier, $price, $inventoryData)
+{
+    foreach ($inventoryData as $item) {
+        if ($item['item'] === $goods && $item['supplier'] === $supplier && $item['unit_price'] === $price) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// Thêm hàng hóa vào kho
+function addInventory($goods, $supplier, $weight, $price, $inventoryData)
+{
+    $inventoryData[] = [
+        'item' => $goods,
+        'supplier' => $supplier,
+        'weight' => $weight,
+        'unit_price' => $price,
+    ];
+    return $inventoryData;
+}
+
+// cập nhật hàng hóa trong kho
+function updateInventory($goods, $supplier, $weight, $price, $inventoryData, $type)
+{
+    foreach ($inventoryData as $key => $item) {
+        if ($item['item'] === $goods && $item['supplier'] === $supplier && $item['unit_price'] === $price) {
+            if ($type === 'import') {
+                $inventoryData[$key]['weight'] += $weight;
+            } else {
+                $inventoryData[$key]['weight'] -= $weight;
+            }
+            break;
+        }
+    }
+    return $inventoryData;
+}
+
+// lấy thông tin mặt hàng theo id
+function getGoodsById($id, $filePath = '../' . GOODS_JSON_LINK)
+{
+    $data = readJsonFile($filePath);
+    foreach ($data as $item) {
+        if ($item['id'] === $id) {
+            return $item;
+        }
+    }
+    return [];
+}
+
+// lấy thông tin số lượng hàng hóa trong kho, tiền tương ứng và thôn tin hàng hóa theo supplier id
+function getGoodsBySupplier($supplierId, $filePath = GOODS_JSON_PATH)
+{
+    $data = readJsonFile($filePath);
+    $result = [];
+    foreach ($data as $item) {
+        if ($item['supplier'] === $supplierId) {
+            $goodsInfo = getGoodsById($item['item']);
+            $item['goodsInfo'] = $goodsInfo;
+            $result[] = $item;
+        }
+    }
+    return $result;
+}
+
+// Lấy danh sách thông tin giá và số lượng hàng hóa theo item id và supplier id
+function getWeightPriceByItem($itemId, $supplierId, $filePath = GOODS_JSON_PATH)
+{
+    $data = readJsonFile($filePath);
+    $result = [];
+    foreach ($data as $item) {
+        if ($item['item'] === $itemId && $item['supplier'] === $supplierId) {
+            $result[] = [
+                'weight' => $item['weight'],
+                'unit_price' => $item['unit_price'],
+            ];
+        }
+    }
+    return $result;
+}
+
+// Lấy số lượng hàng hóa theo item id và supplier id và giá
+function getWeightByItemSupplierPrice($itemId, $supplierId, $price, $filePath)
+{
+    $data = readJsonFile($filePath);
+    foreach ($data as $item) {
+        if ($item['item'] === $itemId && $item['supplier'] === $supplierId && $item['unit_price'] === $price) {
+            return $item['weight'];
+        }
+    }
+    return 0;
+}
+
+// lưu thông tin nhập hàng vào file json theo item id và supplier id và giá và theo ngày
+function saveImportExportGoodsInInventory($supplier, $item, $remaining_weight, $unit_price, $current_date, $importExportData, $filePath, $type)
+{
+    $inventoryData = readJsonFile($filePath);
+    if (checkImportExportInventoryExist($item, $supplier, $unit_price, $current_date, $inventoryData)) {
+        foreach ($inventoryData as $key => $data) {
+            if ($data['item'] === $item && $data['supplier'] === $supplier && $data['unit_price'] === $unit_price && $data['createdAt'] === $current_date) {
+                if ($type === 'import') {
+                    // thêm thông tin import vào danh sách import_list
+                    $data['import_list'][] = $importExportData;
+                    $inventoryData[$key] = $data;
+                    writeJsonFile($filePath, $inventoryData);
+                    break;
+                } else {
+                    // thêm thông tin export vào danh sách export_list
+                    $data['export_list'][] = $importExportData;
+                    $inventoryData[$key] = $data;
+                    writeJsonFile($filePath, $inventoryData);
+                    break;
+                }
+            }
+        }
+    } else {
+        if ($type === 'import') {
+            $inventoryData[] = [
+                'id' => uniqid('import_export_'),
+                'item' => $item,
+                'supplier' => $supplier,
+                'remaining_weight' => $remaining_weight,
+                'unit_price' => $unit_price,
+                'createdAt' => $current_date,
+                'import_list' => [$importExportData],
+            ];
+            writeJsonFile($filePath, $inventoryData);
+        } else {
+            $inventoryData[] = [
+                'id' => uniqid('import_export_'),
+                'item' => $item,
+                'supplier' => $supplier,
+                'remaining_weight' => $remaining_weight,
+                'unit_price' => $unit_price,
+                'createdAt' => $current_date,
+                'export_list' => [$importExportData],
+            ];
+            writeJsonFile($filePath, $inventoryData);
+        }
+    }
+}
+
+function checkImportExportInventoryExist($goods, $supplier, $price, $current_date, $inventoryData)
+{
+    foreach ($inventoryData as $item) {
+        if ($item['item'] === $goods && $item['supplier'] === $supplier && $item['unit_price'] === $price && $item['createdAt'] === $current_date) {
+            return true;
+        }
+    }
+    return false;
 }

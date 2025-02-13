@@ -1,0 +1,14 @@
+[
+    {
+        "item": "goods_67a8b3ad649dd",
+        "supplier": "ncc_67a8b2dfdc1af",
+        "weight": 2,
+        "unit_price": 1000
+    },
+    {
+        "item": "goods_67a8b3ad649dd",
+        "supplier": "ncc_67a8b2dfdc1af",
+        "weight": 16,
+        "unit_price": 2000
+    }
+]
