@@ -297,3 +297,102 @@ function checkImportExportInventoryExist($goods, $supplier, $price, $current_dat
     }
     return false;
 }
+
+// tính toán thông tin cho report inventory
+function calculateInventoryReport($inventoryData)
+{
+
+    // lấy thông tin NCC
+    $supplierData = readJsonFile(SUPPLIERS_JSON_LINK);
+    $nameNCC = '';
+    $codeNCC = '';
+    foreach ($supplierData as $supplier) {
+        if ($supplier['id'] === $inventoryData['supplier']) {
+            $nameNCC = $supplier['nameNCC'];
+            $codeNCC = $supplier['codeNCC'];
+            break;
+        }
+    }
+    // lấy thông tin mặt hàng
+    $goodsData = readJsonFile(GOODS_JSON_LINK);
+    $nameGoods = '';
+    $codeGoods = '';
+    foreach ($goodsData as $goods) {
+        if ($goods['id'] === $inventoryData['item']) {
+            $nameGoods = $goods['nameGoods'];
+            $codeGoods = $goods['codeGoods'];
+            break;
+        }
+    }
+
+
+    $SLN = 0;
+    $xa = 0;
+    $SLX = 0;
+    $haoHut = 0;
+    $customerData = [];
+    if (isset($inventoryData['import_list'])) {
+        foreach ($inventoryData['import_list'] as $import) {
+            $SLN += $import['weight'];
+            $xa += $import['disposed_weight'];
+        }
+    }
+    if (isset($inventoryData['export_list'])) {
+        foreach ($inventoryData['export_list'] as $export) {
+            $SLX += $export['export_weight'];
+            $haoHut += $export['lost_weight'];
+            // kiểm tra xem khách hàng đã có trong danh sách chưa
+            if (!in_array($export['customer'], $customerData)){
+                $customerData[] = [
+                    'id' => $export['customer'],
+                    'weight' => $export['export_weight'],
+                ];
+            } else {
+                // câp nhật số lượng hàng hóa đã xuất ra của khách hàng
+                foreach ($customerData as $key => $customer) {
+                    if ($customer['id'] === $export['customer']) {
+                        $customerData[$key]['weight'] += $export['export_weight'];
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    $thanhTien = ($SLN + $inventoryData['remaining_weight']) * $inventoryData['unit_price'];
+    $CPHaoHut = $haoHut * $inventoryData['unit_price'];
+    $conLai = $SLN + $inventoryData['remaining_weight'] - $xa;
+    $tonCuoi = $conLai - $SLX - $haoHut;
+    $CPTonCuoi = $tonCuoi * $inventoryData['unit_price'];
+
+    return [
+        'DVT' => 'kg',
+        'tonDau' => $inventoryData['remaining_weight'],
+        'SLN' => $SLN,
+        'xa' => $xa,
+        'conLai' => $conLai,
+        'unit_price' => $inventoryData['unit_price'],
+        'thanhTien' => $thanhTien,
+        'SLX' => $SLX,
+        'haoHut' => $haoHut,
+        'CPHaoHut' => $CPHaoHut,
+        'tonCuoi' => $tonCuoi,
+        'CPTonCuoi' => $CPTonCuoi,
+        'nameNCC' => $nameNCC,
+        'codeNCC' => $codeNCC,
+        'nameGoods' => $nameGoods,
+        'codeGoods' => $codeGoods,
+        'createdAt' => $inventoryData['createdAt'],
+        'customerData' => $customerData,
+    ];
+}
+
+function checkCustomerDataById($customerId, $customerData)
+{
+    foreach ($customerData as $customer) {
+        if ($customer['id'] === $customerId) {
+            return [true, $customer['weight']];
+        }
+    }
+    return [false, 0];
+}

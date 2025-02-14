@@ -14,6 +14,14 @@ if (!isset($_SESSION['email'])) {
 $email = $_SESSION['email'];
 $fullname = $_SESSION['full_name'];
 
+include '../helper/general.php';
+
+// Đường dẫn file JSON
+$filePath = IMPORT_EXPORT_INVENTORY_JSON_PATH;
+$dataList = readJsonFile($filePath);
+
+$customerData = readJsonFile(CUSTOMER_JSON_LINK);
+
 ?>
 
 <!doctype html>
@@ -73,7 +81,7 @@ $fullname = $_SESSION['full_name'];
             </div>
         </nav>
         <div class="container pt-3">
-            <h2>Dashboard</h2>
+            <h4>BẢNG THEO DÕI HÀNG NHẬP-XUẤT-TỒN</h4>
             <p>Welcome, <?php echo $fullname; ?>!</p>
         </div>
         <div class="container">
@@ -88,6 +96,80 @@ $fullname = $_SESSION['full_name'];
                 </div>
             </div>
         </div>
+
+        <div class="container mt-4">
+            <div class="table-responsive" style="margin-bottom: 80px !important;">
+                <table id="adminTable" class="table table-bordered border border-1">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col" rowspan="2" class="align-top" style="width: 80px;">Ngày</th>
+                            <th scope="col" rowspan="2" class="align-top">MH</th>
+                            <th scope="col" rowspan="2" class="align-top">Mã NCC</th>
+                            <th scope="col" rowspan="2" class="align-top" style="width: 150px;">Tên mặt hàng</th>
+                            <th scope="col" rowspan="2" class="align-top" style="width: 150px;">Tên NCC</th>
+                            <th scope="col" rowspan="2" class="align-top">ĐVT</th>
+                            <th scope="col" rowspan="2" class="align-top">Tồn đầu</th>
+                            <th scope="col" rowspan="2" class="align-top">SLN</th>
+                            <th scope="col" rowspan="2" class="align-top">Xả</th>
+                            <th scope="col" rowspan="2" class="align-top">Còn lại</th>
+                            <th scope="col" rowspan="2" class="align-top">Đơn giá</th>
+                            <th scope="col" rowspan="2" class="align-top">Thành tiền</th>
+                            <th scope="col" colspan="12" class="text-center">SỐ LƯỢNG XUẤT</th>
+                            <th scope="col" rowspan="2" class="align-top">Tổng SLX</th>
+                            <th scope="col" rowspan="2" class="align-top">Hao hụt</th>
+                            <th scope="col" rowspan="2" class="align-top">CP hao hụt</th>
+                            <th scope="col" rowspan="2" class="align-top">TỒN CUỐI</th>
+                            <th scope="col" rowspan="2" class="align-top">CP TỒN</th>
+                        </tr>
+                        <tr>
+                            <?php
+                            foreach ($customerData as $customer) {
+                                echo "<th scope='col' class='align-top' style='width: 70px;'>" . $customer['nameCustomer'] . "</th>";
+                            }
+                            ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        foreach ($dataList as $data) {
+                            $reportData = calculateInventoryReport($data);
+                        ?>
+                            <tr class="border border-1" onclick="alert('Chức năng đang được phát triển!');" style="cursor: pointer;">
+                                <td style="border: solid 1px #dbdbdb;"><?php echo $reportData['createdAt']; ?></td>
+                                <td style="border: solid 1px #dbdbdb;"><?php echo $reportData['codeGoods']; ?></td>
+                                <td style="border: solid 1px #dbdbdb;"><?php echo $reportData['codeNCC']; ?></td>
+                                <td style="border: solid 1px #dbdbdb;"><?php echo $reportData['nameGoods']; ?></td>
+                                <td style="border: solid 1px #dbdbdb;"><?php echo $reportData['nameNCC']; ?></td>
+                                <td style="border: solid 1px #dbdbdb; text-align: center;"><?php echo $reportData['DVT']; ?></td>
+                                <td style="border: solid 1px #dbdbdb; text-align: center;"><?php echo $reportData['tonDau']; ?></td>
+                                <td style="border: solid 1px #dbdbdb; background-color: #f2bd64; font-weight: bold; text-align: center;"><?php echo $reportData['SLN']; ?></td>
+                                <td style="border: solid 1px #dbdbdb; text-align: center;"><?php echo $reportData['xa']; ?></td>
+                                <td style="border: solid 1px #dbdbdb; font-weight: bold; text-align: center;"><?php echo $reportData['conLai']; ?></td>
+                                <td style="border: solid 1px #dbdbdb; text-align: end;"><?php echo number_format($reportData['unit_price'], 0, ',', '.'); ?></td>
+                                <td style="border: solid 1px #dbdbdb; background-color:rgb(83, 150, 244); font-weight: bold; text-align: end;"><?php echo number_format($reportData['thanhTien'], 0, ',', '.'); ?></td>
+                                <?php
+                                foreach ($customerData as $customer) {
+                                    $isExist = checkCustomerDataById($customer['id'], $reportData['customerData']);
+                                    if ($isExist[0]) {
+                                        echo "<td style='border: solid 1px #dbdbdb; text-align: center;'>" . $isExist[1] . "</td>";
+                                    } else {
+                                        echo "<td style='border: solid 1px #dbdbdb;'></td>";
+                                    }
+                                }
+                                ?>
+                                <td style="border: solid 1px #dbdbdb; background-color:rgb(223, 165, 255); font-weight: bold; text-align: center;"><?php echo $reportData['SLX']; ?></td>
+                                <td style="border: solid 1px #dbdbdb; background-color:rgb(238, 208, 255); font-weight: bold; text-align: center;"><?php echo $reportData['haoHut']; ?></td>
+                                <td style="border: solid 1px #dbdbdb; text-align: end;"><?php echo number_format($reportData['CPHaoHut'], 0, ',', '.'); ?></td>
+                                <td style="border: solid 1px #dbdbdb; background-color: lightgreen; color: #f20000; font-weight: bold; text-align: center;"><?php echo $reportData['tonCuoi']; ?></td>
+                                <td style="border: solid 1px #dbdbdb; background-color: bisque; font-weight: bold; text-align: end;"><?php echo  number_format($reportData['CPTonCuoi'], 0, ',', '.'); ?></td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
 
     <footer id="sticky-footer" class="flex-shrink-0 py-2 bg-dark text-white-50">
@@ -96,7 +178,43 @@ $fullname = $_SESSION['full_name'];
         </div>
     </footer>
     <script>
-
+        $(document).ready(function() {
+            if (window.innerWidth <= 550) {
+                $('#adminTable').DataTable({
+                    scrollY: true, // Set the vertical scrolling height
+                    scrollX: true, // Set the vertical scrolling height
+                    scrollCollapse: true, // Allow the table to reduce height if less content
+                    paging: true, // Enable pagination
+                    searching: true, // Enable searching
+                    ordering: true, // Enable column sorting
+                    info: true, // Show table info
+                    language: {
+                        search: "Search:",
+                        paginate: {
+                            next: "Next",
+                            previous: "Previous"
+                        }
+                    }
+                });
+            } else {
+                $('#adminTable').DataTable({
+                    scrollY: true, // Set the vertical scrolling height
+                    scrollX: true, // Set the vertical scrolling height
+                    scrollCollapse: true, // Allow the table to reduce height if less content
+                    paging: true, // Enable pagination
+                    searching: true, // Enable searching
+                    ordering: true, // Enable column sorting
+                    info: true, // Show table info
+                    language: {
+                        search: "Search:",
+                        paginate: {
+                            next: "Next",
+                            previous: "Previous"
+                        }
+                    }
+                });
+            }
+        });
     </script>
 
 </body>

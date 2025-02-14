@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $lastId = end($data)['index'] ?? 0;
     // Tạo dữ liệu mới từ form
     $newData = [
-        'id' => uniqid('good_'), // ID duy nhất
+        'id' => uniqid('import_'), // ID duy nhất
         'index' => $lastId + 1,
         'createdAt' => $time,
         'supplier' => $supplier,

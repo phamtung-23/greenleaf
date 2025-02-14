@@ -84,7 +84,7 @@ $goodsList = readJsonFile('../database/database/goods.json');
     <div class="container">
       <div class="row">
         <div class="col-12 d-flex justify-content-end gap-2">
-          <button class="btn btn-success mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#addGoodsModal" data-bs-whatever="@mdo"><i class="fa-solid fa-plus"></i> Thêm nhà hàng hóa</button>
+          <button class="btn btn-success mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#addGoodsModal" data-bs-whatever="@mdo"><i class="fa-solid fa-plus"></i> Thêm hàng hóa</button>
         </div>
       </div>
     </div>

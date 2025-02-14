@@ -12,5 +12,19 @@
         "images": [
             "database\/image_import\/image_67ac45e0b7c11_2025_02_12.png"
         ]
+    },
+    {
+        "id": "export_67ae308c6462e",
+        "index": 2,
+        "createdAt": "2025-02-13 18:49:00",
+        "supplier": "ncc_67a8b2dfdc1af",
+        "unit_price": 2000,
+        "item": "goods_67a8b3ad649dd",
+        "customer": "customer_67a8cdd59f22d",
+        "export_weight": 2,
+        "lost_weight": 0.5,
+        "images": [
+            "database\/image_import\/image_67ae308c64212_2025_02_13.jpg"
+        ]
     }
 ]
