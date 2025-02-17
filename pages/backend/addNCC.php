@@ -18,6 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get data from form
     $codeNCC = isset($_POST['codeNCC']) ? $_POST['codeNCC'] : '';
     $nameNCC = isset($_POST['nameNCC']) ? $_POST['nameNCC'] : '';
+    $address = isset($_POST['address']) ? $_POST['address'] : '';
+    $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
+    $bankNumber = isset($_POST['bankNumber']) ? $_POST['bankNumber'] : '';
+    $bankName = isset($_POST['bankName']) ? $_POST['bankName'] : '';
 
     // Đọc dữ liệu hiện có
     $data = readJsonFile('../'.SUPPLIERS_JSON_LINK);
@@ -26,7 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $newData = [
         'id' => uniqid('ncc_'),
         'codeNCC' => $codeNCC,
-        'nameNCC' => $nameNCC
+        'nameNCC' => $nameNCC,
+        'address' => $address,
+        'phone' => $phone,
+        'bankNumber' => $bankNumber,
+        'bankName' => $bankName
     ];
 
     // Thêm dữ liệu mới vào danh sách

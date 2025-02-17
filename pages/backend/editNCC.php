@@ -17,13 +17,21 @@ header('Content-Type: application/json');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get data from form
     $id = $_POST['id'];
-    $updatedCodeNCC = $_POST['updatedCodeNCC'];
-    $updatedNameNCC = $_POST['updatedNameNCC'];
+    $updatedCodeNCC = $_POST['updatedCodeNCC'] ?? '';
+    $updatedNameNCC = $_POST['updatedNameNCC'] ?? '';
+    $updatedAddress = $_POST['updatedAddress'] ?? '';
+    $updatedPhoneNumber = $_POST['updatedPhone'] ?? '';
+    $updatedBankNumber = $_POST['updatedBankNumber'] ?? '';
+    $updatedBankName = $_POST['updatedBankName'] ?? '';
 
     // Tạo dữ liệu mới từ form
     $newData = [
         'codeNCC' => $updatedCodeNCC,
-        'nameNCC' => $updatedNameNCC
+        'nameNCC' => $updatedNameNCC,
+        'address' => $updatedAddress,
+        'phone' => $updatedPhoneNumber,
+        'bankNumber' => $updatedBankNumber,
+        'bankName' => $updatedBankName
     ];
 
     // Cập nhật dữ liệu mới vào file JSON

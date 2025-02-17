@@ -96,6 +96,10 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
               <th scope="col">#</th>
               <th scope="col">Mã nhà cung cấp</th>
               <th scope="col">Tên nhà cung cấp</th>
+              <th scope="col">Địa chỉ</th>
+              <th scope="col">SĐT</th>
+              <th scope="col">Số TK Ngân hàng</th>
+              <th scope="col">Tên ngân hàng</th>
               <th scope="col">Thao tác</th>
             </tr>
           </thead>
@@ -106,11 +110,19 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
               echo "<th scope='row'>" . ($index + 1) . "</th>";
               echo "<td>" . $supplier['codeNCC'] . "</td>";
               echo "<td>" . $supplier['nameNCC'] . "</td>";
+              echo "<td>" . $supplier['address'] . "</td>";
+              echo "<td>" . $supplier['phone'] . "</td>";
+              echo "<td>" . $supplier['bankNumber'] . "</td>";
+              echo "<td>" . $supplier['bankName'] . "</td>";
               echo "<td class='align-middle h-100 d-flex gap-1 justify-content-center align-items-center'>
                         <button type='button' class='btn btn-secondary btn-edit-NCC' 
                           data-bs-id='{$supplier['id']}' 
                           data-bs-name='{$supplier['nameNCC']}' 
                           data-bs-code='{$supplier['codeNCC']}' 
+                          data-bs-address='{$supplier['address']}'
+                          data-bs-phone='{$supplier['phone']}'
+                          data-bs-bank-number='{$supplier['bankNumber']}'
+                          data-bs-bank-name='{$supplier['bankName']}'
                           
                           data-bs-toggle='modal' 
                           data-bs-target='#editNCCModal'>
@@ -148,6 +160,22 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
                 <label for="nameNCC" class="col-form-label">Tên NCC:</label>
                 <input type="text" class="form-control" id="nameNCC" name="nameNCC">
               </div>
+              <div class="mb-3">
+                <label for="address" class="col-form-label">Địa chỉ:</label>
+                <input type="text" class="form-control" id="address" name="address">
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="col-form-label">SĐT:</label>
+                <input type="text" class="form-control" id="phone" name="phone">
+              </div>
+              <div class="mb-3">
+                <label for="bankNumber" class="col-form-label">Số TK Ngân hàng:</label>
+                <input type="text" class="form-control" id="bankNumber" name="bankNumber">
+              </div>
+              <div class="mb-3">
+                <label for="bankName" class="col-form-label">Tên ngân hàng:</label>
+                <input type="text" class="form-control" id="bankName" name="bankName">
+              </div>
             </form>
           </div>
           <div class="modal-footer">
@@ -175,6 +203,22 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
               <div class="mb-3">
                 <label for="editNameNCC" class="col-form-label">Tên NCC:</label>
                 <input type="text" class="form-control" id="editNameNCC" name="editNameNCC">
+              </div>
+              <div class="mb-3">
+                <label for="editAddress" class="col-form-label">Địa chỉ:</label>
+                <input type="text" class="form-control" id="editAddress" name="editAddress">
+              </div>
+              <div class="mb-3">
+                <label for="editPhone" class="col-form-label">SĐT:</label>
+                <input type="text" class="form-control" id="editPhone" name="editPhone">
+              </div>
+              <div class="mb-3">
+                <label for="editBankNumber" class="col-form-label">Số TK Ngân hàng:</label>
+                <input type="text" class="form-control" id="editBankNumber" name="editBankNumber">
+              </div>
+              <div class="mb-3">
+                <label for="editBankName" class="col-form-label">Tên ngân hàng:</label>
+                <input type="text" class="form-control" id="editBankName" name="editBankName">
               </div>
             </form>
           </div>
@@ -265,6 +309,10 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
           const id = button.getAttribute('data-bs-id')
           const name = button.getAttribute('data-bs-name')
           const code = button.getAttribute('data-bs-code')
+          const address = button.getAttribute('data-bs-address')
+          const phone = button.getAttribute('data-bs-phone')
+          const bankNumber = button.getAttribute('data-bs-bank-number')
+          const bankName = button.getAttribute('data-bs-bank-name')
           // If necessary, you could initiate an Ajax request here
           // and then do the updating in a callback.
 
@@ -272,10 +320,18 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
           const editIdNCC = exampleModal.querySelector('#editIdNCC')
           const editCodeNCC = exampleModal.querySelector('#editCodeNCC')
           const editNameNCC = exampleModal.querySelector('#editNameNCC')
+          const editAddress = exampleModal.querySelector('#editAddress')
+          const editPhone = exampleModal.querySelector('#editPhone')
+          const editBankNumber = exampleModal.querySelector('#editBankNumber')
+          const editBankName = exampleModal.querySelector('#editBankName')
 
           editIdNCC.value = id
           editCodeNCC.value = code
           editNameNCC.value = name
+          editAddress.value = address
+          editPhone.value = phone
+          editBankNumber.value = bankNumber
+          editBankName.value = bankName
         })
       }
 
@@ -303,6 +359,10 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
       $('#btn-add-NCC').on('click', function() {
         let codeNCC = $('#codeNCC').val();
         let nameNCC = $('#nameNCC').val();
+        let address = $('#address').val();
+        let phone = $('#phone').val();
+        let bankNumber = $('#bankNumber').val();
+        let bankName = $('#bankName').val();
 
         if (codeNCC == '' || nameNCC == '') {
           Swal.fire({
@@ -316,7 +376,11 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
             type: 'POST',
             data: {
               codeNCC: codeNCC,
-              nameNCC: nameNCC
+              nameNCC: nameNCC,
+              address: address,
+              phone: phone,
+              bankNumber: bankNumber,
+              bankName: bankName
             },
             success: function(response) {
               if (response.success) {
@@ -346,6 +410,10 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
         let id = $('#editIdNCC').val();
         let updatedCodeNCC = $('#editCodeNCC').val();
         let updatedNameNCC = $('#editNameNCC').val();
+        let updatedAddress = $('#editAddress').val();
+        let updatedPhone = $('#editPhone').val();
+        let updatedBankNumber = $('#editBankNumber').val();
+        let updatedBankName = $('#editBankName').val();
 
         if (updatedCodeNCC === '' || updatedNameNCC === '') {
           Swal.fire({
@@ -360,7 +428,11 @@ $suppliers = readJsonFile('../database/database/suppliers.json');
             data: {
               id: id,
               updatedCodeNCC: updatedCodeNCC,
-              updatedNameNCC: updatedNameNCC
+              updatedNameNCC: updatedNameNCC,
+              updatedAddress: updatedAddress,
+              updatedPhone: updatedPhone,
+              updatedBankNumber: updatedBankNumber,
+              updatedBankName: updatedBankName
             },
             success: function(response) {
               if (response.success) {

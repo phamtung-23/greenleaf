@@ -2,661 +2,1189 @@
     {
         "id": "ncc_67a8b2dfdc1af",
         "codeNCC": "AN",
-        "nameNCC": "ÂN - ỚT CHUÔNG"
+        "nameNCC": "ÂN - ỚT CHUÔNG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1b2",
         "codeNCC": "ANH",
-        "nameNCC": "ANH - HÀNH LÁ"
+        "nameNCC": "ANH - HÀNH LÁ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1b3",
         "codeNCC": "ATINH",
-        "nameNCC": "ANH TÌNH- BÍ NỤ-TRỌC"
+        "nameNCC": "ANH TÌNH- BÍ NỤ-TRỌC",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1b4",
         "codeNCC": "ATINH",
-        "nameNCC": "ANH TÌNH- BÍ NỤ-TRỌC"
+        "nameNCC": "ANH TÌNH- BÍ NỤ-TRỌC",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1b5",
         "codeNCC": "BBAO",
-        "nameNCC": "BẢO - CÀ TÍM"
+        "nameNCC": "BẢO - CÀ TÍM",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1b6",
         "codeNCC": "BBAO",
-        "nameNCC": "BẢO - CÀ TÍM"
+        "nameNCC": "BẢO - CÀ TÍM",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1b7",
         "codeNCC": "BCANG",
-        "nameNCC": "BA CẢNG"
+        "nameNCC": "BA CẢNG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1b8",
         "codeNCC": "BHL",
-        "nameNCC": "BẢO-BÍ HỒ LÔ"
+        "nameNCC": "BẢO-BÍ HỒ LÔ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1b9",
         "codeNCC": "BHL",
-        "nameNCC": "BẢO-BÍ HỒ LÔ"
+        "nameNCC": "BẢO-BÍ HỒ LÔ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1ba",
         "codeNCC": "BEH",
-        "nameNCC": "BÉ HAI - LƠ"
+        "nameNCC": "BÉ HAI - LƠ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1bb",
         "codeNCC": "BEH",
-        "nameNCC": "BÉ HAI - LƠ"
+        "nameNCC": "BÉ HAI - LƠ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1bc",
         "codeNCC": "BXLM",
-        "nameNCC": "ANH BÁU - XÀ LÁCH MỸ"
+        "nameNCC": "ANH BÁU - XÀ LÁCH MỸ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1bd",
         "codeNCC": "BINHCTH",
-        "nameNCC": "BÌNH - CẢI THẢO"
+        "nameNCC": "BÌNH - CẢI THẢO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1be",
         "codeNCC": "CHITH",
-        "nameNCC": "CHI - CẢI THẢO"
+        "nameNCC": "CHI - CẢI THẢO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1bf",
         "codeNCC": "CHICR",
-        "nameNCC": "CHI -  CÀ RỐT"
+        "nameNCC": "CHI -  CÀ RỐT",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1c0",
         "codeNCC": "CNX",
-        "nameNCC": "CAO NGUYÊN XANH-BEEF"
+        "nameNCC": "CAO NGUYÊN XANH-BEEF",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1c1",
         "codeNCC": "LIEU",
-        "nameNCC": "CHỊ LIỄU-DƯA HẠ UYỂN"
+        "nameNCC": "CHỊ LIỄU-DƯA HẠ UYỂN",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1c2",
         "codeNCC": "COI",
-        "nameNCC": "CÒI - CẢI THÌA"
+        "nameNCC": "CÒI - CẢI THÌA",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1c3",
         "codeNCC": "CUONG",
-        "nameNCC": "CƯỜNG - DƯA BABY"
+        "nameNCC": "CƯỜNG - DƯA BABY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1c4",
         "codeNCC": "CHO",
-        "nameNCC": "CHỢ - MUA NGOÀI"
+        "nameNCC": "CHỢ - MUA NGOÀI",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1c5",
         "codeNCC": "LOI",
-        "nameNCC": "ANH LỢI- BÓ XÔI"
+        "nameNCC": "ANH LỢI- BÓ XÔI",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1c6",
         "codeNCC": "DAO",
-        "nameNCC": "ĐẠO - ỚT PLM"
+        "nameNCC": "ĐẠO - ỚT PLM",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1c7",
         "codeNCC": "COLOI",
-        "nameNCC": "CÔ LỢI- HÀNH TÂY"
+        "nameNCC": "CÔ LỢI- HÀNH TÂY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1c8",
         "codeNCC": "DIEN",
-        "nameNCC": "DIÊN - ỚT CHUÔNG"
+        "nameNCC": "DIÊN - ỚT CHUÔNG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1d9",
         "codeNCC": "DIEMCC",
-        "nameNCC": "DIỄM - CÀ CHUA"
+        "nameNCC": "DIỄM - CÀ CHUA",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1da",
         "codeNCC": "DIEMB",
-        "nameNCC": "DIỄM - BẮP MỸ"
+        "nameNCC": "DIỄM - BẮP MỸ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1db",
         "codeNCC": "HA",
-        "nameNCC": "HÀ - CỦ CẢI"
+        "nameNCC": "HÀ - CỦ CẢI",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1dc",
         "codeNCC": "HAIDUNG",
-        "nameNCC": "HAI DŨNG -CẢI THẢO"
+        "nameNCC": "HAI DŨNG -CẢI THẢO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1dd",
         "codeNCC": "HANG",
-        "nameNCC": "HẰNG - SÚ TRẮNG"
+        "nameNCC": "HẰNG - SÚ TRẮNG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1de",
         "codeNCC": "HANH",
-        "nameNCC": "HẠNH VÂN - HÀNH TÂY"
+        "nameNCC": "HẠNH VÂN - HÀNH TÂY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1df",
         "codeNCC": "LAM",
-        "nameNCC": "ANH LÂM- BÓ XÔI"
+        "nameNCC": "ANH LÂM- BÓ XÔI",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1e0",
         "codeNCC": "CHOA",
-        "nameNCC": "CHỊ HOA - ỚT CHUÔNG"
+        "nameNCC": "CHỊ HOA - ỚT CHUÔNG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1e1",
         "codeNCC": "HOAK",
-        "nameNCC": "HOA -KHOAI LANG"
+        "nameNCC": "HOA -KHOAI LANG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1e2",
         "codeNCC": "HOANGH",
-        "nameNCC": "HOÀNG HẰNG- HÀNH TÂY"
+        "nameNCC": "HOÀNG HẰNG- HÀNH TÂY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1e3",
         "codeNCC": "HONGCR",
-        "nameNCC": "HỒNG - CÀ RỐT"
+        "nameNCC": "HỒNG - CÀ RỐT",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1e4",
         "codeNCC": "HUAN",
-        "nameNCC": "HUÂN - ỚT CAY"
+        "nameNCC": "HUÂN - ỚT CAY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1e5",
         "codeNCC": "HUELINH",
-        "nameNCC": "HUÊ LINH - ỚT CHUÔNG"
+        "nameNCC": "HUÊ LINH - ỚT CHUÔNG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1e6",
         "codeNCC": "HUNG",
-        "nameNCC": "HÙNG - AGRO"
+        "nameNCC": "HÙNG - AGRO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1e7",
         "codeNCC": "HUNGTL",
-        "nameNCC": "HÙNG- THÌ LÀ"
+        "nameNCC": "HÙNG- THÌ LÀ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1e8",
         "codeNCC": "HOANG",
-        "nameNCC": "HOÀNG - CẦN TÂY"
+        "nameNCC": "HOÀNG - CẦN TÂY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1e9",
         "codeNCC": "HATHINH",
-        "nameNCC": "HÀ -VỰA RAU THƠM"
+        "nameNCC": "HÀ -VỰA RAU THƠM",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1ea",
         "codeNCC": "NGAN",
-        "nameNCC": "CHỊ NGÂN- LÔ LÔ TÍM"
+        "nameNCC": "CHỊ NGÂN- LÔ LÔ TÍM",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1eb",
         "codeNCC": "KHANHR",
-        "nameNCC": "KHÁNH - RỐT"
+        "nameNCC": "KHÁNH - RỐT",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1ec",
         "codeNCC": "KHANHLAN",
-        "nameNCC": "KHÁNH LAN- CẢI THẢO"
+        "nameNCC": "KHÁNH LAN- CẢI THẢO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1ed",
         "codeNCC": "KIMNGAN",
-        "nameNCC": "KIM NGÂN- HÀNH LÁ"
+        "nameNCC": "KIM NGÂN- HÀNH LÁ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1ee",
         "codeNCC": "HOANGH",
-        "nameNCC": "HOÀNG- CẦN TÂY KADO"
+        "nameNCC": "HOÀNG- CẦN TÂY KADO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1ef",
         "codeNCC": "LANNGHIEM",
-        "nameNCC": "LAN NGHIÊM - KHOAI LANG"
+        "nameNCC": "LAN NGHIÊM - KHOAI LANG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1f0",
         "codeNCC": "LOAN",
-        "nameNCC": "CHỊ LOAN - SÚ TIM"
+        "nameNCC": "CHỊ LOAN - SÚ TIM",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1f1",
         "codeNCC": "LUA",
-        "nameNCC": "LỤA- ĐỌT SU"
+        "nameNCC": "LỤA- ĐỌT SU",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1f3",
         "codeNCC": "LUABM",
-        "nameNCC": "LƯU - BẮP MỸ"
+        "nameNCC": "LƯU - BẮP MỸ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1f4",
         "codeNCC": "MAI",
-        "nameNCC": "MAI- KHOAI MẬT"
+        "nameNCC": "MAI- KHOAI MẬT",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1f5",
         "codeNCC": "MANH",
-        "nameNCC": "MẠNH- ỚT CHUÔNG"
+        "nameNCC": "MẠNH- ỚT CHUÔNG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1f6",
         "codeNCC": "NA",
-        "nameNCC": "NA - QUẾ TÂY"
+        "nameNCC": "NA - QUẾ TÂY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1f7",
         "codeNCC": "NAM",
-        "nameNCC": "NAM - CẢI THẢO"
+        "nameNCC": "NAM - CẢI THẢO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1f8",
         "codeNCC": "NGHI",
-        "nameNCC": "NGHỊ - SÚ TIM"
+        "nameNCC": "NGHỊ - SÚ TIM",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1f9",
         "codeNCC": "NGHIEP",
-        "nameNCC": "NGHIỆP- CHERY"
+        "nameNCC": "NGHIỆP- CHERY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1fa",
         "codeNCC": "NGOCANH",
-        "nameNCC": "NGỌC ANH- DƯA BABY"
+        "nameNCC": "NGỌC ANH- DƯA BABY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1fb",
         "codeNCC": "NGO",
-        "nameNCC": "NGỌ - CẢI THẢO"
+        "nameNCC": "NGỌ - CẢI THẢO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1fc",
         "codeNCC": "NGOCD",
-        "nameNCC": "NGỌC - DỀN"
+        "nameNCC": "NGỌC - DỀN",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1fd",
         "codeNCC": "NGUYEN",
-        "nameNCC": "CHỊ NGUYÊN - SÚ TIM"
+        "nameNCC": "CHỊ NGUYÊN - SÚ TIM",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1fe",
         "codeNCC": "NHATQ",
-        "nameNCC": "NHẬT QUYÊN - XOÀI"
+        "nameNCC": "NHẬT QUYÊN - XOÀI",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc1ff",
         "codeNCC": "PHUONGCD",
-        "nameNCC": "PHƯỢNG - CHANH DÂY"
+        "nameNCC": "PHƯỢNG - CHANH DÂY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc200",
         "codeNCC": "PHUONGCT",
-        "nameNCC": "PHƯƠNG - CẦN TÂY"
+        "nameNCC": "PHƯƠNG - CẦN TÂY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc201",
         "codeNCC": "THUANLUU",
-        "nameNCC": "THUẬN LƯU - SÚ TIM"
+        "nameNCC": "THUẬN LƯU - SÚ TIM",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc202",
         "codeNCC": "THUY",
-        "nameNCC": "THÙY - SÚ TIM"
+        "nameNCC": "THÙY - SÚ TIM",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc203",
         "codeNCC": "TIENOC",
-        "nameNCC": "TIẾN - ỚT CHUÔNG"
+        "nameNCC": "TIẾN - ỚT CHUÔNG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc204",
         "codeNCC": "TKY",
-        "nameNCC": "ANH TIẾN- BẮP MỸ"
+        "nameNCC": "ANH TIẾN- BẮP MỸ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc205",
         "codeNCC": "THUYO",
-        "nameNCC": "THỦY - ỚT BABY"
+        "nameNCC": "THỦY - ỚT BABY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc206",
         "codeNCC": "TIENP",
-        "nameNCC": "TIẾN PHÁT - THẢO"
+        "nameNCC": "TIẾN PHÁT - THẢO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc207",
         "codeNCC": "TOAN",
-        "nameNCC": "TOÀN - RAU THƠM"
+        "nameNCC": "TOÀN - RAU THƠM",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc208",
         "codeNCC": "TRUNG",
-        "nameNCC": "TRUNG - BÍ NON"
+        "nameNCC": "TRUNG - BÍ NON",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc209",
         "codeNCC": "VUONG",
-        "nameNCC": "VƯƠNG - CÀ BI"
+        "nameNCC": "VƯƠNG - CÀ BI",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc20a",
         "codeNCC": "VUONG",
-        "nameNCC": "VƯƠNG - CÀ BI"
+        "nameNCC": "VƯƠNG - CÀ BI",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc20b",
         "codeNCC": "DHONG",
-        "nameNCC": "DIÊN HỒNG- CÀ RỐT"
+        "nameNCC": "DIÊN HỒNG- CÀ RỐT",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc20c",
         "codeNCC": "HCHAU",
-        "nameNCC": "HẢI CHÂU-RỐT BABY"
+        "nameNCC": "HẢI CHÂU-RỐT BABY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc20d",
         "codeNCC": "HIEN",
-        "nameNCC": "CHỊ HIỀN - KHOAI LANG NHẬT"
+        "nameNCC": "CHỊ HIỀN - KHOAI LANG NHẬT",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc20e",
         "codeNCC": "HOA",
-        "nameNCC": "CHỊ HOA - KHOAI LANG NHẬT"
+        "nameNCC": "CHỊ HOA - KHOAI LANG NHẬT",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc20f",
         "codeNCC": "MANH",
-        "nameNCC": "VIỄN MẠNH- ỚT CHUÔNG"
+        "nameNCC": "VIỄN MẠNH- ỚT CHUÔNG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc210",
         "codeNCC": "MINH",
-        "nameNCC": "MINH - ĐỌT SU"
+        "nameNCC": "MINH - ĐỌT SU",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc211",
         "codeNCC": "MUI",
-        "nameNCC": "CHỊ MÙI - CÀ RỐT"
+        "nameNCC": "CHỊ MÙI - CÀ RỐT",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc212",
         "codeNCC": "NGA",
-        "nameNCC": "NGA-CÀ BEEF-DƯA BABY"
+        "nameNCC": "NGA-CÀ BEEF-DƯA BABY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc213",
         "codeNCC": "PHUONG",
-        "nameNCC": "PHƯƠNG -THÌA-CẢI"
+        "nameNCC": "PHƯƠNG -THÌA-CẢI",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc214",
         "codeNCC": "TIEN",
-        "nameNCC": "DIỆP TIÊN - ĐẬU LEO-DƯA LEO"
+        "nameNCC": "DIỆP TIÊN - ĐẬU LEO-DƯA LEO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc215",
         "codeNCC": "CTUAN",
-        "nameNCC": "CHÚ TUẤN- SU HÀO"
+        "nameNCC": "CHÚ TUẤN- SU HÀO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc216",
         "codeNCC": "TUYEN",
-        "nameNCC": "TUYÊN- MĂNG TÂY -NINH THUẬN"
+        "nameNCC": "TUYÊN- MĂNG TÂY -NINH THUẬN",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc217",
         "codeNCC": "TUOI",
-        "nameNCC": "CHỊ TƯƠI- CÀ BEEF"
+        "nameNCC": "CHỊ TƯƠI- CÀ BEEF",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc218",
         "codeNCC": "THAI",
-        "nameNCC": "ANH THÁI- XÀ LÁCH"
+        "nameNCC": "ANH THÁI- XÀ LÁCH",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc219",
         "codeNCC": "THIET",
-        "nameNCC": "CHỊ THIẾT - RAU CỦ DL"
+        "nameNCC": "CHỊ THIẾT - RAU CỦ DL",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc21a",
         "codeNCC": "CTHU",
-        "nameNCC": "CHỊ THU -BẮP NỮ HOÀNG"
+        "nameNCC": "CHỊ THU -BẮP NỮ HOÀNG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc21b",
         "codeNCC": "CTHUAN",
-        "nameNCC": "CÔ THUẦN- CỦ CẢI TRẮNG"
+        "nameNCC": "CÔ THUẦN- CỦ CẢI TRẮNG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc21c",
         "codeNCC": "THUYTRAN",
-        "nameNCC": "CHỊ THỦY - LƠ BABY"
+        "nameNCC": "CHỊ THỦY - LƠ BABY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc21d",
         "codeNCC": "VMINH",
-        "nameNCC": "VĨNH PHƯƠNG - PHƯỜNG 8"
+        "nameNCC": "VĨNH PHƯƠNG - PHƯỜNG 8",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc21e",
         "codeNCC": "VLAN",
-        "nameNCC": "CHỊ KIM LOAN- ỚT SỪNG"
+        "nameNCC": "CHỊ KIM LOAN- ỚT SỪNG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc21f",
         "codeNCC": "TUANDL",
-        "nameNCC": "TUÂN ĐL"
+        "nameNCC": "TUÂN ĐL",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc220",
         "codeNCC": "XIXIN",
-        "nameNCC": "XI XIN - ĐƠN LẺ"
+        "nameNCC": "XI XIN - ĐƠN LẺ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc221",
         "codeNCC": "HVAN",
-        "nameNCC": "HỒNG VÂN - LƠ BABY"
+        "nameNCC": "HỒNG VÂN - LƠ BABY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc222",
         "codeNCC": "HOPELAND",
-        "nameNCC": "HOPELAND- DƯA NHẬT"
+        "nameNCC": "HOPELAND- DƯA NHẬT",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc223",
         "codeNCC": "QTRANG",
-        "nameNCC": "QUYỀN TRANG - KHOAI"
+        "nameNCC": "QUYỀN TRANG - KHOAI",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc224",
         "codeNCC": "GIACY",
-        "nameNCC": "GIÁC Ý-CÀ BEEF"
+        "nameNCC": "GIÁC Ý-CÀ BEEF",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc225",
         "codeNCC": "KIMHOA",
-        "nameNCC": "KIM HOA - CÀ BEEF"
+        "nameNCC": "KIM HOA - CÀ BEEF",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc226",
         "codeNCC": "THUYCCD",
-        "nameNCC": "THỦY - CỦ CẢI ĐỎ"
+        "nameNCC": "THỦY - CỦ CẢI ĐỎ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc227",
         "codeNCC": "TYLE",
-        "nameNCC": "TÝ LỆ  - KHOAI LANG"
+        "nameNCC": "TÝ LỆ  - KHOAI LANG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc228",
         "codeNCC": "HANHTAN",
-        "nameNCC": "HẠNH TÂN - SÚ TRẮNG"
+        "nameNCC": "HẠNH TÂN - SÚ TRẮNG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc229",
         "codeNCC": "CUBI",
-        "nameNCC": "CU BI - ĐẬU BẮP"
+        "nameNCC": "CU BI - ĐẬU BẮP",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc22a",
         "codeNCC": "CHANGLE",
-        "nameNCC": "CHỊ HẰNG - HÀNG LẺ"
+        "nameNCC": "CHỊ HẰNG - HÀNG LẺ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc22b",
         "codeNCC": "HAN",
-        "nameNCC": "BEEF GIA HÂN"
+        "nameNCC": "BEEF GIA HÂN",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc22c",
         "codeNCC": "HUNGLV",
-        "nameNCC": "HÙNG - THỦY CANH"
+        "nameNCC": "HÙNG - THỦY CANH",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc22d",
         "codeNCC": "BAOBI",
-        "nameNCC": "BẢO BÍ ĐỎ"
+        "nameNCC": "BẢO BÍ ĐỎ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc22e",
         "codeNCC": "CLIEN",
-        "nameNCC": "CÔ LIÊN - ỚT XIÊM"
+        "nameNCC": "CÔ LIÊN - ỚT XIÊM",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc22f",
         "codeNCC": "HUONG",
-        "nameNCC": "HƯƠNG - LƠ XANH"
+        "nameNCC": "HƯƠNG - LƠ XANH",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc230",
         "codeNCC": "TNGUYEN",
-        "nameNCC": "TƯỜNG NGUYÊN - LÁ É"
+        "nameNCC": "TƯỜNG NGUYÊN - LÁ É",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc231",
         "codeNCC": "HNGOC",
-        "nameNCC": "HỒNG NGỌC - QUẾ TÂY"
+        "nameNCC": "HỒNG NGỌC - QUẾ TÂY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc232",
         "codeNCC": "CHIR",
-        "nameNCC": "CHI - CÀ RỐT"
+        "nameNCC": "CHI - CÀ RỐT",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc233",
         "codeNCC": "BPDL",
-        "nameNCC": "BÍCH PHƯƠNG- ĐÀ LẠT"
+        "nameNCC": "BÍCH PHƯƠNG- ĐÀ LẠT",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc234",
         "codeNCC": "MTU",
-        "nameNCC": "MÌNH TÚ - KHOAI TÂY"
+        "nameNCC": "MÌNH TÚ - KHOAI TÂY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc235",
         "codeNCC": "LAICD",
-        "nameNCC": "LÀI - CHANH DÂY"
+        "nameNCC": "LÀI - CHANH DÂY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc236",
         "codeNCC": "CYEN",
-        "nameNCC": "CHỊ YẾN - KHOAI LANG"
+        "nameNCC": "CHỊ YẾN - KHOAI LANG",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc237",
         "codeNCC": "QKHANH",
-        "nameNCC": "KHANH - CẢI THẢO"
+        "nameNCC": "KHANH - CẢI THẢO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc238",
         "codeNCC": "KTAN",
-        "nameNCC": "KIM TÂN"
+        "nameNCC": "KIM TÂN",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc239",
         "codeNCC": "MI",
-        "nameNCC": "MI - PARO"
+        "nameNCC": "MI - PARO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc23a",
         "codeNCC": "CTHANH",
-        "nameNCC": "THANH ỚT CAY"
+        "nameNCC": "THANH ỚT CAY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc23b",
         "codeNCC": "MDUNG",
-        "nameNCC": "MỸ DUNG - CHANH DÂY"
+        "nameNCC": "MỸ DUNG - CHANH DÂY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc23c",
         "codeNCC": "MDUYEN",
-        "nameNCC": "DUYÊN - HỒNG GIÒN"
+        "nameNCC": "DUYÊN - HỒNG GIÒN",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc23d",
         "codeNCC": "LCAU",
-        "nameNCC": "LIÊN CẨU - THẢO TQ"
+        "nameNCC": "LIÊN CẨU - THẢO TQ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc23e",
         "codeNCC": "THAO",
-        "nameNCC": "THẠO  - CẢI THẢO"
+        "nameNCC": "THẠO  - CẢI THẢO",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc23f",
         "codeNCC": "NAMCR",
-        "nameNCC": "NAM - CORON"
+        "nameNCC": "NAM - CORON",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc240",
         "codeNCC": "BAODL",
-        "nameNCC": "BẢO - CẦN TÂY DL"
+        "nameNCC": "BẢO - CẦN TÂY DL",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc241",
         "codeNCC": "THAOBN",
-        "nameNCC": "THẢO - BÍ NỤ"
+        "nameNCC": "THẢO - BÍ NỤ",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc242",
         "codeNCC": "NGUYENH",
-        "nameNCC": "NGUYÊN - HỒNG GIÒN"
+        "nameNCC": "NGUYÊN - HỒNG GIÒN",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc243",
         "codeNCC": "HUANDL",
-        "nameNCC": "HUÂN ĐÀ LẠT"
+        "nameNCC": "HUÂN ĐÀ LẠT",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc244",
         "codeNCC": "CUONGCD",
-        "nameNCC": "CƯỜNG - CHANH DÂY"
+        "nameNCC": "CƯỜNG - CHANH DÂY",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     },
     {
         "id": "ncc_67a8b2dfdc245",
         "codeNCC": "TDOAN",
-        "nameNCC": "THUẬN ĐOÀN - CÀ RỐT"
+        "nameNCC": "THUẬN ĐOÀN - CÀ RỐT",
+        "address": "",
+        "phone": "",
+        "bankNumber": "",
+        "bankName": ""
     }
 ]
