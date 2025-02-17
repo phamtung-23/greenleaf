@@ -134,7 +134,7 @@ $customerData = readJsonFile(CUSTOMER_JSON_LINK);
                         foreach ($dataList as $data) {
                             $reportData = calculateInventoryReport($data);
                         ?>
-                            <tr class="border border-1" onclick="alert('Chức năng đang được phát triển!');" style="cursor: pointer;">
+                            <tr class="border border-1" onclick="openDetail('<?=$data['id']?>')" style="cursor: pointer;">
                                 <td style="border: solid 1px #dbdbdb;"><?php echo $reportData['createdAt']; ?></td>
                                 <td style="border: solid 1px #dbdbdb;"><?php echo $reportData['codeGoods']; ?></td>
                                 <td style="border: solid 1px #dbdbdb;"><?php echo $reportData['codeNCC']; ?></td>
@@ -215,6 +215,10 @@ $customerData = readJsonFile(CUSTOMER_JSON_LINK);
                 });
             }
         });
+
+        function openDetail(id) {
+            window.location.href = "report_detail.php?id=" + id;
+        }
     </script>
 
 </body>

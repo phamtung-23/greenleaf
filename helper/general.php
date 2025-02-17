@@ -342,7 +342,7 @@ function calculateInventoryReport($inventoryData)
             $SLX += $export['export_weight'];
             $haoHut += $export['lost_weight'];
             // kiểm tra xem khách hàng đã có trong danh sách chưa
-            if (!in_array($export['customer'], $customerData)){
+            if (!in_array($export['customer'], $customerData)) {
                 $customerData[] = [
                     'id' => $export['customer'],
                     'weight' => $export['export_weight'],
@@ -395,4 +395,107 @@ function checkCustomerDataById($customerId, $customerData)
         }
     }
     return [false, 0];
+}
+
+function calculateInventoryReportById($inventoryId, $inventoryData)
+{
+
+    foreach ($inventoryData as $item) {
+        if ($item['id'] === $inventoryId) {
+            // lấy thông tin NCC
+            $supplierData = readJsonFile(SUPPLIERS_JSON_LINK);
+            $nameNCC = '';
+            $codeNCC = '';
+            foreach ($supplierData as $supplier) {
+                if ($supplier['id'] === $item['supplier']) {
+                    $nameNCC = $supplier['nameNCC'];
+                    $codeNCC = $supplier['codeNCC'];
+                    break;
+                }
+            }
+            // lấy thông tin mặt hàng
+            $goodsData = readJsonFile(GOODS_JSON_LINK);
+            $nameGoods = '';
+            $codeGoods = '';
+            foreach ($goodsData as $goods) {
+                if ($goods['id'] === $item['item']) {
+                    $nameGoods = $goods['nameGoods'];
+                    $codeGoods = $goods['codeGoods'];
+                    break;
+                }
+            }
+
+
+            $SLN = 0;
+            $xa = 0;
+            $SLX = 0;
+            $haoHut = 0;
+            $customerData = [];
+            if (isset($item['import_list'])) {
+                foreach ($item['import_list'] as $import) {
+                    $SLN += $import['weight'];
+                    $xa += $import['disposed_weight'];
+                }
+            }
+            if (isset($item['export_list'])) {
+                foreach ($item['export_list'] as $export) {
+                    $SLX += $export['export_weight'];
+                    $haoHut += $export['lost_weight'];
+                    // kiểm tra xem khách hàng đã có trong danh sách chưa
+                    if (!in_array($export['customer'], $customerData)) {
+                        $customerFromDB = readJsonFile(CUSTOMER_JSON_LINK);
+                        $customerName = '';
+                        foreach ($customerFromDB as $customer) {
+                            if ($customer['id'] === $export['customer']) {
+                                $customerName = $customer['nameCustomer'];
+                                break;
+                            }
+                        }
+                        $customerData[] = [
+                            'id' => $export['customer'],
+                            'weight' => $export['export_weight'],
+                            'name' => $customerName,
+                        ];
+                    } else {
+                        // câp nhật số lượng hàng hóa đã xuất ra của khách hàng
+                        foreach ($customerData as $key => $customer) {
+                            if ($customer['id'] === $export['customer']) {
+                                $customerData[$key]['weight'] += $export['export_weight'];
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+
+            $thanhTien = ($SLN + $item['remaining_weight']) * $item['unit_price'];
+            $CPHaoHut = $haoHut * $item['unit_price'];
+            $conLai = $SLN + $item['remaining_weight'] - $xa;
+            $tonCuoi = $conLai - $SLX - $haoHut;
+            $CPTonCuoi = $tonCuoi * $item['unit_price'];
+
+            return [
+                'DVT' => 'kg',
+                'tonDau' => $item['remaining_weight'],
+                'SLN' => $SLN,
+                'xa' => $xa,
+                'conLai' => $conLai,
+                'unit_price' => $item['unit_price'],
+                'thanhTien' => $thanhTien,
+                'SLX' => $SLX,
+                'haoHut' => $haoHut,
+                'CPHaoHut' => $CPHaoHut,
+                'tonCuoi' => $tonCuoi,
+                'CPTonCuoi' => $CPTonCuoi,
+                'nameNCC' => $nameNCC,
+                'codeNCC' => $codeNCC,
+                'nameGoods' => $nameGoods,
+                'codeGoods' => $codeGoods,
+                'createdAt' => $item['createdAt'],
+                'customerData' => $customerData,
+                'import_list' => $item['import_list'] ?? [],
+                'export_list' => $item['export_list'] ?? [],
+            ];
+        }
+    }
 }
