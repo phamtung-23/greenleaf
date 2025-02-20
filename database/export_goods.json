@@ -6,12 +6,13 @@
         "supplier": "ncc_67a8b2dfdc1af",
         "unit_price": 1000,
         "item": "goods_67a8b3ad649dd",
-        "customer": "customer_67a8cdd59f226",
-        "export_weight": 23,
+        "customer": "customer_67a8cdd59f227",
+        "export_weight": 25,
         "lost_weight": 0,
         "images": [
             "database\/image_import\/image_67ac45e0b7c11_2025_02_12.png"
-        ]
+        ],
+        "updatedAt": "2025-02-20 15:36:10"
     },
     {
         "id": "export_67ae308c6462e",

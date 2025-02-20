@@ -5,14 +5,15 @@
         "createdAt": "2025-02-12 07:43:52",
         "supplier": "ncc_67a8b2dfdc1af",
         "item": "goods_67a8b3ad649dd",
-        "weight": 12,
-        "disposed_weight": 2,
-        "remaining_weight": 10,
+        "weight": 120,
+        "disposed_weight": 20,
+        "remaining_weight": 100,
         "unit_price": 1000,
-        "total_price": 10000,
+        "total_price": 100000,
         "images": [
             "database\/image_import\/image_67ac4328eaab9_2025_02_12.png"
-        ]
+        ],
+        "updatedAt": "2025-02-19 17:03:37"
     },
     {
         "id": "import_67ac434587235",

@@ -288,6 +288,59 @@ function saveImportExportGoodsInInventory($supplier, $item, $remaining_weight, $
     }
 }
 
+function updateImportExportGoodsInInventory($inventory_id, $import_export_id, $current_date, $updateData, $filePath, $type)
+{
+    $inventoryData = readJsonFile($filePath);
+    foreach ($inventoryData as $key => $data) {
+        if ($data['id'] === $inventory_id) {
+            if ($type === 'import') {
+                foreach ($data['import_list'] as $k => $import) {
+                    if ($import['id'] === $import_export_id) {
+                        $inventoryData[$key]['import_list'][$k] = $updateData;
+                        $inventoryData[$key]['updatedAt'] = $current_date;
+                        writeJsonFile($filePath, $inventoryData);
+                        break;
+                    }
+                }
+            } else {
+                foreach ($data['export_list'] as $k => $export) {
+                    if ($export['id'] === $import_export_id) {
+                        $inventoryData[$key]['export_list'][$k] = $updateData;
+                        $inventoryData[$key]['updatedAt'] = $current_date;
+                        writeJsonFile($filePath, $inventoryData);
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}
+
+function deleteImportExportGoodsInInventory($inventory_id, $import_export_id, $filePath, $type){
+    $inventoryData = readJsonFile($filePath);
+    foreach ($inventoryData as $key => $data) {
+        if ($data['id'] === $inventory_id) {
+            if ($type === 'import') {
+                foreach ($data['import_list'] as $k => $import) {
+                    if ($import['id'] === $import_export_id) {
+                        unset($inventoryData[$key]['import_list'][$k]);
+                        writeJsonFile($filePath, $inventoryData);
+                        break;
+                    }
+                }
+            } else {
+                foreach ($data['export_list'] as $k => $export) {
+                    if ($export['id'] === $import_export_id) {
+                        unset($inventoryData[$key]['export_list'][$k]);
+                        writeJsonFile($filePath, $inventoryData);
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}
+
 function checkImportExportInventoryExist($goods, $supplier, $price, $current_date, $inventoryData)
 {
     foreach ($inventoryData as $item) {
@@ -475,6 +528,7 @@ function calculateInventoryReportById($inventoryId, $inventoryData)
             $CPTonCuoi = $tonCuoi * $item['unit_price'];
 
             return [
+                'id' => $item['id'],
                 'DVT' => 'kg',
                 'tonDau' => $item['remaining_weight'],
                 'SLN' => $SLN,
@@ -498,4 +552,16 @@ function calculateInventoryReportById($inventoryId, $inventoryData)
             ];
         }
     }
+}
+
+// lấy data by id
+function getDataById($id, $filePath)
+{
+    $data = readJsonFile($filePath);
+    foreach ($data as $item) {
+        if ($item['id'] === $id) {
+            return $item;
+        }
+    }
+    return [];
 }
