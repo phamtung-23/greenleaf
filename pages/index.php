@@ -120,6 +120,7 @@ $customerData = readJsonFile(CUSTOMER_JSON_LINK);
                             <th scope="col" rowspan="2" class="align-top">CP hao hụt</th>
                             <th scope="col" rowspan="2" class="align-top">TỒN CUỐI</th>
                             <th scope="col" rowspan="2" class="align-top">CP TỒN</th>
+                            <th scope="col" rowspan="2" class="align-top">Hành động</th>
                         </tr>
                         <tr>
                             <?php
@@ -134,40 +135,63 @@ $customerData = readJsonFile(CUSTOMER_JSON_LINK);
                         foreach ($dataList as $data) {
                             $reportData = calculateInventoryReport($data);
                         ?>
-                            <tr class="border border-1" onclick="openDetail('<?=$data['id']?>')" style="cursor: pointer;">
-                                <td style="border: solid 1px #dbdbdb;"><?php echo $reportData['createdAt']; ?></td>
-                                <td style="border: solid 1px #dbdbdb;"><?php echo $reportData['codeGoods']; ?></td>
-                                <td style="border: solid 1px #dbdbdb;"><?php echo $reportData['codeNCC']; ?></td>
-                                <td style="border: solid 1px #dbdbdb;"><?php echo $reportData['nameGoods']; ?></td>
-                                <td style="border: solid 1px #dbdbdb;"><?php echo $reportData['nameNCC']; ?></td>
-                                <td style="border: solid 1px #dbdbdb; text-align: center;"><?php echo $reportData['DVT']; ?></td>
-                                <td style="border: solid 1px #dbdbdb; text-align: center;"><?php echo $reportData['tonDau']; ?></td>
-                                <td style="border: solid 1px #dbdbdb; background-color: #f2bd64; font-weight: bold; text-align: center;"><?php echo $reportData['SLN']; ?></td>
-                                <td style="border: solid 1px #dbdbdb; text-align: center;"><?php echo $reportData['xa']; ?></td>
-                                <td style="border: solid 1px #dbdbdb; font-weight: bold; text-align: center;"><?php echo $reportData['conLai']; ?></td>
-                                <td style="border: solid 1px #dbdbdb; text-align: end;"><?php echo number_format($reportData['unit_price'], 0, ',', '.'); ?></td>
-                                <td style="border: solid 1px #dbdbdb; background-color:rgb(83, 150, 244); font-weight: bold; text-align: end;"><?php echo number_format($reportData['thanhTien'], 0, ',', '.'); ?></td>
+                            <tr class="border border-1">
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb;"><?php echo $reportData['createdAt']; ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb;"><?php echo $reportData['codeGoods']; ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb;"><?php echo $reportData['codeNCC']; ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb;"><?php echo $reportData['nameGoods']; ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb;"><?php echo $reportData['nameNCC']; ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb; text-align: center;"><?php echo $reportData['DVT']; ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb; text-align: center;"><?php echo $reportData['tonDau']; ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb; background-color: #f2bd64; font-weight: bold; text-align: center;"><?php echo $reportData['SLN']; ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb; text-align: center;"><?php echo $reportData['xa']; ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb; font-weight: bold; text-align: center;"><?php echo $reportData['conLai']; ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb; text-align: end;"><?php echo number_format($reportData['unit_price'], 0, ',', '.'); ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb; background-color:rgb(83, 150, 244); font-weight: bold; text-align: end;"><?php echo number_format($reportData['thanhTien'], 0, ',', '.'); ?></td>
                                 <?php
                                 foreach ($customerData as $customer) {
                                     $isExist = checkCustomerDataById($customer['id'], $reportData['customerData']);
                                     if ($isExist[0]) {
-                                        echo "<td style='border: solid 1px #dbdbdb; text-align: center;'>" . $isExist[1] . "</td>";
+                                        echo "<td onclick='openDetail('{$data['id']}')' style='cursor: pointer; border: solid 1px #dbdbdb; text-align: center;'>" . $isExist[1] . "</td>";
                                     } else {
-                                        echo "<td style='border: solid 1px #dbdbdb;'></td>";
+                                        echo "<td onclick='openDetail('{$data['id']}')' style='cursor: pointer; border: solid 1px #dbdbdb;'></td>";
                                     }
                                 }
                                 ?>
-                                <td style="border: solid 1px #dbdbdb; background-color:rgb(223, 165, 255); font-weight: bold; text-align: center;"><?php echo $reportData['SLX']; ?></td>
-                                <td style="border: solid 1px #dbdbdb; background-color:rgb(238, 208, 255); font-weight: bold; text-align: center;"><?php echo $reportData['haoHut']; ?></td>
-                                <td style="border: solid 1px #dbdbdb; text-align: end;"><?php echo number_format($reportData['CPHaoHut'], 0, ',', '.'); ?></td>
-                                <td style="border: solid 1px #dbdbdb; background-color: lightgreen; color: #f20000; font-weight: bold; text-align: center;"><?php echo $reportData['tonCuoi']; ?></td>
-                                <td style="border: solid 1px #dbdbdb; background-color: bisque; font-weight: bold; text-align: end;"><?php echo  number_format($reportData['CPTonCuoi'], 0, ',', '.'); ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb; background-color:rgb(223, 165, 255); font-weight: bold; text-align: center;"><?php echo $reportData['SLX']; ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb; background-color:rgb(238, 208, 255); font-weight: bold; text-align: center;"><?php echo $reportData['haoHut']; ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb; text-align: end;"><?php echo number_format($reportData['CPHaoHut'], 0, ',', '.'); ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb; background-color: lightgreen; color: #f20000; font-weight: bold; text-align: center;"><?php echo $reportData['tonCuoi']; ?></td>
+                                <td onclick="openDetail('<?= $data['id'] ?>')" style="cursor: pointer; border: solid 1px #dbdbdb; background-color: bisque; font-weight: bold; text-align: end;"><?php echo  number_format($reportData['CPTonCuoi'], 0, ',', '.'); ?></td>
+                                <td style="border: solid 1px #dbdbdb; text-align: center;">
+                                    <button class="btn btn-danger" data-bs-id="<?= $data['id'] ?>" data-bs-toggle='modal' data-bs-target='#deleteImportExportModal'>Xóa</button>
+                                </td>
                             </tr>
                         <?php
                         }
                         ?>
                     </tbody>
                 </table>
+            </div>
+        </div>
+
+        <!-- Modal Delete goods -->
+        <div class="modal fade" id="deleteImportExportModal" tabindex="-1" aria-labelledby="deleteImportExportModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-danger text-white">
+                        <h1 class="modal-title fs-5" id="deleteImportExportModalLabel">Xác nhận xóa</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Bạn có chắc chắn muốn xóa phiếu theo dõi?</p>
+                        <input type="hidden" id="importExportId">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                        <button type="button" class="btn btn-danger" id="confirmDeleteImportExport">Xóa</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -214,7 +238,60 @@ $customerData = readJsonFile(CUSTOMER_JSON_LINK);
                     }
                 });
             }
+
+
+            // Open Delete Modal with existing goods data
+            const deleteModal = document.getElementById('deleteImportExportModal')
+            if (deleteModal) {
+                deleteModal.addEventListener('show.bs.modal', event => {
+                    // Button that triggered the modal
+                    const button = event.relatedTarget
+                    // Extract info from data-bs-* attributes
+                    const id = button.getAttribute('data-bs-id')
+
+                    console.log(id);
+
+                    // Update the modal's content.
+                    const deleteImportExportId = deleteModal.querySelector('#importExportId')
+                    deleteImportExportId.value = id
+                })
+            }
+
+            $('#confirmDeleteImportExport').on('click', function() {
+                let id = $('#importExportId').val();
+
+                console.log(id);
+
+                $.ajax({
+                    url: 'backend/deleteImportExport.php',
+                    type: 'POST',
+                    data: {
+                        id: id
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Thành công',
+                                text: response.message
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    location.reload();
+                                }
+                            });
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Lỗi',
+                                text: response.message
+                            });
+                        }
+                    }
+                });
+            });
         });
+
+
 
         function openDetail(id) {
             window.location.href = "report_detail.php?id=" + id;
