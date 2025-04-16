@@ -2,25 +2,43 @@
     {
         "item": "goods_67a8b3ad649dd",
         "supplier": "ncc_67a8b2dfdc1af",
-        "weight": 88,
+        "weight": 0,
         "unit_price": 1000
     },
     {
-        "item": "goods_67a8b3ad649dd",
-        "supplier": "ncc_67a8b2dfdc1af",
-        "weight": 13.5,
+        "item": "goods_67a8b3ad649e3",
+        "supplier": "ncc_67a8b2dfdc1b2",
+        "weight": 0,
         "unit_price": 2000
     },
     {
         "item": "goods_67a8b3ad649e3",
         "supplier": "ncc_67a8b2dfdc1b2",
-        "weight": 32,
-        "unit_price": 1000000
+        "weight": 0,
+        "unit_price": 1000
     },
     {
-        "item": "goods_67a8b3ad649e4",
-        "supplier": "ncc_67a8b2dfdc1b4",
-        "weight": 11,
-        "unit_price": 100000
+        "item": "goods_67a8b3ad649dd",
+        "supplier": "ncc_67a8b2dfdc1af",
+        "weight": 0,
+        "unit_price": 11111
+    },
+    {
+        "item": "goods_67a8b3ad649dd",
+        "supplier": "ncc_67a8b2dfdc1af",
+        "weight": 0,
+        "unit_price": 1212
+    },
+    {
+        "item": "goods_67a8b3ad649dd",
+        "supplier": "ncc_67a8b2dfdc1af",
+        "weight": 0,
+        "unit_price": 1112
+    },
+    {
+        "item": "goods_67a8b3ad649dd",
+        "supplier": "ncc_67a8b2dfdc1af",
+        "weight": 0,
+        "unit_price": 1111
     }
 ]

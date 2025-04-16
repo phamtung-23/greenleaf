@@ -75,10 +75,10 @@ echo "<script>
                             <a class="nav-link active" aria-current="page" href="index.php">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="import.php">Nhập hàng</a>
+                            <a class="nav-link" aria-current="page" href="management_import.php">Nhập hàng</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="export.php">Xuất hàng</a>
+                            <a class="nav-link" aria-current="page" href="management_export.php">Xuất hàng</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="management_ncc.php">Nhà cung cấp</a>
@@ -431,7 +431,7 @@ echo "<script>
                 </div>
             </div>
         </div>
-        
+
         <!-- Modal Delete import -->
         <div class="modal fade" id="deleteExportModal" tabindex="-1" aria-labelledby="deleteExportModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -459,7 +459,6 @@ echo "<script>
         </div>
     </footer>
     <script>
-
         // =================== IMPORT ==================
         // Open Edit Modal with existing import data
         const exampleModal = document.getElementById('updateImportModal')
@@ -472,7 +471,6 @@ echo "<script>
                 // If necessary, you could initiate an Ajax request here
                 // and then do the updating in a callback.
                 const importData = inventoryData.import_list.find(item => item.id == id)
-                console.log(importData)
 
                 // Update the modal's content.
                 const importIdInput = document.getElementById('import_id')
@@ -671,7 +669,11 @@ echo "<script>
                     title: 'Thành công',
                     text: data.message,
                 }).then(() => {
-                    window.location.reload();
+                    if (data.isDeleted) {
+                        window.location.href = 'index.php'
+                    } else {
+                        window.location.reload();
+                    }
                 });
             } else {
                 Swal.fire({
@@ -695,7 +697,6 @@ echo "<script>
                 // If necessary, you could initiate an Ajax request here
                 // and then do the updating in a callback.
                 const exportData = inventoryData.export_list.find(item => item.id == id)
-                console.log(exportData)
 
                 // Update the modal's content.
                 const exportIdInput = document.getElementById('export_id')
@@ -716,7 +717,6 @@ echo "<script>
                 const imagePreview = document.getElementById('image-preview-export')
                 imagePreview.innerHTML = ''
                 exportData.images.forEach(image => {
-                    console.log(image)
                     const imageElement = document.createElement('div')
                     imageElement.classList.add('col-md-4')
                     imageElement.innerHTML = `<img src="../${image}" alt="" class="img-thumbnail" style="width: 100%;">`
@@ -827,7 +827,11 @@ echo "<script>
                     title: 'Thành công',
                     text: data.message,
                 }).then(() => {
-                    window.location.reload();
+                    if (data.isDeleted) {
+                        window.location.href = 'index.php'
+                    } else {
+                        window.location.reload();
+                    }
                 });
             } else {
                 Swal.fire({
@@ -837,7 +841,6 @@ echo "<script>
                 });
             }
         })
-
     </script>
 
 </body>

@@ -54,8 +54,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // ======= Xóa thông tin nhập hàng vào import_export_inventory.json
     deleteImportExportGoodsInInventory($inventory_id, $import_id, '../' . IMPORT_EXPORT_INVENTORY_JSON_PATH, 'import');
 
+    $isExistInventory = getDataById($inventory_id, '../' . IMPORT_EXPORT_INVENTORY_JSON_PATH);
 
-    echo json_encode(['success' => true, 'message' => 'Xóa thông tin nhập hàng thành công!']);
+    if (empty($isExistInventory)) {
+        echo json_encode(['success' => true, 'message' => 'Xóa thông tin nhập hàng thành công!', 'isDeleted' => true]);
+    } else {
+        echo json_encode(['success' => true, 'message' => 'Xóa thông tin nhập hàng thành công!', 'isDeleted' => false]);
+    }
 } else {
     echo json_encode(['success' => false, 'message' => 'Yêu cầu không hợp lệ!']);
 }

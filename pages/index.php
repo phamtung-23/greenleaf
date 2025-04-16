@@ -59,10 +59,10 @@ $customerData = readJsonFile(CUSTOMER_JSON_LINK);
                             <a class="nav-link active" aria-current="page" href="index.php">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="import.php">Nhập hàng</a>
+                            <a class="nav-link" aria-current="page" href="management_import.php">Nhập hàng</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="export.php">Xuất hàng</a>
+                            <a class="nav-link" aria-current="page" href="management_export.php">Xuất hàng</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="management_ncc.php">Nhà cung cấp</a>
@@ -249,8 +249,6 @@ $customerData = readJsonFile(CUSTOMER_JSON_LINK);
                     // Extract info from data-bs-* attributes
                     const id = button.getAttribute('data-bs-id')
 
-                    console.log(id);
-
                     // Update the modal's content.
                     const deleteImportExportId = deleteModal.querySelector('#importExportId')
                     deleteImportExportId.value = id
@@ -259,8 +257,6 @@ $customerData = readJsonFile(CUSTOMER_JSON_LINK);
 
             $('#confirmDeleteImportExport').on('click', function() {
                 let id = $('#importExportId').val();
-
-                console.log(id);
 
                 $.ajax({
                     url: 'backend/deleteImportExport.php',

@@ -138,6 +138,8 @@ function deleteJsonFileById($filePath, $id)
     foreach ($data as $key => $item) {
         if ($item['id'] === $id) {
             unset($data[$key]);
+            // Re-index the array to maintain sequential keys
+            $data = array_values($data);
             break;
         }
     }
@@ -324,6 +326,8 @@ function deleteImportExportGoodsInInventory($inventory_id, $import_export_id, $f
                 foreach ($data['import_list'] as $k => $import) {
                     if ($import['id'] === $import_export_id) {
                         unset($inventoryData[$key]['import_list'][$k]);
+                        // Re-index the array to maintain sequential keys
+                        $inventoryData[$key]['import_list'] = array_values($inventoryData[$key]['import_list']);
                         writeJsonFile($filePath, $inventoryData);
                         break;
                     }
@@ -332,11 +336,21 @@ function deleteImportExportGoodsInInventory($inventory_id, $import_export_id, $f
                 foreach ($data['export_list'] as $k => $export) {
                     if ($export['id'] === $import_export_id) {
                         unset($inventoryData[$key]['export_list'][$k]);
+                        // Re-index the array to maintain sequential keys
+                        $inventoryData[$key]['export_list'] = array_values($inventoryData[$key]['export_list']);
                         writeJsonFile($filePath, $inventoryData);
                         break;
                     }
                 }
             }
+            // Nếu không còn danh sách nhập hoặc xuất nào thì xóa luôn mục này
+            if (empty($inventoryData[$key]['import_list']) && empty($inventoryData[$key]['export_list'])) {
+                unset($inventoryData[$key]);
+                // Re-index the array to maintain sequential keys
+                $inventoryData = array_values($inventoryData);
+                writeJsonFile($filePath, $inventoryData);
+            }
+            break;
         }
     }
 }
@@ -561,6 +575,20 @@ function getDataById($id, $filePath)
     foreach ($data as $item) {
         if ($item['id'] === $id) {
             return $item;
+        }
+    }
+    return [];
+}
+
+// get inventory data by import id
+function getInventoryDataByImportId($importId, $filePath)
+{
+    $data = readJsonFile($filePath);
+    foreach ($data as $item) {
+        foreach ($item['import_list'] as $import) {
+            if ($import['id'] === $importId) {
+                return $item;
+            }
         }
     }
     return [];

@@ -63,10 +63,10 @@ $customerList = readJsonFile(CUSTOMER_JSON_LINK);
                             <a class="nav-link" aria-current="page" href="index.php">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="import.php">Nhập hàng</a>
+                            <a class="nav-link " aria-current="page" href="management_import.php">Nhập hàng</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="export.php">Xuất hàng</a>
+                            <a class="nav-link active" aria-current="page" href="management_export.php">Xuất hàng</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="management_ncc.php">Nhà cung cấp</a>
@@ -321,9 +321,9 @@ $customerList = readJsonFile(CUSTOMER_JSON_LINK);
                 });
 
                 // log data
-                for (var pair of importData.entries()) {
-                    console.log(pair[0] + ', ' + pair[1]);
-                }
+                // for (var pair of importData.entries()) {
+                //     console.log(pair[0] + ', ' + pair[1]);
+                // }
 
                 // Gửi dữ liệu
                 $.ajax({
@@ -333,7 +333,7 @@ $customerList = readJsonFile(CUSTOMER_JSON_LINK);
                     contentType: false,
                     processData: false,
                     success: function(response) {
-                        console.log(response);
+                        // console.log(response);
                         if (response.success) {
                             Swal.fire({
                                 icon: 'success',
@@ -341,7 +341,7 @@ $customerList = readJsonFile(CUSTOMER_JSON_LINK);
                                 text: response.message,
                             }).then((result) => {
                                 if (result.isConfirmed) {
-                                    window.location.href = 'export.php';
+                                    window.location.href = 'management_export.php';
                                 }
                             });
                         } else {

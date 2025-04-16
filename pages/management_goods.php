@@ -56,10 +56,10 @@ $goodsList = readJsonFile('../database/database/goods.json');
               <a class="nav-link " aria-current="page" href="index.php">Trang chủ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="import.php">Nhập hàng</a>
+              <a class="nav-link" aria-current="page" href="management_import.php">Nhập hàng</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="export.php">Xuất hàng</a>
+              <a class="nav-link" aria-current="page" href="management_export.php">Xuất hàng</a>
             </li>
             <li class="nav-item">
               <a class="nav-link " aria-current="page" href="management_ncc.php">Nhà cung cấp</a>
