@@ -2,7 +2,7 @@
     {
         "item": "goods_67a8b3ad649dd",
         "supplier": "ncc_67a8b2dfdc1af",
-        "weight": 90,
+        "weight": 88,
         "unit_price": 1000
     },
     {
@@ -16,5 +16,11 @@
         "supplier": "ncc_67a8b2dfdc1b2",
         "weight": 32,
         "unit_price": 1000000
+    },
+    {
+        "item": "goods_67a8b3ad649e4",
+        "supplier": "ncc_67a8b2dfdc1b4",
+        "weight": 11,
+        "unit_price": 100000
     }
 ]

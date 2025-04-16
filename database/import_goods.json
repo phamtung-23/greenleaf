@@ -74,5 +74,18 @@
         "images": [
             "database\/image_import\/image_67ae33ba9910c_2025_02_13.jpg"
         ]
+    },
+    {
+        "id": "import_67ff1692310bc",
+        "index": 6,
+        "createdAt": "2025-04-16 04:31:46",
+        "supplier": "ncc_67a8b2dfdc1b4",
+        "item": "goods_67a8b3ad649e4",
+        "weight": 13,
+        "disposed_weight": 2,
+        "remaining_weight": 11,
+        "unit_price": 100000,
+        "total_price": 1100000,
+        "images": []
     }
 ]

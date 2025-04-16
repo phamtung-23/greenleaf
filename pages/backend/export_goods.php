@@ -35,13 +35,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $time = date('Y-m-d H:i:s'); // Lấy thời gian hiện tại
 
     // Xử lý upload hình ảnh
-    $imageLinks = uploadImages($_FILES, '../' . IMAGE_EXPORT_DIR);
+    $imageLinks = [];
+    if (isset($_FILES['images']) && count($_FILES['images']['name']) > 0 && $_FILES['images']['name'][0] !== '') {
+        $imageLinks = uploadImages($_FILES, '../' . IMAGE_EXPORT_DIR);
+    }
 
     // Đọc dữ liệu hiện có
     $data = readJsonFile('../' . EXPORT_GOODS_JSON_PATH);
 
     // Lấy ID cuối cùng và tăng thêm 1
     $lastId = end($data)['index'] ?? 0;
+
     // Tạo dữ liệu mới từ form
     $newData = [
         'id' => uniqid('export_'), // ID duy nhất
@@ -53,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'customer' => $customer,
         'export_weight' => (float)$export_weight,
         'lost_weight' => (float)$lost_weight,
-        'images' => $imageLinks, // Thêm đường dẫn hình ảnh
+        'images' => $imageLinks
     ];
 
     $total_weight = (float)$export_weight + (float)$lost_weight;

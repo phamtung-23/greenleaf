@@ -36,7 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $time = date('Y-m-d H:i:s'); // Lấy thời gian hiện tại
 
     // Xử lý upload hình ảnh
-    $imageLinks = uploadImages($_FILES, '../' . IMAGE_DIR);
+    $imageLinks = [];
+    if (isset($_FILES['images']) && count($_FILES['images']['name']) > 0) {
+        $imageLinks = uploadImages($_FILES, '../' . IMAGE_DIR);
+    }
 
     // Đọc dữ liệu hiện có
     $data = readJsonFile('../' . GOODS_JSON_PATH);
@@ -65,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     writeJsonFile('../' . GOODS_JSON_PATH, $data);
 
     // lấy số lượng hàng hóa hiện có
-    $remaining_weight_in_inventory = getWeightByItemSupplierPrice($item, $supplier, (int)$unit_price, '../'.INVENTORY_JSON_PATH);
+    $remaining_weight_in_inventory = getWeightByItemSupplierPrice($item, $supplier, (int)$unit_price, '../' . INVENTORY_JSON_PATH);
 
     // ======= Cập nhật số lượng hàng hóa trong kho
     $inventoryData = readJsonFile('../' . INVENTORY_JSON_PATH);

@@ -146,5 +146,50 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "import_export_67ff169234dc5",
+        "item": "goods_67a8b3ad649e4",
+        "supplier": "ncc_67a8b2dfdc1b4",
+        "remaining_weight": 0,
+        "unit_price": 100000,
+        "createdAt": "16-04-2025",
+        "import_list": [
+            {
+                "id": "import_67ff1692310bc",
+                "index": 6,
+                "createdAt": "2025-04-16 04:31:46",
+                "supplier": "ncc_67a8b2dfdc1b4",
+                "item": "goods_67a8b3ad649e4",
+                "weight": 13,
+                "disposed_weight": 2,
+                "remaining_weight": 11,
+                "unit_price": 100000,
+                "total_price": 1100000,
+                "images": []
+            }
+        ]
+    },
+    {
+        "id": "import_export_67ff17dd50dfe",
+        "item": "goods_67a8b3ad649dd",
+        "supplier": "ncc_67a8b2dfdc1af",
+        "remaining_weight": 90,
+        "unit_price": 1000,
+        "createdAt": "16-04-2025",
+        "export_list": [
+            {
+                "id": "export_67ff17dd50224",
+                "index": 3,
+                "createdAt": "2025-04-16 04:37:17",
+                "supplier": "ncc_67a8b2dfdc1af",
+                "unit_price": 1000,
+                "item": "goods_67a8b3ad649dd",
+                "customer": "customer_67a8cdd59f228",
+                "export_weight": 2,
+                "lost_weight": 0,
+                "images": []
+            }
+        ]
     }
 ]

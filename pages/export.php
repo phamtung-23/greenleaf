@@ -178,7 +178,7 @@ $customerList = readJsonFile(CUSTOMER_JSON_LINK);
 
                         <div class="col-md-6">
                             <label for="images" class="form-label">Upload hình ảnh:</label>
-                            <input class="form-control" type="file" id="images" name="images[]" multiple accept="image/*" required>
+                            <input class="form-control" type="file" id="images" name="images[]" multiple accept="image/*">
                             <div class="invalid-feedback">
                                 Vui lòng chọn hình ảnh.
                             </div>
@@ -301,8 +301,11 @@ $customerList = readJsonFile(CUSTOMER_JSON_LINK);
                 importData.append('export_weight', weight);
                 importData.append('lost_weight', disposedWeight);
 
-                for (let i = 0; i < images.length; i++) {
-                    importData.append('images[]', images[i]);
+                // Only append images if they exist
+                if (images.length > 0) {
+                    for (let i = 0; i < images.length; i++) {
+                        importData.append('images[]', images[i]);
+                    }
                 }
 
 
